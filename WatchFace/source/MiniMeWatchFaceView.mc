@@ -7,6 +7,7 @@ import Toybox.Time;
 import Toybox.Time.Gregorian;
 import Toybox.UserProfile;
 import Toybox.WatchUi;
+import Toybox.Weather;
 
 class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private const MOOD_NEUTRAL = 0;
@@ -107,7 +108,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
 
         drawMetricRow(dc, iconX, valueX, topY, formatSteps(getSteps()), textColor, 0);
         drawMetricRow(dc, iconX, valueX, topY + rowGap, getWeeklyRunningDistanceText(), textColor, 2);
-        drawMetricRow(dc, iconX, valueX, topY + (rowGap * 2), "18\u00B0", textColor, 1);
+        drawMetricRow(dc, iconX, valueX, topY + (rowGap * 2), getWeatherTemperatureText(), textColor, 1);
     }
 
     private function drawMetricRow(dc as Dc, iconX as Number, valueX as Number, y as Number, value as String, color as Number, iconType as Number) as Void {
@@ -304,6 +305,27 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         }
 
         return steps.format("%d");
+    }
+
+    private function getWeatherTemperatureText() as String {
+        try {
+            if (!(Weather has :getCurrentConditions)) {
+                return "--\u00B0";
+            }
+
+            var conditions = Weather.getCurrentConditions();
+
+            if (
+                (conditions != null) &&
+                (conditions has :temperature) &&
+                (conditions.temperature != null)
+            ) {
+                return Lang.format("$1$\u00B0", [ (conditions.temperature as Number).format("%.0f") ]);
+            }
+        } catch (ex) {
+        }
+
+        return "--\u00B0";
     }
 
     private function getBackgroundBitmap(mood as Number) as BitmapResource? {
