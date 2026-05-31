@@ -90,46 +90,23 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private function drawActivityRows(dc as Dc, width as Number, height as Number) as Void {
         var clusterOffsetX = (width * 0.035).toNumber();
         var clusterOffsetY = (height * 0.05).toNumber();
-        var iconX = (width * 0.55).toNumber() - clusterOffsetX;
-        var valueX = (width * 0.88).toNumber() - clusterOffsetX;
-        var labelRightX = (width * 0.77).toNumber() - clusterOffsetX;
+        var iconX = (width * 0.535).toNumber() - clusterOffsetX;
+        var labelX = (width * 0.585).toNumber() - clusterOffsetX;
+        var valueX = (width * 0.79).toNumber() - clusterOffsetX;
         var topY = (height * 0.52).toNumber() - clusterOffsetY;
         var rowGap = (height * 0.13).toNumber();
-        var lineLeft = (width * 0.63).toNumber() - clusterOffsetX;
-        var lineRight = (width * 0.88).toNumber() - clusterOffsetX;
 
-        drawMetricRow(dc, iconX, labelRightX, valueX, topY, "Step", formatSteps(getSteps()), 0x36B94C, 0);
-        drawDivider(dc, lineLeft, lineRight, topY + (rowGap / 2));
-        drawMetricRow(dc, iconX, labelRightX, valueX, topY + rowGap, "Temp", "18\u00B0", 0x178FDD, 1);
-        drawDivider(dc, lineLeft, lineRight, topY + rowGap + (rowGap / 2));
-        drawMetricRow(dc, iconX, labelRightX, valueX, topY + (rowGap * 2), "Bat", getBatteryText(), 0xF7B927, 2);
+        drawMetricRow(dc, iconX, labelX, valueX, topY, "Step", formatSteps(getSteps()), 0x36B94C, 0);
+        drawMetricRow(dc, iconX, labelX, valueX, topY + rowGap, "Temp", "18\u00B0", 0x178FDD, 1);
+        drawMetricRow(dc, iconX, labelX, valueX, topY + (rowGap * 2), "Bat", getBatteryText(), 0xF7B927, 2);
     }
 
-    private function drawMetricRow(dc as Dc, iconX as Number, labelRightX as Number, valueX as Number, y as Number, label as String, value as String, color as Number, iconType as Number) as Void {
+    private function drawMetricRow(dc as Dc, iconX as Number, labelX as Number, valueX as Number, y as Number, label as String, value as String, color as Number, iconType as Number) as Void {
         drawMetricIcon(dc, iconX, y, iconType);
 
         dc.setColor(0xFFFFFF, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(
-            labelRightX,
-            y,
-            Graphics.FONT_XTINY,
-            label,
-            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER
-        );
-        dc.drawText(
-            valueX,
-            y,
-            Graphics.FONT_XTINY,
-            value,
-            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER
-        );
-    }
-
-    private function drawDivider(dc as Dc, x1 as Number, x2 as Number, y as Number) as Void {
-        dc.setColor(0x65D7F4, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(2);
-        dc.drawLine(x1, y, x2, y);
-        dc.setPenWidth(1);
+        drawBoldText(dc, labelX, y, Graphics.FONT_XTINY, label, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        drawBoldText(dc, valueX, y, Graphics.FONT_XTINY, value, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     private function drawMetricIcon(dc as Dc, x as Number, y as Number, iconType as Number) as Void {
@@ -182,6 +159,11 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
             text,
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
         );
+    }
+
+    private function drawBoldText(dc as Dc, x as Number, y as Number, font as Graphics.FontType, text as String, justification as Number) as Void {
+        dc.drawText(x, y, font, text, justification);
+        dc.drawText(x + 1, y, font, text, justification);
     }
 
     private function getBatteryText() as String {
