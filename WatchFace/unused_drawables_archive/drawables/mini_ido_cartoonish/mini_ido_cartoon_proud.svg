@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="144" viewBox="0 0 136 144">
+  <title>Mini Ido Cartoon Proud Runner</title>
+  <defs>
+    <linearGradient id="skinProud" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#F0B38F"/>
+      <stop offset="1" stop-color="#D79270"/>
+    </linearGradient>
+    <linearGradient id="vestProud" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#17AEE7"/>
+      <stop offset="1" stop-color="#0E77B9"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="68" cy="132" rx="36" ry="7" fill="#000000" opacity="0.28"/>
+  <path d="M42 78 C44 61 54 53 68 53 C82 53 92 61 94 78 L98 117 C99 126 92 132 83 132 H53 C44 132 37 126 38 117 Z" fill="#B8FF26"/>
+  <path d="M49 58 H61 L57 119 H45 Z" fill="url(#vestProud)"/>
+  <path d="M75 58 H87 L91 119 H79 Z" fill="url(#vestProud)"/>
+  <path d="M56 73 H80" stroke="#7BE0FF" stroke-width="5" stroke-linecap="round"/>
+  <rect x="55" y="83" width="26" height="20" rx="4" fill="#E7FFF1"/>
+  <path d="M61 94 H75" stroke="#6844D8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M42 80 C31 84 26 92 24 102" fill="none" stroke="#D79270" stroke-width="10" stroke-linecap="round"/>
+  <path d="M95 80 C106 84 111 92 113 102" fill="none" stroke="#D79270" stroke-width="10" stroke-linecap="round"/>
+  <path d="M53 126 L48 104" stroke="#121821" stroke-width="12" stroke-linecap="round"/>
+  <path d="M83 126 L88 104" stroke="#121821" stroke-width="12" stroke-linecap="round"/>
+  <path d="M48 114 V128" stroke="#FF4FA3" stroke-width="8" stroke-linecap="round"/>
+  <path d="M88 114 V128" stroke="#FF4FA3" stroke-width="8" stroke-linecap="round"/>
+  <path d="M39 132 H58" stroke="#F3F6FA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M78 132 H97" stroke="#F3F6FA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M42 49 C42 31 53 18 68 18 C83 18 94 31 94 49 C94 67 83 81 68 81 C53 81 42 67 42 49Z" fill="url(#skinProud)"/>
+  <path d="M45 19 C49 13 59 10 68 10 C77 10 87 13 91 19 L91 27 H45Z" fill="#F6F7FA"/>
+  <path d="M86 21 C94 22 99 25 102 30 C96 31 91 30 86 27Z" fill="#E2E7EE"/>
+  <path d="M39 48 C34 48 32 54 35 60 C37 65 41 66 44 63" fill="#D79270"/>
+  <path d="M97 48 C102 48 104 54 101 60 C99 65 95 66 92 63" fill="#D79270"/>
+  <path d="M45 39 C50 33 57 30 68 30 C79 30 86 33 91 39 L91 43 H45Z" fill="#F6F7FA"/>
+  <path d="M49 46 C54 43 60 43 64 46" fill="none" stroke="#40322D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M72 46 C76 43 82 43 87 46" fill="none" stroke="#40322D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M49 50 C53 47 60 47 64 51" stroke="#11151A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M72 51 C76 47 83 47 87 50" stroke="#11151A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M48 58 C52 75 60 83 68 83 C76 83 84 75 88 58 C82 66 74 70 68 70 C62 70 54 66 48 58Z" fill="#6A514B"/>
+  <path d="M53 61 C58 69 78 69 83 61" fill="none" stroke="#F8EFEA" stroke-width="4" stroke-linecap="round"/>
+  <path d="M66 51 C64 56 64 59 68 59" fill="none" stroke="#B87862" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M113 28 L117 20 L121 28 L129 32 L121 36 L117 44 L113 36 L105 32Z" fill="#FFD43B"/>
+</svg>

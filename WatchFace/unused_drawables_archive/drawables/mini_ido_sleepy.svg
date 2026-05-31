@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="112" viewBox="0 0 88 112" shape-rendering="crispEdges">
+  <title>Mini Ido Sleepy Morning</title>
+  <g id="shadow" opacity="0.35">
+    <rect x="24" y="100" width="40" height="4" fill="#11151A"/>
+    <rect x="30" y="104" width="28" height="4" fill="#11151A"/>
+  </g>
+  <g id="legs">
+    <rect x="30" y="78" width="10" height="20" fill="#151A20"/>
+    <rect x="48" y="78" width="10" height="20" fill="#151A20"/>
+    <rect x="28" y="96" width="14" height="6" fill="#8FD8FF"/>
+    <rect x="46" y="96" width="14" height="6" fill="#8FD8FF"/>
+  </g>
+  <g id="body">
+    <rect x="23" y="43" width="42" height="39" rx="5" fill="#11151A"/>
+    <rect x="23" y="43" width="42" height="7" fill="#1D2530"/>
+    <rect x="18" y="52" width="8" height="22" fill="#11151A"/>
+    <rect x="62" y="52" width="8" height="22" fill="#11151A"/>
+    <rect x="17" y="73" width="10" height="6" fill="#DDA482"/>
+    <rect x="61" y="73" width="10" height="6" fill="#DDA482"/>
+    <rect x="31" y="54" width="26" height="5" fill="#C9A7FF"/>
+    <rect x="35" y="63" width="18" height="4" fill="#8FD8FF"/>
+  </g>
+  <g id="head">
+    <rect x="28" y="16" width="32" height="30" rx="8" fill="#DDA482"/>
+    <rect x="32" y="10" width="24" height="9" fill="#2B2622"/>
+    <rect x="30" y="12" width="28" height="4" fill="#3A342F"/>
+    <rect x="24" y="26" width="6" height="12" fill="#DDA482"/>
+    <rect x="58" y="26" width="6" height="12" fill="#DDA482"/>
+    <rect x="28" y="36" width="32" height="10" fill="#80645C"/>
+    <rect x="32" y="36" width="24" height="4" fill="#5F4B45"/>
+    <rect x="34" y="29" width="7" height="2" fill="#2B1D1B"/>
+    <rect x="49" y="29" width="7" height="2" fill="#2B1D1B"/>
+    <rect x="41" y="39" width="7" height="2" fill="#D8B7A6"/>
+  </g>
+  <g id="z">
+    <rect x="68" y="16" width="10" height="3" fill="#8FD8FF"/>
+    <rect x="74" y="19" width="3" height="3" fill="#8FD8FF"/>
+    <rect x="71" y="22" width="3" height="3" fill="#8FD8FF"/>
+    <rect x="68" y="25" width="10" height="3" fill="#8FD8FF"/>
+  </g>
+</svg>

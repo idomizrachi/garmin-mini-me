@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini Ido Right Data Rail Mock</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #020406;
+        --bezel: #151a21;
+        --ink: #f7fbff;
+        --muted: #6e7b89;
+        --blue: #7ed7ff;
+        --green: #55df84;
+        --pink: #ff5fa8;
+        --yellow: #ffd84e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+        background: #0a0d12;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .watch {
+        position: relative;
+        width: min(92vw, 390px);
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 50% 46%, rgba(126, 215, 255, 0.08), transparent 48%),
+          var(--bg);
+        box-shadow:
+          inset 0 0 0 11px var(--bezel),
+          inset 0 0 0 12px rgba(255, 255, 255, 0.1),
+          0 28px 70px rgba(0, 0, 0, 0.58);
+      }
+
+      .watch::before {
+        content: "";
+        position: absolute;
+        inset: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 50%;
+      }
+
+      .date,
+      .time,
+      .rail,
+      .mini {
+        position: absolute;
+      }
+
+      .date {
+        top: 44px;
+        left: 0;
+        right: 0;
+        color: var(--blue);
+        font-size: 11px;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .time {
+        top: 76px;
+        left: 0;
+        right: 0;
+        font-variant-numeric: tabular-nums;
+        font-size: 48px;
+        font-weight: 850;
+        line-height: 1;
+        text-align: center;
+        text-shadow: 0 0 18px rgba(126, 215, 255, 0.16);
+      }
+
+      .rail {
+        right: 27px;
+        top: 134px;
+        display: grid;
+        gap: 16px;
+        width: 58px;
+        text-align: center;
+      }
+
+      .metric {
+        display: grid;
+        gap: 2px;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 8px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .metric strong {
+        color: var(--ink);
+        font-size: 10px;
+        font-weight: 850;
+        line-height: 1.05;
+      }
+
+      .metric.goal strong {
+        color: var(--yellow);
+      }
+
+      .metric.week strong {
+        color: var(--blue);
+      }
+
+      .mini {
+        left: calc(50% - 18px);
+        top: 150px;
+        width: 86px;
+        height: 112px;
+        transform: translateX(-50%);
+      }
+
+      .head,
+      .cap,
+      .eye,
+      .mouth,
+      .body,
+      .vest,
+      .arm,
+      .leg,
+      .shoe {
+        position: absolute;
+      }
+
+      .head {
+        left: 26px;
+        top: 4px;
+        width: 34px;
+        height: 30px;
+        border-radius: 8px;
+        background: #f5b77c;
+        box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      .cap {
+        left: 21px;
+        top: 0;
+        width: 44px;
+        height: 12px;
+        border-radius: 7px 7px 2px 2px;
+        background: #11151a;
+      }
+
+      .cap::after {
+        content: "";
+        position: absolute;
+        right: -12px;
+        top: 5px;
+        width: 15px;
+        height: 5px;
+        background: #11151a;
+      }
+
+      .eye {
+        top: 18px;
+        width: 4px;
+        height: 4px;
+        background: #11151a;
+      }
+
+      .eye.left {
+        left: 36px;
+      }
+
+      .eye.right {
+        left: 49px;
+      }
+
+      .mouth {
+        left: 42px;
+        top: 27px;
+        width: 10px;
+        height: 4px;
+        border-bottom: 2px solid #11151a;
+      }
+
+      .body {
+        left: 22px;
+        top: 38px;
+        width: 42px;
+        height: 42px;
+        border-radius: 9px;
+        background: var(--green);
+      }
+
+      .vest {
+        left: 34px;
+        top: 40px;
+        width: 19px;
+        height: 33px;
+        border-left: 3px solid rgba(0, 0, 0, 0.28);
+        border-right: 3px solid rgba(0, 0, 0, 0.28);
+      }
+
+      .arm {
+        top: 48px;
+        width: 9px;
+        height: 34px;
+        border-radius: 5px;
+        background: #f5b77c;
+        transform-origin: top center;
+      }
+
+      .arm.left {
+        left: 12px;
+        transform: rotate(22deg);
+      }
+
+      .arm.right {
+        right: 12px;
+        transform: rotate(-22deg);
+      }
+
+      .leg {
+        top: 78px;
+        width: 12px;
+        height: 26px;
+        border-radius: 4px;
+        background: #151a21;
+      }
+
+      .leg.left {
+        left: 26px;
+      }
+
+      .leg.right {
+        right: 26px;
+      }
+
+      .shoe {
+        top: 101px;
+        width: 16px;
+        height: 7px;
+        border-radius: 4px;
+        background: var(--pink);
+      }
+
+      .shoe.left {
+        left: 21px;
+      }
+
+      .shoe.right {
+        right: 21px;
+      }
+
+      .platform {
+        position: absolute;
+        left: 127px;
+        right: 127px;
+        top: 274px;
+        height: 3px;
+        border-radius: 3px;
+        background: rgba(126, 215, 255, 0.36);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="watch" aria-label="Right data rail Mini Ido watch face layout">
+      <div class="date">30 MAY</div>
+      <div class="time">09:41</div>
+
+      <div class="mini" aria-hidden="true">
+        <div class="cap"></div>
+        <div class="head"></div>
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="mouth"></div>
+        <div class="body"></div>
+        <div class="vest"></div>
+        <div class="arm left"></div>
+        <div class="arm right"></div>
+        <div class="leg left"></div>
+        <div class="leg right"></div>
+        <div class="shoe left"></div>
+        <div class="shoe right"></div>
+      </div>
+
+      <div class="rail" aria-label="Compact right data rail">
+        <div class="metric">
+          <span>Steps</span>
+          <strong>6420</strong>
+        </div>
+        <div class="metric goal">
+          <span>Goal</span>
+          <strong>10K</strong>
+        </div>
+        <div class="metric week">
+          <span>Week</span>
+          <strong>-- km</strong>
+        </div>
+      </div>
+
+      <div class="platform"></div>
+    </main>
+  </body>
+</html>

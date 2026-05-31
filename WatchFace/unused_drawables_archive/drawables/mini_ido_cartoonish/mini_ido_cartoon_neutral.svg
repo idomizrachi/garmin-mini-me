@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="144" viewBox="0 0 128 144">
+  <title>Mini Ido Cartoon Neutral</title>
+  <defs>
+    <linearGradient id="skinNeutral" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#F0B38F"/>
+      <stop offset="1" stop-color="#D79270"/>
+    </linearGradient>
+    <linearGradient id="shirtNeutral" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#182233"/>
+      <stop offset="1" stop-color="#0D121B"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="64" cy="132" rx="34" ry="7" fill="#000000" opacity="0.28"/>
+  <path d="M38 78 C40 61 50 53 64 53 C78 53 88 61 90 78 L94 118 C95 126 89 132 80 132 H48 C39 132 33 126 34 118 Z" fill="url(#shirtNeutral)"/>
+  <path d="M43 80 C35 85 31 94 28 110" fill="none" stroke="#D79270" stroke-width="10" stroke-linecap="round"/>
+  <path d="M85 80 C93 85 97 94 100 110" fill="none" stroke="#D79270" stroke-width="10" stroke-linecap="round"/>
+  <path d="M49 126 L47 101" stroke="#121821" stroke-width="12" stroke-linecap="round"/>
+  <path d="M79 126 L81 101" stroke="#121821" stroke-width="12" stroke-linecap="round"/>
+  <path d="M40 132 H57" stroke="#F3F6FA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M71 132 H88" stroke="#F3F6FA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M38 49 C38 31 49 18 64 18 C79 18 90 31 90 49 C90 67 79 81 64 81 C49 81 38 67 38 49Z" fill="url(#skinNeutral)"/>
+  <path d="M43 42 C44 28 52 19 64 19 C76 19 84 28 85 42 C80 34 72 30 64 30 C56 30 48 34 43 42Z" fill="#2F2A25"/>
+  <path d="M35 48 C30 48 28 54 31 60 C33 65 37 66 40 63" fill="#D79270"/>
+  <path d="M93 48 C98 48 100 54 97 60 C95 65 91 66 88 63" fill="#D79270"/>
+  <path d="M43 59 C47 74 55 82 64 82 C73 82 81 74 85 59 C79 66 71 69 64 69 C57 69 49 66 43 59Z" fill="#6A514B"/>
+  <path d="M48 59 C52 67 58 71 64 71 C70 71 76 67 80 59" fill="none" stroke="#4E3D38" stroke-width="5" stroke-linecap="round"/>
+  <path d="M54 62 C58 66 70 66 74 62" fill="none" stroke="#F8EFEA" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="54" cy="49" rx="4.4" ry="5.2" fill="#251A18"/>
+  <ellipse cx="74" cy="49" rx="4.4" ry="5.2" fill="#251A18"/>
+  <circle cx="55.5" cy="47.2" r="1.4" fill="#FFFFFF"/>
+  <circle cx="75.5" cy="47.2" r="1.4" fill="#FFFFFF"/>
+  <path d="M49 40 C53 37 57 37 60 39" fill="none" stroke="#40322D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M68 39 C72 37 76 37 80 40" fill="none" stroke="#40322D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M62 50 C60 55 60 58 64 58" fill="none" stroke="#B87862" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M49 84 C56 88 72 88 79 84" fill="none" stroke="#273247" stroke-width="4" stroke-linecap="round"/>
+</svg>

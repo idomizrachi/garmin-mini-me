@@ -1,0 +1,1177 @@
+[ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [ActivityMonitor,1,14,29]; ]
+import Toybox.ActivityMonitor;
+[ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Time,5,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Time,6,14,18]; @symbol_importdef<2> = [Gregorian,6,19,28]; ]
+import Toybox.Time.Gregorian;
+[ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [WatchUi,7,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 9; @symbol_classdef = [MiniMeWatchFaceView,9,6,25]; @symbol_extends<0> = [WatchUi,9,34,41]; @symbol_extends<1> = [WatchFace,9,42,51]; ]
+class MiniMeWatchFaceView extends WatchUi.WatchFace {
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 9; ]
+    <init> {
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 15 18 ]
+        %tmp.1 = newa 12;
+        %tmp.2 = "JAN";
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = "FEB";
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = "MAR";
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = "APR";
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = "MAY";
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = "JUN";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = "JUL";
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        %tmp.23 = "AUG";
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 7 %tmp.23;
+        %tmp.26 = "SEP";
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 8 %tmp.26;
+        %tmp.29 = "OCT";
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 9 %tmp.29;
+        %tmp.32 = "NOV";
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 10 %tmp.32;
+        %tmp.35 = "DEC";
+        %tmp.36 = dup %tmp.34;
+        %tmp.37 = aputv %tmp.36 11 %tmp.35;
+        putv self :MONTHS %tmp.37;
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 10; @position = 18; @symbol_constdef = [MOOD_NEUTRAL,10,18,30]; ]
+    private
+    const MOOD_NEUTRAL = 0;
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 11; @position = 18; @symbol_constdef = [MOOD_PROUD,11,18,28]; ]
+    private
+    const MOOD_PROUD = 1;
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 12; @position = 18; @symbol_constdef = [MOOD_SOFT,12,18,27]; ]
+    private
+    const MOOD_SOFT = 2;
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 13; @position = 18; @symbol_constdef = [MOOD_SLEEPY,13,18,29]; ]
+    private
+    const MOOD_SLEEPY = 3;
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 15; @position = 18; @symbol_constdef = [MONTHS,15,18,24]; ]
+    private
+    const MONTHS;
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 20; @symbol_functiondef = [initialize,20,13,23]; ]
+    function initialize() as Void {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_20_26_22_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 21 8 ]
+        symbol [ WatchFace %tmp.2 21 8 17 ];
+        %tmp.2 = getv ? :WatchFace;
+        symbol [ initialize %tmp.3 21 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_20_26_22_4_stop:
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 24; @symbol_functiondef = [onLayout,24,13,21]; @symbol_param<0> = [dc,24,22,24]; @symbol_param<0>_type<0> = [Dc,24,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 27; @symbol_functiondef = [onShow,27,13,19]; ]
+    function onShow() as Void {
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 30; @symbol_functiondef = [onUpdate,30,13,21]; @symbol_param<0> = [dc,30,22,24]; @symbol_param<0>_type<0> = [Dc,30,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_30_40_32_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 31 8 ]
+        %tmp.1 = self;
+        symbol [ drawFace %tmp.2 31 8 16 ];
+        %tmp.2 = getv function %tmp.1 :drawFace;
+        %tmp.3 = lgetv %dc;
+        symbol [ dc %tmp.3 31 17 19 ];
+        %tmp.4 = false;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_30_40_32_4_stop:
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 34; @symbol_functiondef = [onPartialUpdate,34,13,28]; @symbol_param<0> = [dc,34,29,31]; @symbol_param<0>_type<0> = [Dc,34,35,37]; ]
+    function onPartialUpdate(dc as Dc) as Void {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_34_47_36_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 35 8 ]
+        %tmp.1 = self;
+        symbol [ drawFace %tmp.2 35 8 16 ];
+        %tmp.2 = getv function %tmp.1 :drawFace;
+        %tmp.3 = lgetv %dc;
+        symbol [ dc %tmp.3 35 17 19 ];
+        %tmp.4 = true;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_34_47_36_4_stop:
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 38; @symbol_functiondef = [onHide,38,13,19]; ]
+    function onHide() as Void {
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 41; @symbol_functiondef = [drawFace,41,21,29]; @symbol_param<0> = [dc,41,30,32]; @symbol_param<0>_type<0> = [Dc,41,36,38]; @symbol_param<1> = [lowPower,41,40,48]; @symbol_param<1>_type<0> = [Boolean,41,52,59]; ]
+    private
+    function drawFace(dc as Dc, lowPower as Boolean) as Void {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_41_69_52_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 42 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_41_69_52_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_41_69_52_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 42 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 42 20 22 ];
+        symbol [ getWidth %tmp.2 42 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 42 12 17 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 43 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_41_69_52_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_41_69_52_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 43 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 43 21 23 ];
+        symbol [ getHeight %tmp.5 43 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 43 12 18 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 44 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_41_69_52_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_41_69_52_4_stop" ]
+        %centerX.3 = local;
+        symbol [ centerX %centerX.3 44 12 19 ];
+        %tmp.7 = lgetv %width.1;
+        symbol [ width %tmp.7 44 22 27 ];
+        %tmp.8 = 2;
+        %tmp.9 = div %tmp.7 %tmp.8;
+        lputv %centerX.3 %tmp.9;
+        symbol [ centerX %centerX.3 44 12 19 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 46 8 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 46 8 10 ];
+        symbol [ setColor %tmp.11 46 11 19 ];
+        %tmp.11 = getv function %tmp.10 :setColor;
+        symbol [ Graphics %tmp.12 46 20 28 ];
+        %tmp.12 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.13 46 29 40 ];
+        %tmp.13 = getv %tmp.12 :COLOR_BLACK;
+        symbol [ Graphics %tmp.14 46 42 50 ];
+        %tmp.14 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.15 46 51 62 ];
+        %tmp.15 = getv %tmp.14 :COLOR_BLACK;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 47 8 ]
+        %tmp.16 = lgetv %dc;
+        symbol [ dc %tmp.16 47 8 10 ];
+        symbol [ clear %tmp.17 47 11 16 ];
+        %tmp.17 = getv function %tmp.16 :clear;
+        invoke %tmp.16 %tmp.17();
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 49 8 ]
+        %tmp.18 = self;
+        symbol [ drawTime %tmp.19 49 8 16 ];
+        %tmp.19 = getv function %tmp.18 :drawTime;
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 49 17 19 ];
+        %tmp.21 = lgetv %centerX.3;
+        symbol [ centerX %tmp.21 49 21 28 ];
+        %tmp.22 = lgetv %height.2;
+        symbol [ height %tmp.22 49 30 36 ];
+        invoke %tmp.18 %tmp.19(%tmp.20, %tmp.21, %tmp.22);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 50 8 ]
+        %tmp.23 = self;
+        symbol [ drawMiniIdo %tmp.24 50 8 19 ];
+        %tmp.24 = getv function %tmp.23 :drawMiniIdo;
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 50 20 22 ];
+        %tmp.26 = lgetv %centerX.3;
+        symbol [ centerX %tmp.26 50 24 31 ];
+        %tmp.27 = lgetv %height.2;
+        symbol [ height %tmp.27 50 33 39 ];
+        %tmp.28 = self;
+        symbol [ choosePrototypeMood %tmp.29 50 41 60 ];
+        %tmp.29 = getv function %tmp.28 :choosePrototypeMood;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = lgetv %lowPower;
+        symbol [ lowPower %tmp.31 50 64 72 ];
+        invoke %tmp.23 %tmp.24(%tmp.25, %tmp.26, %tmp.27, %tmp.30, %tmp.31);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 51 8 ]
+        %tmp.32 = self;
+        symbol [ drawPeripheralData %tmp.33 51 8 26 ];
+        %tmp.33 = getv function %tmp.32 :drawPeripheralData;
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 51 27 29 ];
+        %tmp.35 = lgetv %width.1;
+        symbol [ width %tmp.35 51 31 36 ];
+        %tmp.36 = lgetv %height.2;
+        symbol [ height %tmp.36 51 38 44 ];
+        invoke %tmp.32 %tmp.33(%tmp.34, %tmp.35, %tmp.36);
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_41_69_52_4_stop:
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 54; @symbol_functiondef = [drawTime,54,21,29]; @symbol_param<0> = [dc,54,30,32]; @symbol_param<0>_type<0> = [Dc,54,36,38]; @symbol_param<1> = [centerX,54,40,47]; @symbol_param<1>_type<0> = [Number,54,51,57]; @symbol_param<2> = [height,54,59,65]; @symbol_param<2>_type<0> = [Number,54,69,75]; ]
+    private
+    function drawTime(dc as Dc, centerX as Number, height as Number) as Void {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_54_85_69_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 55 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_54_85_69_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_54_85_69_4_stop" ]
+        %clock.1 = local;
+        symbol [ clock %clock.1 55 12 17 ];
+        symbol [ System %tmp.1 55 20 26 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.2 55 27 39 ];
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clock.1 %tmp.3;
+        symbol [ clock %clock.1 55 12 17 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 56 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_54_85_69_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_54_85_69_4_stop" ]
+        %timeText.2 = local;
+        symbol [ timeText %timeText.2 56 12 20 ];
+        symbol [ Lang %tmp.4 56 23 27 ];
+        %tmp.4 = getm $.Toybox.Lang;
+        symbol [ format %tmp.5 56 28 34 ];
+        %tmp.5 = getv function %tmp.4 :format;
+        %tmp.6 = "$1$:$2$";
+        %tmp.7 = newa 2;
+        %tmp.8 = lgetv %clock.1;
+        symbol [ clock %tmp.8 58 14 19 ];
+        symbol [ hour %tmp.9 58 20 24 ];
+        %tmp.9 = getv %tmp.8 :hour;
+        symbol [ format %tmp.10 58 25 31 ];
+        %tmp.10 = getv function %tmp.9 :format;
+        %tmp.11 = "%02d";
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        %tmp.13 = dup %tmp.7;
+        %tmp.14 = aputv %tmp.13 0 %tmp.12;
+        %tmp.15 = lgetv %clock.1;
+        symbol [ clock %tmp.15 58 41 46 ];
+        symbol [ min %tmp.16 58 47 50 ];
+        %tmp.16 = getv %tmp.15 :min;
+        symbol [ format %tmp.17 58 51 57 ];
+        %tmp.17 = getv function %tmp.16 :format;
+        %tmp.18 = "%02d";
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        %tmp.20 = dup %tmp.14;
+        %tmp.21 = aputv %tmp.20 1 %tmp.19;
+        %tmp.22 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.21);
+        lputv %timeText.2 %tmp.22;
+        symbol [ timeText %timeText.2 56 12 20 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 61 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 61 8 10 ];
+        symbol [ setColor %tmp.24 61 11 19 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ Graphics %tmp.25 61 20 28 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.26 61 29 40 ];
+        %tmp.26 = getv %tmp.25 :COLOR_WHITE;
+        symbol [ Graphics %tmp.27 61 42 50 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.28 61 51 68 ];
+        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 62 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 62 8 10 ];
+        symbol [ drawText %tmp.30 62 11 19 ];
+        %tmp.30 = getv function %tmp.29 :drawText;
+        %tmp.31 = lgetv %centerX;
+        symbol [ centerX %tmp.31 63 12 19 ];
+        %tmp.32 = lgetv %height;
+        symbol [ height %tmp.32 64 13 19 ];
+        %tmp.33 = 0.30;
+        %tmp.34 = mul %tmp.32 %tmp.33;
+        symbol [ toNumber %tmp.35 64 28 36 ];
+        %tmp.35 = getv function %tmp.34 :toNumber;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        symbol [ Graphics %tmp.37 65 12 20 ];
+        %tmp.37 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.38 65 21 36 ];
+        %tmp.38 = getv %tmp.37 :FONT_NUMBER_HOT;
+        %tmp.39 = lgetv %timeText.2;
+        symbol [ timeText %tmp.39 66 12 20 ];
+        symbol [ Graphics %tmp.40 67 12 20 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.41 67 21 40 ];
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.42 67 43 51 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.43 67 52 72 ];
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_VCENTER;
+        %tmp.44 = bitor %tmp.41 %tmp.43;
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.36, %tmp.38, %tmp.39, %tmp.44);
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_54_85_69_4_stop:
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 71; @symbol_functiondef = [drawPeripheralData,71,21,39]; @symbol_param<0> = [dc,71,40,42]; @symbol_param<0>_type<0> = [Dc,71,46,48]; @symbol_param<1> = [width,71,50,55]; @symbol_param<1>_type<0> = [Number,71,59,65]; @symbol_param<2> = [height,71,67,73]; @symbol_param<2>_type<0> = [Number,71,77,83]; ]
+    private
+    function drawPeripheralData(dc as Dc, width as Number, height as Number) as Void {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_71_93_102_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 72 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_71_93_102_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_71_93_102_4_stop" ]
+        %now.1 = local;
+        symbol [ now %now.1 72 12 15 ];
+        symbol [ Gregorian %tmp.1 72 18 27 ];
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.2 72 28 32 ];
+        %tmp.2 = getv function %tmp.1 :info;
+        symbol [ Time %tmp.3 72 33 37 ];
+        %tmp.3 = getm $.Toybox.Time;
+        symbol [ now %tmp.4 72 38 41 ];
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        symbol [ Time %tmp.6 72 45 49 ];
+        %tmp.6 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.7 72 50 62 ];
+        %tmp.7 = getv %tmp.6 :FORMAT_SHORT;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %now.1 %tmp.8;
+        symbol [ now %now.1 72 12 15 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 73 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_71_93_102_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_71_93_102_4_stop" ]
+        %dateText.2 = local;
+        symbol [ dateText %dateText.2 73 12 20 ];
+        symbol [ Lang %tmp.9 73 23 27 ];
+        %tmp.9 = getm $.Toybox.Lang;
+        symbol [ format %tmp.10 73 28 34 ];
+        %tmp.10 = getv function %tmp.9 :format;
+        %tmp.11 = "$1$ $2$";
+        %tmp.12 = newa 2;
+        %tmp.13 = lgetv %now.1;
+        symbol [ now %tmp.13 73 48 51 ];
+        symbol [ day %tmp.14 73 52 55 ];
+        %tmp.14 = getv %tmp.13 :day;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 0 %tmp.14;
+        symbol [ MONTHS %tmp.18 73 57 63 ];
+        %tmp.18 = getv ? :MONTHS;
+        %tmp.19 = lgetv %now.1;
+        symbol [ now %tmp.19 73 64 67 ];
+        symbol [ month %tmp.20 73 68 73 ];
+        %tmp.20 = getv %tmp.19 :month;
+        %tmp.21 = 1;
+        %tmp.22 = sub %tmp.20 %tmp.21;
+        %tmp.23 = agetv %tmp.18 %tmp.22;
+        %tmp.24 = dup %tmp.16;
+        %tmp.25 = aputv %tmp.24 1 %tmp.23;
+        %tmp.26 = invoke %tmp.9 %tmp.10(%tmp.11, %tmp.25);
+        lputv %dateText.2 %tmp.26;
+        symbol [ dateText %dateText.2 73 12 20 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 74 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_71_93_102_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_71_93_102_4_stop" ]
+        %stepsText.3 = local;
+        symbol [ stepsText %stepsText.3 74 12 21 ];
+        symbol [ Lang %tmp.27 74 24 28 ];
+        %tmp.27 = getm $.Toybox.Lang;
+        symbol [ format %tmp.28 74 29 35 ];
+        %tmp.28 = getv function %tmp.27 :format;
+        %tmp.29 = "$1$ STEPS";
+        %tmp.30 = newa 1;
+        %tmp.31 = self;
+        symbol [ getSteps %tmp.32 74 51 59 ];
+        %tmp.32 = getv function %tmp.31 :getSteps;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        symbol [ format %tmp.34 74 62 68 ];
+        %tmp.34 = getv function %tmp.33 :format;
+        %tmp.35 = "%d";
+        %tmp.36 = invoke %tmp.33 %tmp.34(%tmp.35);
+        %tmp.37 = dup %tmp.30;
+        %tmp.38 = aputv %tmp.37 0 %tmp.36;
+        %tmp.39 = invoke %tmp.27 %tmp.28(%tmp.29, %tmp.38);
+        lputv %stepsText.3 %tmp.39;
+        symbol [ stepsText %stepsText.3 74 12 21 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 76 8 ]
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 76 8 10 ];
+        symbol [ setColor %tmp.41 76 11 19 ];
+        %tmp.41 = getv function %tmp.40 :setColor;
+        %tmp.42 = 0x8FD8FF;
+        symbol [ Graphics %tmp.43 76 30 38 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.44 76 39 56 ];
+        %tmp.44 = getv %tmp.43 :COLOR_TRANSPARENT;
+        invoke %tmp.40 %tmp.41(%tmp.42, %tmp.44);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 77 8 ]
+        %tmp.45 = lgetv %dc;
+        symbol [ dc %tmp.45 77 8 10 ];
+        symbol [ drawText %tmp.46 77 11 19 ];
+        %tmp.46 = getv function %tmp.45 :drawText;
+        %tmp.47 = lgetv %width;
+        symbol [ width %tmp.47 78 12 17 ];
+        %tmp.48 = 2;
+        %tmp.49 = div %tmp.47 %tmp.48;
+        %tmp.50 = lgetv %height;
+        symbol [ height %tmp.50 79 13 19 ];
+        %tmp.51 = 0.69;
+        %tmp.52 = mul %tmp.50 %tmp.51;
+        symbol [ toNumber %tmp.53 79 28 36 ];
+        %tmp.53 = getv function %tmp.52 :toNumber;
+        %tmp.54 = invoke %tmp.52 %tmp.53();
+        symbol [ Graphics %tmp.55 80 12 20 ];
+        %tmp.55 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.56 80 21 31 ];
+        %tmp.56 = getv %tmp.55 :FONT_XTINY;
+        %tmp.57 = lgetv %dateText.2;
+        symbol [ dateText %tmp.57 81 12 20 ];
+        symbol [ Graphics %tmp.58 82 12 20 ];
+        %tmp.58 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.59 82 21 40 ];
+        %tmp.59 = getv %tmp.58 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.60 82 43 51 ];
+        %tmp.60 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.61 82 52 72 ];
+        %tmp.61 = getv %tmp.60 :TEXT_JUSTIFY_VCENTER;
+        %tmp.62 = bitor %tmp.59 %tmp.61;
+        invoke %tmp.45 %tmp.46(%tmp.49, %tmp.54, %tmp.56, %tmp.57, %tmp.62);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 85 8 ]
+        %tmp.63 = lgetv %dc;
+        symbol [ dc %tmp.63 85 8 10 ];
+        symbol [ setColor %tmp.64 85 11 19 ];
+        %tmp.64 = getv function %tmp.63 :setColor;
+        %tmp.65 = 0xFFFFFF;
+        symbol [ Graphics %tmp.66 85 30 38 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.67 85 39 56 ];
+        %tmp.67 = getv %tmp.66 :COLOR_TRANSPARENT;
+        invoke %tmp.63 %tmp.64(%tmp.65, %tmp.67);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 86 8 ]
+        %tmp.68 = lgetv %dc;
+        symbol [ dc %tmp.68 86 8 10 ];
+        symbol [ drawText %tmp.69 86 11 19 ];
+        %tmp.69 = getv function %tmp.68 :drawText;
+        %tmp.70 = lgetv %width;
+        symbol [ width %tmp.70 87 12 17 ];
+        %tmp.71 = 2;
+        %tmp.72 = div %tmp.70 %tmp.71;
+        %tmp.73 = lgetv %height;
+        symbol [ height %tmp.73 88 13 19 ];
+        %tmp.74 = 0.78;
+        %tmp.75 = mul %tmp.73 %tmp.74;
+        symbol [ toNumber %tmp.76 88 28 36 ];
+        %tmp.76 = getv function %tmp.75 :toNumber;
+        %tmp.77 = invoke %tmp.75 %tmp.76();
+        symbol [ Graphics %tmp.78 89 12 20 ];
+        %tmp.78 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.79 89 21 31 ];
+        %tmp.79 = getv %tmp.78 :FONT_SMALL;
+        %tmp.80 = lgetv %stepsText.3;
+        symbol [ stepsText %tmp.80 90 12 21 ];
+        symbol [ Graphics %tmp.81 91 12 20 ];
+        %tmp.81 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.82 91 21 40 ];
+        %tmp.82 = getv %tmp.81 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.83 91 43 51 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.84 91 52 72 ];
+        %tmp.84 = getv %tmp.83 :TEXT_JUSTIFY_VCENTER;
+        %tmp.85 = bitor %tmp.82 %tmp.84;
+        invoke %tmp.68 %tmp.69(%tmp.72, %tmp.77, %tmp.79, %tmp.80, %tmp.85);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 94 8 ]
+        %tmp.86 = lgetv %dc;
+        symbol [ dc %tmp.86 94 8 10 ];
+        symbol [ setColor %tmp.87 94 11 19 ];
+        %tmp.87 = getv function %tmp.86 :setColor;
+        %tmp.88 = 0x5E6A78;
+        symbol [ Graphics %tmp.89 94 30 38 ];
+        %tmp.89 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.90 94 39 56 ];
+        %tmp.90 = getv %tmp.89 :COLOR_TRANSPARENT;
+        invoke %tmp.86 %tmp.87(%tmp.88, %tmp.90);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 95 8 ]
+        %tmp.91 = lgetv %dc;
+        symbol [ dc %tmp.91 95 8 10 ];
+        symbol [ drawText %tmp.92 95 11 19 ];
+        %tmp.92 = getv function %tmp.91 :drawText;
+        %tmp.93 = lgetv %width;
+        symbol [ width %tmp.93 96 12 17 ];
+        %tmp.94 = 2;
+        %tmp.95 = div %tmp.93 %tmp.94;
+        %tmp.96 = lgetv %height;
+        symbol [ height %tmp.96 97 13 19 ];
+        %tmp.97 = 0.87;
+        %tmp.98 = mul %tmp.96 %tmp.97;
+        symbol [ toNumber %tmp.99 97 28 36 ];
+        %tmp.99 = getv function %tmp.98 :toNumber;
+        %tmp.100 = invoke %tmp.98 %tmp.99();
+        symbol [ Graphics %tmp.101 98 12 20 ];
+        %tmp.101 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.102 98 21 31 ];
+        %tmp.102 = getv %tmp.101 :FONT_XTINY;
+        %tmp.103 = "WEEK --.- KM";
+        symbol [ Graphics %tmp.104 100 12 20 ];
+        %tmp.104 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.105 100 21 40 ];
+        %tmp.105 = getv %tmp.104 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.106 100 43 51 ];
+        %tmp.106 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.107 100 52 72 ];
+        %tmp.107 = getv %tmp.106 :TEXT_JUSTIFY_VCENTER;
+        %tmp.108 = bitor %tmp.105 %tmp.107;
+        invoke %tmp.91 %tmp.92(%tmp.95, %tmp.100, %tmp.102, %tmp.103, %tmp.108);
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_71_93_102_4_stop:
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 104; @symbol_functiondef = [drawMiniIdo,104,21,32]; @symbol_param<0> = [dc,104,33,35]; @symbol_param<0>_type<0> = [Dc,104,39,41]; @symbol_param<1> = [centerX,104,43,50]; @symbol_param<1>_type<0> = [Number,104,54,60]; @symbol_param<2> = [height,104,62,68]; @symbol_param<2>_type<0> = [Number,104,72,78]; @symbol_param<3> = [mood,104,80,84]; @symbol_param<3>_type<0> = [Number,104,88,94]; @symbol_param<4> = [lowPower,104,96,104]; @symbol_param<4>_type<0> = [Boolean,104,108,115]; ]
+    private
+    function drawMiniIdo(dc as Dc, centerX as Number, height as Number, mood as Number, lowPower as Boolean) as Void {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 105 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_stop" ]
+        %bodyY.1 = local;
+        symbol [ bodyY %bodyY.1 105 12 17 ];
+        %tmp.1 = lgetv %height;
+        symbol [ height %tmp.1 105 21 27 ];
+        %tmp.2 = 0.52;
+        %tmp.3 = mul %tmp.1 %tmp.2;
+        symbol [ toNumber %tmp.4 105 36 44 ];
+        %tmp.4 = getv function %tmp.3 :toNumber;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        lputv %bodyY.1 %tmp.5;
+        symbol [ bodyY %bodyY.1 105 12 17 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 106 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_stop" ]
+        %color.2 = local;
+        symbol [ color %color.2 106 12 17 ];
+        %tmp.6 = 0x35D06F;
+        lputv %color.2 %tmp.6;
+        symbol [ color %color.2 106 12 17 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 107 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_stop" ]
+        %accent.3 = local;
+        symbol [ accent %accent.3 107 12 18 ];
+        %tmp.7 = 0xFF4FA3;
+        lputv %accent.3 %tmp.7;
+        symbol [ accent %accent.3 107 12 18 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 108 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_stop" ]
+        %label.4 = local;
+        symbol [ label %label.4 108 12 17 ];
+        %tmp.8 = "NEUTRAL";
+        lputv %label.4 %tmp.8;
+        symbol [ label %label.4 108 12 17 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 110 8 ]
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_110_8_122_8_if_stmt:
+        %tmp.9 = lgetv %mood;
+        symbol [ mood %tmp.9 110 12 16 ];
+        symbol [ MOOD_PROUD %tmp.11 110 20 30 ];
+        %tmp.11 = getv ? :MOOD_PROUD;
+        %tmp.12 = eq %tmp.9 %tmp.11;
+        bf %tmp.12 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_110_8_122_8_if_false;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_110_8_122_8_if_true:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_110_32_114_8_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 111 12 ]
+        %tmp.13 = 0xFFD43B;
+        lputv %color.2 %tmp.13;
+        symbol [ color %color.2 111 12 17 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 112 12 ]
+        %tmp.14 = 0x35D06F;
+        lputv %accent.3 %tmp.14;
+        symbol [ accent %accent.3 112 12 18 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 113 12 ]
+        %tmp.15 = "PROUD";
+        lputv %label.4 %tmp.15;
+        symbol [ label %label.4 113 12 17 ];
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_110_32_114_8_stop:
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_110_8_122_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_110_8_122_8_if_false:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 114 15 ]
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_114_15_122_8_if_stmt:
+        %tmp.16 = lgetv %mood;
+        symbol [ mood %tmp.16 114 19 23 ];
+        symbol [ MOOD_SOFT %tmp.18 114 27 36 ];
+        %tmp.18 = getv ? :MOOD_SOFT;
+        %tmp.19 = eq %tmp.16 %tmp.18;
+        bf %tmp.19 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_114_15_122_8_if_false;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_114_15_122_8_if_true:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_114_38_118_8_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 115 12 ]
+        %tmp.20 = 0x7E93A8;
+        lputv %color.2 %tmp.20;
+        symbol [ color %color.2 115 12 17 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 116 12 ]
+        %tmp.21 = 0x8FD8FF;
+        lputv %accent.3 %tmp.21;
+        symbol [ accent %accent.3 116 12 18 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 117 12 ]
+        %tmp.22 = "SOFT";
+        lputv %label.4 %tmp.22;
+        symbol [ label %label.4 117 12 17 ];
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_114_38_118_8_stop:
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_114_15_122_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_114_15_122_8_if_false:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 118 15 ]
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_118_15_122_8_if_stmt:
+        %tmp.23 = lgetv %mood;
+        symbol [ mood %tmp.23 118 19 23 ];
+        symbol [ MOOD_SLEEPY %tmp.25 118 27 38 ];
+        %tmp.25 = getv ? :MOOD_SLEEPY;
+        %tmp.26 = eq %tmp.23 %tmp.25;
+        bf %tmp.26 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_118_15_122_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_118_15_122_8_if_true:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_118_40_122_8_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 119 12 ]
+        %tmp.27 = 0x8FD8FF;
+        lputv %color.2 %tmp.27;
+        symbol [ color %color.2 119 12 17 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 120 12 ]
+        %tmp.28 = 0xC9A7FF;
+        lputv %accent.3 %tmp.28;
+        symbol [ accent %accent.3 120 12 18 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 121 12 ]
+        %tmp.29 = "SLEEPY";
+        lputv %label.4 %tmp.29;
+        symbol [ label %label.4 121 12 17 ];
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_118_40_122_8_stop:
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_118_15_122_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_118_15_122_8_if_end:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_114_15_122_8_if_end:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_110_8_122_8_if_end:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 124 8 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 124 8 10 ];
+        symbol [ setColor %tmp.31 124 11 19 ];
+        %tmp.31 = getv function %tmp.30 :setColor;
+        %tmp.32 = lgetv %color.2;
+        symbol [ color %tmp.32 124 20 25 ];
+        symbol [ Graphics %tmp.33 124 27 35 ];
+        %tmp.33 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.34 124 36 53 ];
+        %tmp.34 = getv %tmp.33 :COLOR_TRANSPARENT;
+        invoke %tmp.30 %tmp.31(%tmp.32, %tmp.34);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 125 8 ]
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 125 8 10 ];
+        symbol [ fillCircle %tmp.36 125 11 21 ];
+        %tmp.36 = getv function %tmp.35 :fillCircle;
+        %tmp.37 = lgetv %centerX;
+        symbol [ centerX %tmp.37 125 22 29 ];
+        %tmp.38 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.38 125 31 36 ];
+        %tmp.39 = 22;
+        %tmp.40 = sub %tmp.38 %tmp.39;
+        %tmp.41 = 16;
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.40, %tmp.41);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 126 8 ]
+        %tmp.42 = lgetv %dc;
+        symbol [ dc %tmp.42 126 8 10 ];
+        symbol [ fillRoundedRectangle %tmp.43 126 11 31 ];
+        %tmp.43 = getv function %tmp.42 :fillRoundedRectangle;
+        %tmp.44 = lgetv %centerX;
+        symbol [ centerX %tmp.44 126 32 39 ];
+        %tmp.45 = 17;
+        %tmp.46 = sub %tmp.44 %tmp.45;
+        %tmp.47 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.47 126 46 51 ];
+        %tmp.48 = 8;
+        %tmp.49 = sub %tmp.47 %tmp.48;
+        %tmp.50 = 34;
+        %tmp.51 = 44;
+        %tmp.52 = 8;
+        invoke %tmp.42 %tmp.43(%tmp.46, %tmp.49, %tmp.50, %tmp.51, %tmp.52);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 128 8 ]
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 128 8 10 ];
+        symbol [ setColor %tmp.54 128 11 19 ];
+        %tmp.54 = getv function %tmp.53 :setColor;
+        symbol [ Graphics %tmp.55 128 20 28 ];
+        %tmp.55 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.56 128 29 40 ];
+        %tmp.56 = getv %tmp.55 :COLOR_BLACK;
+        symbol [ Graphics %tmp.57 128 42 50 ];
+        %tmp.57 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.58 128 51 68 ];
+        %tmp.58 = getv %tmp.57 :COLOR_TRANSPARENT;
+        invoke %tmp.53 %tmp.54(%tmp.56, %tmp.58);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 129 8 ]
+        %tmp.59 = lgetv %dc;
+        symbol [ dc %tmp.59 129 8 10 ];
+        symbol [ fillCircle %tmp.60 129 11 21 ];
+        %tmp.60 = getv function %tmp.59 :fillCircle;
+        %tmp.61 = lgetv %centerX;
+        symbol [ centerX %tmp.61 129 22 29 ];
+        %tmp.62 = 6;
+        %tmp.63 = sub %tmp.61 %tmp.62;
+        %tmp.64 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.64 129 35 40 ];
+        %tmp.65 = 25;
+        %tmp.66 = sub %tmp.64 %tmp.65;
+        %tmp.67 = 2;
+        invoke %tmp.59 %tmp.60(%tmp.63, %tmp.66, %tmp.67);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 130 8 ]
+        %tmp.68 = lgetv %dc;
+        symbol [ dc %tmp.68 130 8 10 ];
+        symbol [ fillCircle %tmp.69 130 11 21 ];
+        %tmp.69 = getv function %tmp.68 :fillCircle;
+        %tmp.70 = lgetv %centerX;
+        symbol [ centerX %tmp.70 130 22 29 ];
+        %tmp.71 = 6;
+        %tmp.72 = add %tmp.70 %tmp.71;
+        %tmp.73 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.73 130 35 40 ];
+        %tmp.74 = 25;
+        %tmp.75 = sub %tmp.73 %tmp.74;
+        %tmp.76 = 2;
+        invoke %tmp.68 %tmp.69(%tmp.72, %tmp.75, %tmp.76);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 132 8 ]
+        %tmp.77 = lgetv %dc;
+        symbol [ dc %tmp.77 132 8 10 ];
+        symbol [ setColor %tmp.78 132 11 19 ];
+        %tmp.78 = getv function %tmp.77 :setColor;
+        %tmp.79 = lgetv %accent.3;
+        symbol [ accent %tmp.79 132 20 26 ];
+        symbol [ Graphics %tmp.80 132 28 36 ];
+        %tmp.80 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.81 132 37 54 ];
+        %tmp.81 = getv %tmp.80 :COLOR_TRANSPARENT;
+        invoke %tmp.77 %tmp.78(%tmp.79, %tmp.81);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 133 8 ]
+        %tmp.82 = lgetv %dc;
+        symbol [ dc %tmp.82 133 8 10 ];
+        symbol [ fillRectangle %tmp.83 133 11 24 ];
+        %tmp.83 = getv function %tmp.82 :fillRectangle;
+        %tmp.84 = lgetv %centerX;
+        symbol [ centerX %tmp.84 133 25 32 ];
+        %tmp.85 = 20;
+        %tmp.86 = sub %tmp.84 %tmp.85;
+        %tmp.87 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.87 133 39 44 ];
+        %tmp.88 = 37;
+        %tmp.89 = add %tmp.87 %tmp.88;
+        %tmp.90 = 12;
+        %tmp.91 = 18;
+        invoke %tmp.82 %tmp.83(%tmp.86, %tmp.89, %tmp.90, %tmp.91);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 134 8 ]
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 134 8 10 ];
+        symbol [ fillRectangle %tmp.93 134 11 24 ];
+        %tmp.93 = getv function %tmp.92 :fillRectangle;
+        %tmp.94 = lgetv %centerX;
+        symbol [ centerX %tmp.94 134 25 32 ];
+        %tmp.95 = 8;
+        %tmp.96 = add %tmp.94 %tmp.95;
+        %tmp.97 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.97 134 38 43 ];
+        %tmp.98 = 37;
+        %tmp.99 = add %tmp.97 %tmp.98;
+        %tmp.100 = 12;
+        %tmp.101 = 18;
+        invoke %tmp.92 %tmp.93(%tmp.96, %tmp.99, %tmp.100, %tmp.101);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 135 8 ]
+        %tmp.102 = lgetv %dc;
+        symbol [ dc %tmp.102 135 8 10 ];
+        symbol [ drawLine %tmp.103 135 11 19 ];
+        %tmp.103 = getv function %tmp.102 :drawLine;
+        %tmp.104 = lgetv %centerX;
+        symbol [ centerX %tmp.104 135 20 27 ];
+        %tmp.105 = 17;
+        %tmp.106 = sub %tmp.104 %tmp.105;
+        %tmp.107 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.107 135 34 39 ];
+        %tmp.108 = 4;
+        %tmp.109 = add %tmp.107 %tmp.108;
+        %tmp.110 = lgetv %centerX;
+        symbol [ centerX %tmp.110 135 45 52 ];
+        %tmp.111 = 34;
+        %tmp.112 = sub %tmp.110 %tmp.111;
+        %tmp.113 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.113 135 59 64 ];
+        %tmp.114 = 20;
+        %tmp.115 = add %tmp.113 %tmp.114;
+        invoke %tmp.102 %tmp.103(%tmp.106, %tmp.109, %tmp.112, %tmp.115);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 136 8 ]
+        %tmp.116 = lgetv %dc;
+        symbol [ dc %tmp.116 136 8 10 ];
+        symbol [ drawLine %tmp.117 136 11 19 ];
+        %tmp.117 = getv function %tmp.116 :drawLine;
+        %tmp.118 = lgetv %centerX;
+        symbol [ centerX %tmp.118 136 20 27 ];
+        %tmp.119 = 17;
+        %tmp.120 = add %tmp.118 %tmp.119;
+        %tmp.121 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.121 136 34 39 ];
+        %tmp.122 = 4;
+        %tmp.123 = add %tmp.121 %tmp.122;
+        %tmp.124 = lgetv %centerX;
+        symbol [ centerX %tmp.124 136 45 52 ];
+        %tmp.125 = 34;
+        %tmp.126 = add %tmp.124 %tmp.125;
+        %tmp.127 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.127 136 59 64 ];
+        %tmp.128 = 20;
+        %tmp.129 = add %tmp.127 %tmp.128;
+        invoke %tmp.116 %tmp.117(%tmp.120, %tmp.123, %tmp.126, %tmp.129);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 138 8 ]
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_138_8_142_8_if_stmt:
+        %tmp.130 = lgetv %mood;
+        symbol [ mood %tmp.130 138 12 16 ];
+        symbol [ MOOD_PROUD %tmp.132 138 20 30 ];
+        %tmp.132 = getv ? :MOOD_PROUD;
+        %tmp.133 = eq %tmp.130 %tmp.132;
+        bf %tmp.133 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_138_8_142_8_if_false;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_138_8_142_8_if_true:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_138_32_140_8_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 139 12 ]
+        %tmp.134 = self;
+        symbol [ drawSign %tmp.135 139 12 20 ];
+        %tmp.135 = getv function %tmp.134 :drawSign;
+        %tmp.136 = lgetv %dc;
+        symbol [ dc %tmp.136 139 21 23 ];
+        %tmp.137 = lgetv %centerX;
+        symbol [ centerX %tmp.137 139 25 32 ];
+        %tmp.138 = 50;
+        %tmp.139 = add %tmp.137 %tmp.138;
+        %tmp.140 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.140 139 39 44 ];
+        %tmp.141 = 38;
+        %tmp.142 = sub %tmp.140 %tmp.141;
+        %tmp.143 = "NICE";
+        invoke %tmp.134 %tmp.135(%tmp.136, %tmp.139, %tmp.142, %tmp.143);
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_138_32_140_8_stop:
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_138_8_142_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_138_8_142_8_if_false:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 140 15 ]
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_140_15_142_8_if_stmt:
+        %tmp.144 = lgetv %mood;
+        symbol [ mood %tmp.144 140 19 23 ];
+        symbol [ MOOD_SLEEPY %tmp.146 140 27 38 ];
+        %tmp.146 = getv ? :MOOD_SLEEPY;
+        %tmp.147 = eq %tmp.144 %tmp.146;
+        bf %tmp.147 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_140_15_142_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_140_15_142_8_if_true:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_140_40_142_8_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 141 12 ]
+        %tmp.148 = self;
+        symbol [ drawSign %tmp.149 141 12 20 ];
+        %tmp.149 = getv function %tmp.148 :drawSign;
+        %tmp.150 = lgetv %dc;
+        symbol [ dc %tmp.150 141 21 23 ];
+        %tmp.151 = lgetv %centerX;
+        symbol [ centerX %tmp.151 141 25 32 ];
+        %tmp.152 = 45;
+        %tmp.153 = add %tmp.151 %tmp.152;
+        %tmp.154 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.154 141 39 44 ];
+        %tmp.155 = 42;
+        %tmp.156 = sub %tmp.154 %tmp.155;
+        %tmp.157 = "Z Z";
+        invoke %tmp.148 %tmp.149(%tmp.150, %tmp.153, %tmp.156, %tmp.157);
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_140_40_142_8_stop:
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_140_15_142_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_140_15_142_8_if_end:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_138_8_142_8_if_end:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 144 8 ]
+        %tmp.158 = lgetv %dc;
+        symbol [ dc %tmp.158 144 8 10 ];
+        symbol [ setColor %tmp.159 144 11 19 ];
+        %tmp.159 = getv function %tmp.158 :setColor;
+        %tmp.160 = 0x5E6A78;
+        symbol [ Graphics %tmp.161 144 30 38 ];
+        %tmp.161 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.162 144 39 56 ];
+        %tmp.162 = getv %tmp.161 :COLOR_TRANSPARENT;
+        invoke %tmp.158 %tmp.159(%tmp.160, %tmp.162);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 145 8 ]
+        %tmp.163 = lgetv %dc;
+        symbol [ dc %tmp.163 145 8 10 ];
+        symbol [ drawText %tmp.164 145 11 19 ];
+        %tmp.164 = getv function %tmp.163 :drawText;
+        %tmp.165 = lgetv %centerX;
+        symbol [ centerX %tmp.165 146 12 19 ];
+        %tmp.166 = lgetv %bodyY.1;
+        symbol [ bodyY %tmp.166 147 12 17 ];
+        %tmp.167 = 68;
+        %tmp.168 = add %tmp.166 %tmp.167;
+        symbol [ Graphics %tmp.169 148 12 20 ];
+        %tmp.169 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.170 148 21 31 ];
+        %tmp.170 = getv %tmp.169 :FONT_XTINY;
+        %tmp.171 = lgetv %label.4;
+        symbol [ label %tmp.171 149 12 17 ];
+        symbol [ Graphics %tmp.172 150 12 20 ];
+        %tmp.172 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.173 150 21 40 ];
+        %tmp.173 = getv %tmp.172 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.174 150 43 51 ];
+        %tmp.174 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.175 150 52 72 ];
+        %tmp.175 = getv %tmp.174 :TEXT_JUSTIFY_VCENTER;
+        %tmp.176 = bitor %tmp.173 %tmp.175;
+        invoke %tmp.163 %tmp.164(%tmp.165, %tmp.168, %tmp.170, %tmp.171, %tmp.176);
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_104_125_152_4_stop:
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 154; @symbol_functiondef = [drawSign,154,21,29]; @symbol_param<0> = [dc,154,30,32]; @symbol_param<0>_type<0> = [Dc,154,36,38]; @symbol_param<1> = [x,154,40,41]; @symbol_param<1>_type<0> = [Number,154,45,51]; @symbol_param<2> = [y,154,53,54]; @symbol_param<2>_type<0> = [Number,154,58,64]; @symbol_param<3> = [text,154,66,70]; @symbol_param<3>_type<0> = [String,154,74,80]; ]
+    private
+    function drawSign(dc as Dc, x as Number, y as Number, text as String) as Void {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_154_90_165_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 155 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 155 8 10 ];
+        symbol [ setColor %tmp.2 155 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = 0xFFFFFF;
+        symbol [ Graphics %tmp.4 155 30 38 ];
+        %tmp.4 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.5 155 39 56 ];
+        %tmp.5 = getv %tmp.4 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 156 8 ]
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 156 8 10 ];
+        symbol [ fillRoundedRectangle %tmp.7 156 11 31 ];
+        %tmp.7 = getv function %tmp.6 :fillRoundedRectangle;
+        %tmp.8 = lgetv %x;
+        symbol [ x %tmp.8 156 32 33 ];
+        %tmp.9 = 24;
+        %tmp.10 = sub %tmp.8 %tmp.9;
+        %tmp.11 = lgetv %y;
+        symbol [ y %tmp.11 156 40 41 ];
+        %tmp.12 = 12;
+        %tmp.13 = sub %tmp.11 %tmp.12;
+        %tmp.14 = 48;
+        %tmp.15 = 24;
+        %tmp.16 = 4;
+        invoke %tmp.6 %tmp.7(%tmp.10, %tmp.13, %tmp.14, %tmp.15, %tmp.16);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 157 8 ]
+        %tmp.17 = lgetv %dc;
+        symbol [ dc %tmp.17 157 8 10 ];
+        symbol [ setColor %tmp.18 157 11 19 ];
+        %tmp.18 = getv function %tmp.17 :setColor;
+        %tmp.19 = 0x11151A;
+        symbol [ Graphics %tmp.20 157 30 38 ];
+        %tmp.20 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.21 157 39 56 ];
+        %tmp.21 = getv %tmp.20 :COLOR_TRANSPARENT;
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.21);
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 158 8 ]
+        %tmp.22 = lgetv %dc;
+        symbol [ dc %tmp.22 158 8 10 ];
+        symbol [ drawText %tmp.23 158 11 19 ];
+        %tmp.23 = getv function %tmp.22 :drawText;
+        %tmp.24 = lgetv %x;
+        symbol [ x %tmp.24 159 12 13 ];
+        %tmp.25 = lgetv %y;
+        symbol [ y %tmp.25 160 12 13 ];
+        symbol [ Graphics %tmp.26 161 12 20 ];
+        %tmp.26 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.27 161 21 31 ];
+        %tmp.27 = getv %tmp.26 :FONT_XTINY;
+        %tmp.28 = lgetv %text;
+        symbol [ text %tmp.28 162 12 16 ];
+        symbol [ Graphics %tmp.29 163 12 20 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.30 163 21 40 ];
+        %tmp.30 = getv %tmp.29 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.31 163 43 51 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.32 163 52 72 ];
+        %tmp.32 = getv %tmp.31 :TEXT_JUSTIFY_VCENTER;
+        %tmp.33 = bitor %tmp.30 %tmp.32;
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.25, %tmp.27, %tmp.28, %tmp.33);
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_154_90_165_4_stop:
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 167; @symbol_functiondef = [choosePrototypeMood,167,21,40]; @symbol_return<0> = [Number,167,46,52]; ]
+    private
+    function choosePrototypeMood() as Number {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_167_53_179_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 168 8 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_167_53_179_4_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_167_53_179_4_stop" ]
+        %clock.1 = local;
+        symbol [ clock %clock.1 168 12 17 ];
+        symbol [ System %tmp.1 168 20 26 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.2 168 27 39 ];
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clock.1 %tmp.3;
+        symbol [ clock %clock.1 168 12 17 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 170 8 ]
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_170_8_176_8_if_stmt:
+        %tmp.4 = lgetv %clock.1;
+        symbol [ clock %tmp.4 170 12 17 ];
+        symbol [ hour %tmp.5 170 18 22 ];
+        %tmp.5 = getv %tmp.4 :hour;
+        %tmp.6 = 9;
+        %tmp.7 = lt %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_170_8_176_8_if_false;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_170_8_176_8_if_true:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_170_28_172_8_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 171 12 ]
+        symbol [ MOOD_SLEEPY %tmp.9 171 19 30 ];
+        %tmp.9 = getv ? :MOOD_SLEEPY;
+        ret %tmp.9;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_170_28_172_8_stop:
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_170_8_176_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_170_8_176_8_if_false:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 172 15 ]
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_15_176_8_if_stmt:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_19_172_52_begin:
+        %tmp.10 = lgetv %clock.1;
+        symbol [ clock %tmp.10 172 19 24 ];
+        symbol [ hour %tmp.11 172 25 29 ];
+        %tmp.11 = getv %tmp.10 :hour;
+        %tmp.12 = 18;
+        %tmp.13 = gte %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_15_176_8_if_false;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_39_172_52_true:
+        %tmp.14 = lgetv %clock.1;
+        symbol [ clock %tmp.14 172 39 44 ];
+        symbol [ hour %tmp.15 172 45 49 ];
+        %tmp.15 = getv %tmp.14 :hour;
+        %tmp.16 = 20;
+        %tmp.17 = lt %tmp.15 %tmp.16;
+        push %tmp.17;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_39_172_52_end:
+        %tmp.18 = phi [%tmp.13 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_19_172_52_begin] [%tmp.17 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_39_172_52_true] [%tmp.18 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_39_172_52_end];
+        bf %tmp.18 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_15_176_8_if_false;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_15_176_8_if_true:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_56_174_8_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 173 12 ]
+        symbol [ MOOD_PROUD %tmp.20 173 19 29 ];
+        %tmp.20 = getv ? :MOOD_PROUD;
+        ret %tmp.20;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_56_174_8_stop:
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_15_176_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_15_176_8_if_false:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 174 15 ]
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_15_176_8_if_stmt:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_19_174_52_begin:
+        %tmp.21 = lgetv %clock.1;
+        symbol [ clock %tmp.21 174 19 24 ];
+        symbol [ hour %tmp.22 174 25 29 ];
+        %tmp.22 = getv %tmp.21 :hour;
+        %tmp.23 = 22;
+        %tmp.24 = gte %tmp.22 %tmp.23;
+        bt %tmp.24 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_15_176_8_if_true;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_39_174_52_false:
+        %tmp.25 = lgetv %clock.1;
+        symbol [ clock %tmp.25 174 39 44 ];
+        symbol [ hour %tmp.26 174 45 49 ];
+        %tmp.26 = getv %tmp.25 :hour;
+        %tmp.27 = 6;
+        %tmp.28 = lt %tmp.26 %tmp.27;
+        push %tmp.28;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_39_174_52_end:
+        %tmp.29 = phi [%tmp.24 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_19_174_52_begin] [%tmp.28 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_39_174_52_false] [%tmp.29 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_39_174_52_end];
+        bf %tmp.29 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_15_176_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_15_176_8_if_true:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_55_176_8_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 175 12 ]
+        symbol [ MOOD_SOFT %tmp.31 175 19 28 ];
+        %tmp.31 = getv ? :MOOD_SOFT;
+        ret %tmp.31;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_55_176_8_stop:
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_15_176_8_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_174_15_176_8_if_end:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_172_15_176_8_if_end:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_170_8_176_8_if_end:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 178 8 ]
+        symbol [ MOOD_NEUTRAL %tmp.33 178 15 27 ];
+        %tmp.33 = getv ? :MOOD_NEUTRAL;
+        ret %tmp.33;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_167_53_179_4_stop:
+    }
+    [ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 181; @symbol_functiondef = [getSteps,181,21,29]; @symbol_return<0> = [Number,181,35,41]; ]
+    private
+    function getSteps() as Number {
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_181_42_192_4_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 182 8 ]
+        try @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_beginTry @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_endTry @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_catch @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_finally;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_beginTry:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_12_188_8_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 183 12 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_12_188_8_start" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_12_188_8_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 183 16 20 ];
+        symbol [ ActivityMonitor %tmp.1 183 23 38 ];
+        %tmp.1 = getm $.Toybox.ActivityMonitor;
+        symbol [ getInfo %tmp.2 183 39 46 ];
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+        symbol [ info %info.1 183 16 20 ];
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 185 12 ]
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_12_187_12_if_stmt:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_16_185_74_begin:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_16_185_50_begin:
+        %tmp.4 = lgetv %info.1;
+        symbol [ info %tmp.4 185 17 21 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_12_187_12_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_34_185_50_true:
+        %tmp.7 = lgetv %info.1;
+        symbol [ info %tmp.7 185 35 39 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.10 = const :steps;
+        symbol [ steps %tmp.10 185 45 50 const ];
+        %tmp.11 = canhazplz %tmp.8 %tmp.10;
+        push %tmp.11;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_34_185_50_end:
+        %tmp.12 = phi [%tmp.6 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_16_185_50_begin] [%tmp.11 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_34_185_50_true] [%tmp.12 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_34_185_50_end];
+        bf %tmp.12 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_12_187_12_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_55_185_74_true:
+        %tmp.13 = lgetv %info.1;
+        symbol [ info %tmp.13 185 56 60 ];
+        %tmp.14 = as %tmp.13 { (interface { var steps; }) && (!Null) };
+        symbol [ steps %tmp.15 185 61 66 ];
+        %tmp.15 = getv %tmp.14 :steps;
+        %tmp.16 = null;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        push %tmp.17;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_55_185_74_end:
+        %tmp.18 = phi [%tmp.12 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_16_185_74_begin] [%tmp.17 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_55_185_74_true] [%tmp.18 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_55_185_74_end];
+        bf %tmp.18 @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_12_187_12_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_12_187_12_if_true:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_77_187_12_start:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 186 16 ]
+        %tmp.19 = lgetv %info.1;
+        symbol [ info %tmp.19 186 23 27 ];
+        %tmp.20 = as %tmp.19 { (interface { var steps; }) && (!Null) };
+        symbol [ steps %tmp.21 186 28 33 ];
+        %tmp.21 = getv %tmp.20 :steps;
+        jsr @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_finally;
+        ret %tmp.21;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_77_187_12_stop:
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_12_187_12_if_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_185_12_187_12_if_end:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_12_188_8_stop:
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_endTry:
+        jsr @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_finally;
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_catch:
+        %tmp.22 = exception;
+        push %tmp.22;
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 188 10 ]
+        [ "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_catch" "_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_188_10_189_8_end" ]
+        %ex.2 = local;
+        symbol [ ex %ex.2 188 17 19 ];
+        %tmp.23 = dup %tmp.22;
+        lputv %ex.2 %tmp.23;
+        symbol [ ex %ex.2 188 17 19 ];
+        jsr @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_finally;
+        pop;
+        goto @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_end;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_188_10_189_8_end:
+        try @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_catch @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_188_10_189_8_end @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_188_10_189_8_end @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_finally;
+        jsr @_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_finally;
+        throw %tmp.22;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_finally:
+        jsrret;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_182_8_189_8_end:
+[ "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" 191 8 ]
+        %tmp.24 = 0;
+        ret %tmp.24;
+_Users_idomizrachi_Documents_Garmin_Mini_Me_WatchFace_source_MiniMeWatchFaceView_mc_181_42_192_4_stop:
+    }
+}
+[ @file = "/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc"; @line = 1; ]
+<init> {
+}

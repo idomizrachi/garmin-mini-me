@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <title>Mini Ido Badge Sleepy</title>
+  <defs>
+    <radialGradient id="sleepyBg" cx="50%" cy="45%" r="58%">
+      <stop offset="0" stop-color="#114066"/>
+      <stop offset="1" stop-color="#061B31"/>
+    </radialGradient>
+    <linearGradient id="sleepySkin" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#E9A36F"/>
+      <stop offset="1" stop-color="#B96A43"/>
+    </linearGradient>
+    <linearGradient id="sleepyVest" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#1593D4"/>
+      <stop offset="1" stop-color="#075A8C"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="73" fill="url(#sleepyBg)" stroke="#050505" stroke-width="5"/>
+  <path d="M124 34 C111 38 106 52 112 64 C101 58 97 45 102 35 C107 25 118 21 124 34Z" fill="#FFD83D"/>
+  <path d="M34 65 H48 L36 82 H51 M44 51 H56 L47 64 H59 M27 80 H37 L29 92 H40" fill="none" stroke="#F3F6FA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="42" cy="38" r="3" fill="#FFD83D"/>
+  <circle cx="119" cy="80" r="3" fill="#FFD83D"/>
+  <circle cx="132" cy="64" r="3" fill="#FFD83D"/>
+  <clipPath id="sleepyClip"><circle cx="80" cy="80" r="70"/></clipPath>
+  <g clip-path="url(#sleepyClip)">
+    <path d="M46 126 C48 92 58 72 80 72 C102 72 112 92 114 126 L120 166 H40Z" fill="#C8FF2B"/>
+    <path d="M57 78 C48 91 44 111 42 143" fill="none" stroke="url(#sleepyVest)" stroke-width="15" stroke-linecap="round"/>
+    <path d="M103 78 C112 91 116 111 118 143" fill="none" stroke="url(#sleepyVest)" stroke-width="15" stroke-linecap="round"/>
+    <path d="M54 102 H106" stroke="#94E9FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M58 122 H102" stroke="#8C9AA7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M46 104 C53 91 60 83 67 79" fill="none" stroke="url(#sleepySkin)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M70 76 C75 83 76 93 72 102" fill="none" stroke="url(#sleepySkin)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M73 91 C65 86 60 77 64 71 C70 63 85 77 82 93" fill="url(#sleepySkin)" stroke="#141414" stroke-width="3"/>
+    <path d="M61 94 C58 107 52 118 42 126" fill="none" stroke="url(#sleepySkin)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M50 60 C50 38 63 22 80 22 C97 22 110 38 110 60 C110 82 98 99 80 99 C62 99 50 82 50 60Z" fill="url(#sleepySkin)" stroke="#151515" stroke-width="3"/>
+    <path d="M51 50 C56 34 67 27 80 27 C93 27 104 34 109 50 C103 40 93 35 80 35 C67 35 57 40 51 50Z" fill="#1A1512"/>
+    <path d="M42 59 C36 59 33 67 37 74 C40 82 47 81 50 76" fill="#D48257" stroke="#151515" stroke-width="2"/>
+    <path d="M118 59 C124 59 127 67 123 74 C120 82 113 81 110 76" fill="#D48257" stroke="#151515" stroke-width="2"/>
+    <path d="M47 43 C51 28 65 18 80 18 C95 18 109 28 113 43 L107 48 C101 36 91 30 80 30 C69 30 59 36 53 48Z" fill="#F7F7F7" stroke="#141414" stroke-width="3"/>
+    <path d="M87 22 C99 27 108 34 113 43 L104 51 C97 39 89 32 78 30Z" fill="#E6EAF1" stroke="#141414" stroke-width="2"/>
+    <path d="M55 62 C60 67 66 67 71 62" fill="none" stroke="#2B1C19" stroke-width="4" stroke-linecap="round"/>
+    <path d="M88 62 C93 67 99 67 104 62" fill="none" stroke="#2B1C19" stroke-width="4" stroke-linecap="round"/>
+    <path d="M74 70 C72 74 73 78 80 78" fill="none" stroke="#8A482C" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="83" cy="86" rx="9" ry="12" fill="#401C17" stroke="#151515" stroke-width="2"/>
+    <path d="M55 81 C62 93 98 93 105 81" fill="none" stroke="#8B8B8B" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+  </g>
+</svg>

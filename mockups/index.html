@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Garmin Mini Me Mockups</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #090b10;
+        --panel: #111720;
+        --ink: #f7fbff;
+        --muted: #8a97a8;
+        --blue: #7ed7ff;
+        --green: #55df84;
+        --pink: #ff5fa8;
+        --yellow: #ffd84e;
+        --violet: #b9a2ff;
+        --soft: #8ba1b6;
+        --line: rgba(255, 255, 255, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 18% 14%, rgba(126, 215, 255, 0.16), transparent 28rem),
+          linear-gradient(135deg, #08090d 0%, #11151b 48%, #0a0c11 100%);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1220px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 32px 0 44px;
+      }
+
+      header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(28px, 5vw, 54px);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        max-width: 680px;
+        margin: 0;
+        color: #b8c3d1;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .meta {
+        flex: 0 0 auto;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: right;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .direction {
+        display: grid;
+        gap: 14px;
+        align-content: start;
+      }
+
+      .watch-wrap {
+        display: grid;
+        place-items: center;
+        min-height: 330px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(17, 23, 32, 0.72);
+      }
+
+      .watch {
+        position: relative;
+        width: min(100%, 292px);
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 50% 52%, rgba(36, 45, 56, 0.72) 0 2px, transparent 3px),
+          radial-gradient(circle at 50% 47%, rgba(126, 215, 255, 0.06), transparent 52%),
+          #020406;
+        box-shadow:
+          inset 0 0 0 9px #151a21,
+          inset 0 0 0 10px rgba(255, 255, 255, 0.1),
+          0 24px 54px rgba(0, 0, 0, 0.48);
+      }
+
+      .watch::before {
+        content: "";
+        position: absolute;
+        inset: 22px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .status-dot {
+        position: absolute;
+        top: 28px;
+        left: 50%;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        background: var(--green);
+        box-shadow: 0 0 14px currentColor;
+      }
+
+      .time {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        font-variant-numeric: tabular-nums;
+        font-size: 58px;
+        font-weight: 800;
+        line-height: 1;
+        text-align: center;
+        text-shadow: 0 0 18px rgba(126, 215, 255, 0.18);
+      }
+
+      .date {
+        position: absolute;
+        top: 126px;
+        left: 0;
+        right: 0;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .steps {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 36px;
+        font-size: 15px;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .field {
+        position: absolute;
+        bottom: 56px;
+        color: #6f7c8b;
+        font-size: 9px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .field.left {
+        left: 34px;
+      }
+
+      .field.right {
+        right: 34px;
+      }
+
+      .mini {
+        position: absolute;
+        left: 50%;
+        top: 135px;
+        width: 70px;
+        height: 88px;
+        transform: translateX(-50%) scale(0.86);
+        transform-origin: top center;
+      }
+
+      .head,
+      .body,
+      .arm,
+      .leg,
+      .shoe,
+      .cap,
+      .vest,
+      .eye,
+      .mouth {
+        position: absolute;
+        image-rendering: pixelated;
+      }
+
+      .head {
+        left: 21px;
+        top: 2px;
+        width: 28px;
+        height: 24px;
+        border-radius: 7px;
+        background: #f5b77c;
+        box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      .cap {
+        left: 17px;
+        top: -2px;
+        width: 36px;
+        height: 10px;
+        border-radius: 6px 6px 2px 2px;
+        background: #11151a;
+      }
+
+      .cap::after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        top: 4px;
+        width: 13px;
+        height: 4px;
+        background: #11151a;
+      }
+
+      .eye {
+        top: 13px;
+        width: 3px;
+        height: 3px;
+        background: #11151a;
+      }
+
+      .eye.left {
+        left: 29px;
+      }
+
+      .eye.right {
+        left: 40px;
+      }
+
+      .mouth {
+        left: 34px;
+        top: 20px;
+        width: 8px;
+        height: 3px;
+        border-bottom: 2px solid #11151a;
+      }
+
+      .body {
+        left: 18px;
+        top: 28px;
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        background: var(--green);
+      }
+
+      .vest {
+        left: 27px;
+        top: 29px;
+        width: 16px;
+        height: 28px;
+        border-left: 3px solid rgba(0, 0, 0, 0.28);
+        border-right: 3px solid rgba(0, 0, 0, 0.28);
+      }
+
+      .arm {
+        top: 36px;
+        width: 8px;
+        height: 28px;
+        border-radius: 5px;
+        background: #f5b77c;
+        transform-origin: top center;
+      }
+
+      .arm.left {
+        left: 10px;
+        transform: rotate(25deg);
+      }
+
+      .arm.right {
+        right: 10px;
+        transform: rotate(-25deg);
+      }
+
+      .leg {
+        top: 60px;
+        width: 10px;
+        height: 22px;
+        border-radius: 4px;
+        background: #151a21;
+      }
+
+      .leg.left {
+        left: 21px;
+      }
+
+      .leg.right {
+        right: 21px;
+      }
+
+      .shoe {
+        top: 79px;
+        width: 14px;
+        height: 6px;
+        border-radius: 4px;
+        background: var(--pink);
+      }
+
+      .shoe.left {
+        left: 17px;
+      }
+
+      .shoe.right {
+        right: 17px;
+      }
+
+      .sign {
+        position: absolute;
+        display: grid;
+        place-items: center;
+        min-width: 54px;
+        height: 24px;
+        padding: 0 7px;
+        border: 2px solid #11151a;
+        border-radius: 4px;
+        background: #f7fbff;
+        color: #11151a;
+        font-size: 10px;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .sign::after {
+        content: "";
+        position: absolute;
+        left: 9px;
+        bottom: -15px;
+        width: 4px;
+        height: 15px;
+        background: #11151a;
+      }
+
+      .supporter {
+        position: absolute;
+        width: 26px;
+        height: 34px;
+      }
+
+      .supporter::before,
+      .supporter::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .supporter::before {
+        top: 0;
+        width: 15px;
+        height: 13px;
+        border-radius: 4px;
+        background: #f5b77c;
+      }
+
+      .supporter::after {
+        top: 15px;
+        width: 19px;
+        height: 18px;
+        border-radius: 5px;
+        background: var(--yellow);
+      }
+
+      .watch.proud .mini {
+        top: 134px;
+      }
+
+      .watch.proud .body {
+        background: var(--yellow);
+      }
+
+      .watch.proud .arm.left {
+        transform: rotate(-56deg);
+      }
+
+      .watch.proud .arm.right {
+        transform: rotate(56deg);
+      }
+
+      .watch.proud .leg.left {
+        transform: rotate(12deg);
+      }
+
+      .watch.proud .leg.right {
+        transform: rotate(-12deg);
+      }
+
+      .watch.proud .sign {
+        right: 51px;
+        top: 137px;
+      }
+
+      .watch.proud .supporter.one {
+        left: 65px;
+        top: 164px;
+      }
+
+      .watch.proud .supporter.two {
+        right: 67px;
+        top: 174px;
+      }
+
+      .watch.soft .status-dot {
+        color: var(--soft);
+        background: var(--soft);
+      }
+
+      .watch.soft .time {
+        color: #e6edf5;
+        text-shadow: none;
+      }
+
+      .watch.soft .mini {
+        top: 140px;
+        transform: translateX(-50%) scale(0.86) rotate(-3deg);
+      }
+
+      .watch.soft .body {
+        background: var(--soft);
+      }
+
+      .watch.soft .arm.left {
+        transform: rotate(5deg);
+      }
+
+      .watch.soft .arm.right {
+        transform: rotate(-7deg);
+      }
+
+      .watch.soft .mouth {
+        width: 9px;
+        border-bottom-color: transparent;
+        border-top: 2px solid #11151a;
+      }
+
+      .blanket {
+        position: absolute;
+        left: 96px;
+        top: 194px;
+        width: 102px;
+        height: 28px;
+        border-radius: 8px 8px 14px 14px;
+        background: linear-gradient(90deg, #44556a, #6d8196);
+        opacity: 0.94;
+      }
+
+      .watch.sleepy .status-dot {
+        color: var(--violet);
+        background: var(--violet);
+      }
+
+      .watch.sleepy .mini {
+        top: 139px;
+      }
+
+      .watch.sleepy .body {
+        background: var(--blue);
+      }
+
+      .watch.sleepy .cap {
+        background: #314158;
+      }
+
+      .watch.sleepy .cap::after {
+        background: #314158;
+      }
+
+      .watch.sleepy .eye {
+        width: 7px;
+        height: 2px;
+      }
+
+      .watch.sleepy .mouth {
+        width: 4px;
+        height: 4px;
+        border: 2px solid #11151a;
+        border-radius: 50%;
+      }
+
+      .zzz {
+        position: absolute;
+        right: 76px;
+        top: 139px;
+        color: var(--violet);
+        font-size: 20px;
+        font-weight: 900;
+      }
+
+      .watch.focus .time {
+        top: 74px;
+        font-size: 50px;
+      }
+
+      .watch.focus .date {
+        top: 52px;
+      }
+
+      .watch.focus .mini {
+        top: 128px;
+      }
+
+      .watch.focus .steps {
+        bottom: 36px;
+      }
+
+      .watch.focus .field {
+        bottom: 56px;
+      }
+
+      .platform {
+        position: absolute;
+        left: 88px;
+        right: 88px;
+        top: 232px;
+        height: 3px;
+        border-radius: 3px;
+        background: rgba(126, 215, 255, 0.36);
+      }
+
+      h2 {
+        margin: 0 0 6px;
+        font-size: 17px;
+        letter-spacing: 0;
+      }
+
+      .caption {
+        margin: 0;
+        color: #aab5c3;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .principles {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .principle {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 14px;
+        background: rgba(17, 23, 32, 0.64);
+        color: #bac5d2;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .principle strong {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--ink);
+        font-size: 14px;
+      }
+
+      @media (max-width: 1080px) {
+        .grid,
+        .principles {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        main {
+          width: min(100vw - 20px, 390px);
+          padding-top: 20px;
+        }
+
+        header {
+          display: block;
+        }
+
+        .meta {
+          margin-top: 14px;
+          text-align: left;
+        }
+
+        .grid,
+        .principles {
+          grid-template-columns: 1fr;
+        }
+
+        .watch-wrap {
+          min-height: 314px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Garmin Mini Me</h1>
+          <p class="subtitle">Four composition mockups for a dark AMOLED watch face where Mini Ido shares the stage with the digital time and reflects the day through pose, outfit, and short celebration-only messages.</p>
+        </div>
+        <div class="meta">Forerunner 570 thinking<br>390 x 390 and 454 x 454</div>
+      </header>
+
+      <section class="grid" aria-label="Watch face mockup directions">
+        <article class="direction">
+          <div class="watch-wrap">
+            <div class="watch neutral" aria-label="Neutral shared stage watch face">
+              <div class="status-dot"></div>
+              <div class="time">09:41</div>
+              <div class="date">30 MAY</div>
+              <div class="mini" aria-hidden="true">
+                <div class="cap"></div>
+                <div class="head"></div>
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="mouth"></div>
+                <div class="body"></div>
+                <div class="vest"></div>
+                <div class="arm left"></div>
+                <div class="arm right"></div>
+                <div class="leg left"></div>
+                <div class="leg right"></div>
+                <div class="shoe left"></div>
+                <div class="shoe right"></div>
+              </div>
+              <div class="steps">6,420 STEPS</div>
+              <div class="field left">Fri</div>
+              <div class="field right">12.8 km</div>
+            </div>
+          </div>
+          <div>
+            <h2>Shared Stage</h2>
+            <p class="caption">Default state. Time stays dominant, Mini Ido anchors below it, and peripheral data is useful without turning into a metric grid.</p>
+          </div>
+        </article>
+
+        <article class="direction">
+          <div class="watch-wrap">
+            <div class="watch proud" aria-label="Workout celebration watch face">
+              <div class="status-dot"></div>
+              <div class="time">18:22</div>
+              <div class="date">30 MAY</div>
+              <div class="supporter one"></div>
+              <div class="supporter two"></div>
+              <div class="mini" aria-hidden="true">
+                <div class="cap"></div>
+                <div class="head"></div>
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="mouth"></div>
+                <div class="body"></div>
+                <div class="vest"></div>
+                <div class="arm left"></div>
+                <div class="arm right"></div>
+                <div class="leg left"></div>
+                <div class="leg right"></div>
+                <div class="shoe left"></div>
+                <div class="shoe right"></div>
+              </div>
+              <div class="sign">NICE ONE!</div>
+              <div class="steps">10,008 STEPS</div>
+              <div class="field left">Goal met</div>
+              <div class="field right">Run</div>
+            </div>
+          </div>
+          <div>
+            <h2>Workout Celebration</h2>
+            <p class="caption">A short reward window with one main Mini Ido, tiny supporters, and a sign. It celebrates the recorded workout without explaining pace or distance.</p>
+          </div>
+        </article>
+
+        <article class="direction">
+          <div class="watch-wrap">
+            <div class="watch soft" aria-label="Soft mode watch face">
+              <div class="status-dot"></div>
+              <div class="time">22:07</div>
+              <div class="date">30 MAY</div>
+              <div class="mini" aria-hidden="true">
+                <div class="cap"></div>
+                <div class="head"></div>
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="mouth"></div>
+                <div class="body"></div>
+                <div class="vest"></div>
+                <div class="arm left"></div>
+                <div class="arm right"></div>
+                <div class="leg left"></div>
+                <div class="leg right"></div>
+                <div class="shoe left"></div>
+                <div class="shoe right"></div>
+              </div>
+              <div class="blanket"></div>
+              <div class="steps">4,116 STEPS</div>
+              <div class="field left">Sat</div>
+              <div class="field right">Soft</div>
+            </div>
+          </div>
+          <div>
+            <h2>Soft Mode</h2>
+            <p class="caption">Low recovery reads as slowed, cozy, and quiet. No scolding, no message, just a companion who reflects the need to take it easy.</p>
+          </div>
+        </article>
+
+        <article class="direction">
+          <div class="watch-wrap">
+            <div class="watch sleepy" aria-label="Sleepy morning watch face">
+              <div class="status-dot"></div>
+              <div class="time">07:18</div>
+              <div class="date">30 MAY</div>
+              <div class="zzz">Zz</div>
+              <div class="mini" aria-hidden="true">
+                <div class="cap"></div>
+                <div class="head"></div>
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="mouth"></div>
+                <div class="body"></div>
+                <div class="vest"></div>
+                <div class="arm left"></div>
+                <div class="arm right"></div>
+                <div class="leg left"></div>
+                <div class="leg right"></div>
+                <div class="shoe left"></div>
+                <div class="shoe right"></div>
+              </div>
+              <div class="steps">846 STEPS</div>
+              <div class="field left">Morning</div>
+              <div class="field right">Sleepy</div>
+            </div>
+          </div>
+          <div>
+            <h2>Morning Mood</h2>
+            <p class="caption">Sleep quality shapes the early-day pose. It is readable as mood, not a sleep score, and can be overridden by a workout celebration.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="principles" aria-label="Design principles">
+        <div class="principle"><strong>Positive Bias</strong>Everything says effort noticed or recovery respected. Missed movement never becomes a failure state.</div>
+        <div class="principle"><strong>Readable First</strong>The digital time is always the cleanest object on the face, with Mini Ido staged around it.</div>
+        <div class="principle"><strong>Small Mood Set</strong>Neutral, proud, soft, and sleepy are enough to prove the companion before adding richer behavior.</div>
+        <div class="principle"><strong>Production Path</strong>The mockup uses simple pixel primitives so the first Connect IQ implementation can draw the same language directly.</div>
+      </section>
+    </main>
+  </body>
+</html>

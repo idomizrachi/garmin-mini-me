@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="144" viewBox="0 0 128 144">
+  <title>Mini Ido Cartoon Soft Mode</title>
+  <defs>
+    <linearGradient id="skinSoft" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#F0B38F"/>
+      <stop offset="1" stop-color="#D79270"/>
+    </linearGradient>
+    <linearGradient id="hoodieSoft" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#344456"/>
+      <stop offset="1" stop-color="#1E2936"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="64" cy="132" rx="34" ry="7" fill="#000000" opacity="0.28"/>
+  <path d="M35 81 C38 62 49 53 64 53 C79 53 90 62 93 81 L96 118 C97 127 90 133 80 133 H48 C38 133 31 127 32 118Z" fill="url(#hoodieSoft)"/>
+  <path d="M48 61 C55 70 73 70 80 61" fill="none" stroke="#617287" stroke-width="5" stroke-linecap="round"/>
+  <path d="M45 85 C36 89 32 98 30 112" fill="none" stroke="#D79270" stroke-width="10" stroke-linecap="round"/>
+  <path d="M83 85 C92 89 96 98 98 112" fill="none" stroke="#D79270" stroke-width="10" stroke-linecap="round"/>
+  <path d="M49 126 L48 104" stroke="#151C26" stroke-width="12" stroke-linecap="round"/>
+  <path d="M79 126 L80 104" stroke="#151C26" stroke-width="12" stroke-linecap="round"/>
+  <path d="M41 132 H58" stroke="#7E93A8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M70 132 H87" stroke="#7E93A8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M38 51 C38 32 49 19 64 19 C79 19 90 32 90 51 C90 68 79 82 64 82 C49 82 38 68 38 51Z" fill="url(#skinSoft)"/>
+  <path d="M43 43 C44 30 52 22 64 22 C76 22 84 30 85 43 C80 36 73 33 64 33 C55 33 48 36 43 43Z" fill="#2F2A25"/>
+  <path d="M35 50 C30 50 28 56 31 62 C33 67 37 68 40 65" fill="#D79270"/>
+  <path d="M93 50 C98 50 100 56 97 62 C95 67 91 68 88 65" fill="#D79270"/>
+  <path d="M44 60 C49 74 56 82 64 82 C72 82 79 74 84 60 C78 66 71 69 64 69 C57 69 50 66 44 60Z" fill="#6A514B"/>
+  <path d="M50 60 C55 66 73 66 78 60" fill="none" stroke="#4E3D38" stroke-width="4" stroke-linecap="round"/>
+  <path d="M52 51 C56 50 59 50 62 52" fill="none" stroke="#2C211F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M66 52 C69 50 72 50 76 51" fill="none" stroke="#2C211F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M58 64 C61 62 67 62 70 64" fill="none" stroke="#D8B7A6" stroke-width="3" stroke-linecap="round"/>
+  <path d="M62 52 C60 57 60 60 64 60" fill="none" stroke="#B87862" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="99" cy="35" r="3" fill="#8FD8FF"/>
+  <circle cx="107" cy="27" r="2" fill="#C9A7FF"/>
+</svg>

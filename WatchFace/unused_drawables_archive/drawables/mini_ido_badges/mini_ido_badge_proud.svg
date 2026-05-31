@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <title>Mini Ido Badge Proud</title>
+  <defs>
+    <radialGradient id="proudBg" cx="50%" cy="45%" r="58%">
+      <stop offset="0" stop-color="#63D6F3"/>
+      <stop offset="1" stop-color="#238EBE"/>
+    </radialGradient>
+    <linearGradient id="proudSkin" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#E9A36F"/>
+      <stop offset="1" stop-color="#B96A43"/>
+    </linearGradient>
+    <linearGradient id="proudVest" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#158FD0"/>
+      <stop offset="1" stop-color="#075A8C"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="73" fill="url(#proudBg)" stroke="#050505" stroke-width="5"/>
+  <path d="M12 132 C38 107 59 111 80 130 C101 105 122 103 148 123 V160 H12Z" fill="#4EA66B" opacity="0.75"/>
+  <path d="M22 65 L33 76 M37 49 L49 62 M127 50 L118 65 M139 70 L127 80" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <clipPath id="proudClip"><circle cx="80" cy="80" r="70"/></clipPath>
+  <g clip-path="url(#proudClip)">
+    <path d="M46 126 C48 92 58 72 80 72 C102 72 112 92 114 126 L120 166 H40Z" fill="#C8FF2B"/>
+    <path d="M57 78 C48 91 44 111 42 143" fill="none" stroke="url(#proudVest)" stroke-width="15" stroke-linecap="round"/>
+    <path d="M103 78 C112 91 116 111 118 143" fill="none" stroke="url(#proudVest)" stroke-width="15" stroke-linecap="round"/>
+    <path d="M54 102 H106" stroke="#94E9FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M58 122 H102" stroke="#8C9AA7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M55 130 H105 V159 H55Z" fill="#F8F8F8" stroke="#151515" stroke-width="3"/>
+    <path d="M60 137 H100" stroke="#6F45C8" stroke-width="6" stroke-linecap="round"/>
+    <text x="80" y="154" fill="#6F45C8" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="900" text-anchor="middle">359</text>
+    <path d="M44 92 C35 107 31 125 37 139" fill="none" stroke="url(#proudSkin)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M114 85 C132 71 146 75 151 91" fill="none" stroke="url(#proudSkin)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M128 76 C138 64 154 71 149 86 C146 96 133 95 128 87" fill="url(#proudSkin)" stroke="#141414" stroke-width="3"/>
+    <path d="M116 122 C125 128 135 126 142 117" fill="none" stroke="url(#proudSkin)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M134 58 L143 58 L143 94 L134 94Z" fill="#111820"/>
+    <path d="M50 60 C50 38 63 22 80 22 C97 22 110 38 110 60 C110 82 98 99 80 99 C62 99 50 82 50 60Z" fill="url(#proudSkin)" stroke="#151515" stroke-width="3"/>
+    <path d="M51 50 C56 34 67 27 80 27 C93 27 104 34 109 50 C103 40 93 35 80 35 C67 35 57 40 51 50Z" fill="#1A1512"/>
+    <path d="M42 59 C36 59 33 67 37 74 C40 82 47 81 50 76" fill="#D48257" stroke="#151515" stroke-width="2"/>
+    <path d="M118 59 C124 59 127 67 123 74 C120 82 113 81 110 76" fill="#D48257" stroke="#151515" stroke-width="2"/>
+    <path d="M47 43 C51 28 65 18 80 18 C95 18 109 28 113 43 L107 48 C101 36 91 30 80 30 C69 30 59 36 53 48Z" fill="#F7F7F7" stroke="#141414" stroke-width="3"/>
+    <path d="M47 43 C56 35 69 32 83 34" fill="none" stroke="#D9DEE7" stroke-width="3"/>
+    <path d="M55 61 C60 56 68 55 74 60" fill="none" stroke="#171717" stroke-width="6" stroke-linecap="round"/>
+    <path d="M86 60 C92 55 100 56 105 61" fill="none" stroke="#171717" stroke-width="6" stroke-linecap="round"/>
+    <path d="M53 61 C61 55 70 56 76 61 L72 70 C66 73 58 72 54 67Z" fill="#111820" opacity="0.96"/>
+    <path d="M84 61 C90 56 99 55 107 61 L106 67 C102 72 94 73 88 70Z" fill="#111820" opacity="0.96"/>
+    <path d="M76 63 H84" stroke="#111820" stroke-width="4" stroke-linecap="round"/>
+    <path d="M74 70 C72 74 73 78 80 78" fill="none" stroke="#8A482C" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M53 82 C59 98 69 107 80 107 C91 107 101 98 107 82 C99 91 90 96 80 96 C70 96 61 91 53 82Z" fill="#5A2B20" stroke="#151515" stroke-width="2"/>
+    <path d="M61 86 C66 94 94 94 99 86" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M54 80 C61 91 99 91 106 80" fill="none" stroke="#8B8B8B" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+  </g>
+</svg>

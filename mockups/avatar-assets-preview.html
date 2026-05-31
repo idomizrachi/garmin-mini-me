@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini Ido Avatar Assets</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #05070a;
+        --panel: #0b1017;
+        --line: #26313d;
+        --ink: #f7fbff;
+        --muted: #aeb8c5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+
+      main {
+        width: min(100%, 760px);
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 18px;
+        font-size: 24px;
+        letter-spacing: 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 14px;
+        text-align: center;
+      }
+
+      .stage {
+        display: grid;
+        place-items: center;
+        height: 150px;
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 50% 48%, rgba(126, 215, 255, 0.12), transparent 52%),
+          #000;
+      }
+
+      img {
+        image-rendering: pixelated;
+        transform: scale(1.15);
+        transform-origin: center;
+      }
+
+      p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 680px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Mini Ido Avatar Assets</h1>
+      <section class="grid" aria-label="Mini Ido sprite asset preview">
+        <article class="card">
+          <div class="stage"><img src="../WatchFace/resources/drawables/mini_ido_neutral.svg" alt="Neutral Mini Ido"></div>
+          <p>Neutral</p>
+        </article>
+        <article class="card">
+          <div class="stage"><img src="../WatchFace/resources/drawables/mini_ido_proud.svg" alt="Proud runner Mini Ido"></div>
+          <p>Proud</p>
+        </article>
+        <article class="card">
+          <div class="stage"><img src="../WatchFace/resources/drawables/mini_ido_soft.svg" alt="Soft mode Mini Ido"></div>
+          <p>Soft</p>
+        </article>
+        <article class="card">
+          <div class="stage"><img src="../WatchFace/resources/drawables/mini_ido_sleepy.svg" alt="Sleepy morning Mini Ido"></div>
+          <p>Sleepy</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini Ido Split Reference Assets</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #05070a;
+        --panel: #0b1017;
+        --line: #26313d;
+        --ink: #f7fbff;
+        --muted: #aeb8c5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+
+      main {
+        width: min(100%, 760px);
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: 24px;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 14px;
+        text-align: center;
+      }
+
+      .stage {
+        display: grid;
+        place-items: center;
+        height: 184px;
+        border-radius: 8px;
+        background: #000;
+      }
+
+      img {
+        width: 160px;
+        height: 160px;
+      }
+
+      p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 680px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Mini Ido Split Reference Assets</h1>
+      <p class="subtitle">The supplied composite split into three transparent 160px watch-face images.</p>
+      <section class="grid" aria-label="Mini Ido split reference preview">
+        <article class="card">
+          <div class="stage"><img src="../WatchFace/resources/drawables/mini_ido_split_reference/mini_ido_happy_160.png" alt="Happy Mini Ido"></div>
+          <p>Happy</p>
+        </article>
+        <article class="card">
+          <div class="stage"><img src="../WatchFace/resources/drawables/mini_ido_split_reference/mini_ido_sleepy_160.png" alt="Sleepy Mini Ido"></div>
+          <p>Sleepy</p>
+        </article>
+        <article class="card">
+          <div class="stage"><img src="../WatchFace/resources/drawables/mini_ido_split_reference/mini_ido_proud_160.png" alt="Proud Mini Ido"></div>
+          <p>Proud</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
