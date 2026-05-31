@@ -75,49 +75,47 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
             [ clock.hour.format("%02d"), clock.min.format("%02d") ]
         );
 
-        var timeY = (height * 0.26).toNumber();
-        var timeX = (centerX + (height * 0.14)).toNumber();
+        var timeY = (height * 0.27).toNumber();
+        var timeX = (centerX + (height * 0.04)).toNumber();
 
         drawShadowText(dc, timeX, timeY, Graphics.FONT_NUMBER_HOT, timeText, 0xFFFFFF, 0x197DC5, 4);
     }
 
     private function drawActivityRows(dc as Dc, width as Number, height as Number) as Void {
-        var iconX = (width * 0.52).toNumber();
-        var labelX = (width * 0.61).toNumber();
-        var valueX = (width * 0.90).toNumber();
-        var topY = (height * 0.45).toNumber();
-        var rowGap = (height * 0.118).toNumber();
-        var lineLeft = (width * 0.60).toNumber();
-        var lineRight = (width * 0.94).toNumber();
+        var iconX = (width * 0.55).toNumber();
+        var labelX = (width * 0.63).toNumber();
+        var valueX = (width * 0.88).toNumber();
+        var topY = (height * 0.52).toNumber();
+        var rowGap = (height * 0.13).toNumber();
+        var lineLeft = (width * 0.62).toNumber();
+        var lineRight = (width * 0.90).toNumber();
 
-        drawMetricRow(dc, iconX, labelX, valueX, topY, "HR", "72", 0xFF4E4A, 0);
+        drawMetricRow(dc, iconX, labelX, valueX, topY, "STEP", formatSteps(getSteps()), 0x36B94C, 0);
         drawDivider(dc, lineLeft, lineRight, topY + (rowGap / 2));
-        drawMetricRow(dc, iconX, labelX, valueX, topY + rowGap, "STEPS", formatSteps(getSteps()), 0x36B94C, 1);
+        drawMetricRow(dc, iconX, labelX, valueX, topY + rowGap, "TEMP", "18\u00B0", 0x178FDD, 1);
         drawDivider(dc, lineLeft, lineRight, topY + rowGap + (rowGap / 2));
-        drawMetricRow(dc, iconX, labelX, valueX, topY + (rowGap * 2), "WEATHER", "18\u00B0", 0x178FDD, 2);
-        drawDivider(dc, lineLeft, lineRight, topY + (rowGap * 2) + (rowGap / 2));
-        drawMetricRow(dc, iconX, labelX, valueX, topY + (rowGap * 3), "BAT", getBatteryText(), 0xF7B927, 3);
+        drawMetricRow(dc, iconX, labelX, valueX, topY + (rowGap * 2), "BAT", getBatteryText(), 0xF7B927, 2);
     }
 
     private function drawMetricRow(dc as Dc, iconX as Number, labelX as Number, valueX as Number, y as Number, label as String, value as String, color as Number, iconType as Number) as Void {
         dc.setColor(0xFFFFFF, 0xFFFFFF);
-        dc.fillCircle(iconX, y, 22);
-        dc.setColor(color, color);
         dc.fillCircle(iconX, y, 18);
+        dc.setColor(color, color);
+        dc.fillCircle(iconX, y, 14);
         drawMetricIcon(dc, iconX, y, iconType);
 
         dc.setColor(0xFFFFFF, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
             labelX,
             y,
-            Graphics.FONT_SYSTEM_MEDIUM,
+            Graphics.FONT_XTINY,
             label,
             Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER
         );
         dc.drawText(
             valueX,
             y,
-            Graphics.FONT_NUMBER_MEDIUM,
+            Graphics.FONT_XTINY,
             value,
             Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER
         );
@@ -133,32 +131,23 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private function drawMetricIcon(dc as Dc, x as Number, y as Number, iconType as Number) as Void {
         if (iconType == 0) {
             dc.setColor(0xFFFFFF, 0xFFFFFF);
-            dc.fillCircle(x - 6, y - 4, 7);
-            dc.fillCircle(x + 6, y - 4, 7);
-            dc.fillPolygon([
-                [ x - 13, y - 2 ],
-                [ x + 13, y - 2 ],
-                [ x, y + 13 ]
-            ]);
+            dc.fillEllipse(x - 7, y - 10, 6, 12);
+            dc.fillEllipse(x + 2, y - 9, 6, 12);
+            dc.fillEllipse(x - 2, y + 3, 6, 9);
+            dc.fillEllipse(x + 8, y + 2, 6, 9);
         } else if (iconType == 1) {
-            dc.setColor(0xFFFFFF, 0xFFFFFF);
-            dc.fillEllipse(x - 8, y - 12, 7, 14);
-            dc.fillEllipse(x + 3, y - 11, 7, 14);
-            dc.fillEllipse(x - 2, y + 4, 7, 11);
-            dc.fillEllipse(x + 10, y + 2, 7, 11);
-        } else if (iconType == 2) {
             dc.setColor(0xFFD84E, 0xFFD84E);
-            dc.fillCircle(x + 5, y - 6, 8);
+            dc.fillCircle(x + 4, y - 5, 6);
             dc.setColor(0xFFFFFF, 0xFFFFFF);
-            dc.fillCircle(x - 6, y + 2, 8);
-            dc.fillCircle(x + 4, y + 1, 10);
-            dc.fillRectangle(x - 11, y + 1, 24, 8);
+            dc.fillCircle(x - 5, y + 2, 6);
+            dc.fillCircle(x + 3, y + 1, 8);
+            dc.fillRectangle(x - 9, y + 1, 19, 6);
         } else {
             dc.setColor(0xFFFFFF, Graphics.COLOR_TRANSPARENT);
-            dc.setPenWidth(3);
-            dc.drawRectangle(x - 12, y - 7, 21, 14);
-            dc.fillRectangle(x - 8, y - 3, 14, 7);
-            dc.fillRectangle(x + 11, y - 3, 4, 6);
+            dc.setPenWidth(2);
+            dc.drawRectangle(x - 10, y - 6, 18, 12);
+            dc.fillRectangle(x - 7, y - 3, 12, 6);
+            dc.fillRectangle(x + 9, y - 2, 3, 5);
             dc.setPenWidth(1);
         }
     }
@@ -211,11 +200,13 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     private function formatSteps(steps as Number) as String {
-        if (steps >= 1000) {
+        if (steps >= 10000) {
+            return Lang.format("$1$K", [ (steps / 1000).toNumber().format("%d") ]);
+        } else if (steps >= 1000) {
             var thousands = (steps / 1000).toNumber();
-            var remainder = (steps % 1000).toNumber();
+            var hundreds = ((steps % 1000) / 100).toNumber();
 
-            return Lang.format("$1$,$2$", [ thousands.format("%d"), remainder.format("%03d") ]);
+            return Lang.format("$1$.$2$K", [ thousands.format("%d"), hundreds.format("%d") ]);
         }
 
         return steps.format("%d");
