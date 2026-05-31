@@ -16,6 +16,9 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private var happyBackgroundBitmap as BitmapResource?;
     private var proudBackgroundBitmap as BitmapResource?;
     private var sleepyBackgroundBitmap as BitmapResource?;
+    private var stepsIconBitmap as BitmapResource?;
+    private var weatherIconBitmap as BitmapResource?;
+    private var batteryIconBitmap as BitmapResource?;
 
     function initialize() {
         WatchFace.initialize();
@@ -25,6 +28,9 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         happyBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftHappy) as BitmapResource;
         proudBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftProud) as BitmapResource;
         sleepyBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftSleepy) as BitmapResource;
+        stepsIconBitmap = WatchUi.loadResource(Rez.Drawables.IconSteps) as BitmapResource;
+        weatherIconBitmap = WatchUi.loadResource(Rez.Drawables.IconWeather) as BitmapResource;
+        batteryIconBitmap = WatchUi.loadResource(Rez.Drawables.IconBattery) as BitmapResource;
     }
 
     function onShow() as Void {
@@ -83,34 +89,30 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
 
     private function drawActivityRows(dc as Dc, width as Number, height as Number) as Void {
         var iconX = (width * 0.55).toNumber();
-        var labelX = (width * 0.63).toNumber();
         var valueX = (width * 0.88).toNumber();
+        var labelRightX = (width * 0.77).toNumber();
         var topY = (height * 0.52).toNumber();
         var rowGap = (height * 0.13).toNumber();
-        var lineLeft = (width * 0.62).toNumber();
-        var lineRight = (width * 0.90).toNumber();
+        var lineLeft = (width * 0.63).toNumber();
+        var lineRight = (width * 0.88).toNumber();
 
-        drawMetricRow(dc, iconX, labelX, valueX, topY, "STEP", formatSteps(getSteps()), 0x36B94C, 0);
+        drawMetricRow(dc, iconX, labelRightX, valueX, topY, "Step", formatSteps(getSteps()), 0x36B94C, 0);
         drawDivider(dc, lineLeft, lineRight, topY + (rowGap / 2));
-        drawMetricRow(dc, iconX, labelX, valueX, topY + rowGap, "TEMP", "18\u00B0", 0x178FDD, 1);
+        drawMetricRow(dc, iconX, labelRightX, valueX, topY + rowGap, "Temp", "18\u00B0", 0x178FDD, 1);
         drawDivider(dc, lineLeft, lineRight, topY + rowGap + (rowGap / 2));
-        drawMetricRow(dc, iconX, labelX, valueX, topY + (rowGap * 2), "BAT", getBatteryText(), 0xF7B927, 2);
+        drawMetricRow(dc, iconX, labelRightX, valueX, topY + (rowGap * 2), "Bat", getBatteryText(), 0xF7B927, 2);
     }
 
-    private function drawMetricRow(dc as Dc, iconX as Number, labelX as Number, valueX as Number, y as Number, label as String, value as String, color as Number, iconType as Number) as Void {
-        dc.setColor(0xFFFFFF, 0xFFFFFF);
-        dc.fillCircle(iconX, y, 18);
-        dc.setColor(color, color);
-        dc.fillCircle(iconX, y, 14);
+    private function drawMetricRow(dc as Dc, iconX as Number, labelRightX as Number, valueX as Number, y as Number, label as String, value as String, color as Number, iconType as Number) as Void {
         drawMetricIcon(dc, iconX, y, iconType);
 
         dc.setColor(0xFFFFFF, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
-            labelX,
+            labelRightX,
             y,
             Graphics.FONT_XTINY,
             label,
-            Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER
+            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER
         );
         dc.drawText(
             valueX,
@@ -129,27 +131,21 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     private function drawMetricIcon(dc as Dc, x as Number, y as Number, iconType as Number) as Void {
-        if (iconType == 0) {
-            dc.setColor(0xFFFFFF, 0xFFFFFF);
-            dc.fillEllipse(x - 7, y - 10, 6, 12);
-            dc.fillEllipse(x + 2, y - 9, 6, 12);
-            dc.fillEllipse(x - 2, y + 3, 6, 9);
-            dc.fillEllipse(x + 8, y + 2, 6, 9);
-        } else if (iconType == 1) {
-            dc.setColor(0xFFD84E, 0xFFD84E);
-            dc.fillCircle(x + 4, y - 5, 6);
-            dc.setColor(0xFFFFFF, 0xFFFFFF);
-            dc.fillCircle(x - 5, y + 2, 6);
-            dc.fillCircle(x + 3, y + 1, 8);
-            dc.fillRectangle(x - 9, y + 1, 19, 6);
-        } else {
-            dc.setColor(0xFFFFFF, Graphics.COLOR_TRANSPARENT);
-            dc.setPenWidth(2);
-            dc.drawRectangle(x - 10, y - 6, 18, 12);
-            dc.fillRectangle(x - 7, y - 3, 12, 6);
-            dc.fillRectangle(x + 9, y - 2, 3, 5);
-            dc.setPenWidth(1);
+        var bitmap = getMetricIconBitmap(iconType);
+
+        if (bitmap != null) {
+            dc.drawBitmap(x - 18, y - 18, bitmap);
         }
+    }
+
+    private function getMetricIconBitmap(iconType as Number) as BitmapResource? {
+        if (iconType == 0) {
+            return stepsIconBitmap;
+        } else if (iconType == 1) {
+            return weatherIconBitmap;
+        }
+
+        return batteryIconBitmap;
     }
 
     private function drawEdgeProgress(dc as Dc, width as Number, height as Number, centerX as Number) as Void {

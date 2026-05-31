@@ -6,6 +6,12 @@ using Toybox.Graphics as Gfx;
 
 module Rez {
     module Drawables {
+        (:initialized) var BgAvatarBottomLeftHappy as ResourceId;
+        (:initialized) var BgAvatarBottomLeftProud as ResourceId;
+        (:initialized) var BgAvatarBottomLeftSleepy as ResourceId;
+        (:initialized) var IconSteps as ResourceId;
+        (:initialized) var IconWeather as ResourceId;
+        (:initialized) var IconBattery as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
 
