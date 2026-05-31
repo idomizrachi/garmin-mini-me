@@ -88,13 +88,15 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     private function drawActivityRows(dc as Dc, width as Number, height as Number) as Void {
-        var iconX = (width * 0.55).toNumber();
-        var valueX = (width * 0.88).toNumber();
-        var labelRightX = (width * 0.77).toNumber();
-        var topY = (height * 0.52).toNumber();
+        var clusterOffsetX = (width * 0.035).toNumber();
+        var clusterOffsetY = (height * 0.05).toNumber();
+        var iconX = (width * 0.55).toNumber() - clusterOffsetX;
+        var valueX = (width * 0.88).toNumber() - clusterOffsetX;
+        var labelRightX = (width * 0.77).toNumber() - clusterOffsetX;
+        var topY = (height * 0.52).toNumber() - clusterOffsetY;
         var rowGap = (height * 0.13).toNumber();
-        var lineLeft = (width * 0.63).toNumber();
-        var lineRight = (width * 0.88).toNumber();
+        var lineLeft = (width * 0.63).toNumber() - clusterOffsetX;
+        var lineRight = (width * 0.88).toNumber() - clusterOffsetX;
 
         drawMetricRow(dc, iconX, labelRightX, valueX, topY, "Step", formatSteps(getSteps()), 0x36B94C, 0);
         drawDivider(dc, lineLeft, lineRight, topY + (rowGap / 2));
