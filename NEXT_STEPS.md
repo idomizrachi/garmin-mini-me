@@ -9,6 +9,7 @@
 - [x] Choose a dark AMOLED-friendly digital watch face.
 - [x] Place Mini Ido below the digital time by default.
 - [x] Keep date, steps, and optional weekly distance as peripheral fields.
+- [x] Choose the right data rail layout direction: keep the center cleaner by moving steps and optional secondary data to compact right-edge fields.
 - [x] Limit v1 moods to neutral, happy/proud, tired/soft, and sleepy morning.
 - [x] Use Mood Priority for v1: workout celebration, morning mood, recovery soft mode, neutral fallback.
 - [x] Set Workout Celebration to about 15-30 minutes, with 30 minutes as the upper limit.
@@ -23,11 +24,11 @@
 - [x] Target the Garmin Forerunner 570.
 - [x] Confirm the exact Forerunner 570 screen dimensions and simulator profile.
 - [ ] Render a dark background.
-- [ ] Render large digital time.
-- [ ] Render date as day of month plus month.
-- [ ] Render current steps.
+- [x] Render large digital time.
+- [x] Render date as day of month plus month.
+- [x] Render current steps.
 - [ ] Add an optional placeholder area for weekly distance if the layout stays clean.
-- [ ] Add a placeholder Mini Ido below the digital time.
+- [x] Add a placeholder Mini Ido below the digital time.
 - [ ] Add placeholder visual states for neutral, happy/proud, tired/soft, and sleepy morning.
 
 ## Garmin Feasibility Checks
@@ -59,7 +60,11 @@
 
 ## Visual Prototype And Assets
 
-- [ ] Create a simple static layout mock with placeholder Mini Ido.
+- [x] Create a simple static layout mock with placeholder Mini Ido.
+- [x] Update the watch face toward the right data rail mock: smaller time, centered Mini Ido, and compact right-edge steps/secondary data.
+- [x] Shift Mini Ido slightly left so the avatar feels better balanced against the right data rail.
+- [x] Adjust date and time placement so they never overlap at large time values.
+- [x] Reduce the font size for steps, goal, and weekly distance labels/values.
 - [ ] Test whether the time remains readable with Mini Ido below it.
 - [ ] Test whether peripheral date and step fields remain readable.
 - [ ] Decide whether weekly distance fits cleanly.
