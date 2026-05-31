@@ -16,8 +16,6 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private const MOOD_SLEEPY = 3;
 
     private const BACKGROUND_SIZE = 580;
-    private const EDGE_RING_INSET = 18;
-
     private var happyBackgroundBitmap as BitmapResource?;
     private var proudBackgroundBitmap as BitmapResource?;
     private var sleepyBackgroundBitmap as BitmapResource?;
@@ -66,7 +64,6 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         drawBackground(dc, width, height, mood);
         drawDateAndTime(dc, centerX, height, mood);
         drawActivityRows(dc, width, height, mood);
-        drawEdgeProgress(dc, width, height, centerX);
     }
 
     private function drawBackground(dc as Dc, width as Number, height as Number, mood as Number) as Void {
@@ -134,21 +131,6 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         }
 
         return weeklyRunningDistanceIconBitmap;
-    }
-
-    private function drawEdgeProgress(dc as Dc, width as Number, height as Number, centerX as Number) as Void {
-        var centerY = height / 2;
-        var radius = (width / 2) - EDGE_RING_INSET;
-
-        dc.setPenWidth(13);
-        dc.setColor(0xCDEB56, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(centerX, centerY, radius, Graphics.ARC_COUNTER_CLOCKWISE, 188, 318);
-        dc.setColor(0x48CDEB, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(centerX, centerY, radius, Graphics.ARC_COUNTER_CLOCKWISE, 318, 354);
-
-        dc.setPenWidth(1);
-        dc.setColor(0xF4FBFF, 0xF4FBFF);
-        dc.fillCircle((width * 0.74).toNumber(), (height * 0.12).toNumber(), 8);
     }
 
     private function drawShadowText(dc as Dc, x as Number, y as Number, font as Graphics.FontType, text as String, color as Number, shadowColor as Number, offset as Number) as Void {
