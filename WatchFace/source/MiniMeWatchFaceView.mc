@@ -1,7 +1,11 @@
 import Toybox.ActivityMonitor;
+import Toybox.Activity;
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.System;
+import Toybox.Time;
+import Toybox.Time.Gregorian;
+import Toybox.UserProfile;
 import Toybox.WatchUi;
 
 class MiniMeWatchFaceView extends WatchUi.WatchFace {
@@ -18,7 +22,9 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private var sleepyBackgroundBitmap as BitmapResource?;
     private var stepsIconBitmap as BitmapResource?;
     private var weatherIconBitmap as BitmapResource?;
-    private var batteryIconBitmap as BitmapResource?;
+    private var weeklyRunningDistanceIconBitmap as BitmapResource?;
+    private var weeklyRunningDistanceCacheMinute as Number = -1;
+    private var weeklyRunningDistanceText as String = "--";
 
     function initialize() {
         WatchFace.initialize();
@@ -30,7 +36,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         sleepyBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftSleepy) as BitmapResource;
         stepsIconBitmap = WatchUi.loadResource(Rez.Drawables.IconSteps) as BitmapResource;
         weatherIconBitmap = WatchUi.loadResource(Rez.Drawables.IconWeather) as BitmapResource;
-        batteryIconBitmap = WatchUi.loadResource(Rez.Drawables.IconBattery) as BitmapResource;
+        weeklyRunningDistanceIconBitmap = WatchUi.loadResource(Rez.Drawables.IconWeeklyRunningDistance) as BitmapResource;
     }
 
     function onShow() as Void {
@@ -57,8 +63,8 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         dc.clear();
 
         drawBackground(dc, width, height, mood);
-        drawDateAndTime(dc, centerX, height);
-        drawActivityRows(dc, width, height);
+        drawDateAndTime(dc, centerX, height, mood);
+        drawActivityRows(dc, width, height, mood);
         drawEdgeProgress(dc, width, height, centerX);
     }
 
@@ -74,7 +80,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         }
     }
 
-    private function drawDateAndTime(dc as Dc, centerX as Number, height as Number) as Void {
+    private function drawDateAndTime(dc as Dc, centerX as Number, height as Number, mood as Number) as Void {
         var clock = System.getClockTime();
         var timeText = Lang.format(
             "$1$:$2$",
@@ -83,28 +89,32 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
 
         var timeY = (height * 0.27).toNumber();
         var timeX = (centerX + (height * 0.04)).toNumber();
+        var textColor = getTextColor(mood);
+        var shadowColor = (mood == MOOD_PROUD) ? 0xFFFFFF : 0x197DC5;
 
-        drawShadowText(dc, timeX, timeY, Graphics.FONT_NUMBER_HOT, timeText, 0xFFFFFF, 0x197DC5, 4);
+        drawShadowText(dc, timeX, timeY, Graphics.FONT_NUMBER_HOT, timeText, textColor, shadowColor, 4);
     }
 
-    private function drawActivityRows(dc as Dc, width as Number, height as Number) as Void {
+    private function drawActivityRows(dc as Dc, width as Number, height as Number, mood as Number) as Void {
         var clusterOffsetX = (width * 0.035).toNumber();
         var clusterOffsetY = (height * 0.05).toNumber();
-        var iconX = (width * 0.535).toNumber() - clusterOffsetX;
-        var valueX = (width * 0.585).toNumber() - clusterOffsetX;
+        var proudOffsetX = (mood == MOOD_PROUD) ? (width * 0.075).toNumber() : 0;
+        var iconX = (width * 0.535).toNumber() - clusterOffsetX + proudOffsetX;
+        var valueX = (width * 0.585).toNumber() - clusterOffsetX + proudOffsetX;
         var topY = (height * 0.52).toNumber() - clusterOffsetY;
         var rowGap = (height * 0.13).toNumber();
+        var textColor = getTextColor(mood);
 
-        drawMetricRow(dc, iconX, valueX, topY, formatSteps(getSteps()), 0x36B94C, 0);
-        drawMetricRow(dc, iconX, valueX, topY + rowGap, "18\u00B0", 0x178FDD, 1);
-        drawMetricRow(dc, iconX, valueX, topY + (rowGap * 2), getBatteryText(), 0xF7B927, 2);
+        drawMetricRow(dc, iconX, valueX, topY, formatSteps(getSteps()), textColor, 0);
+        drawMetricRow(dc, iconX, valueX, topY + rowGap, getWeeklyRunningDistanceText(), textColor, 2);
+        drawMetricRow(dc, iconX, valueX, topY + (rowGap * 2), "18\u00B0", textColor, 1);
     }
 
     private function drawMetricRow(dc as Dc, iconX as Number, valueX as Number, y as Number, value as String, color as Number, iconType as Number) as Void {
         drawMetricIcon(dc, iconX, y, iconType);
 
-        dc.setColor(0xFFFFFF, Graphics.COLOR_TRANSPARENT);
-        drawBoldText(dc, valueX, y, Graphics.FONT_XTINY, value, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+        drawBoldText(dc, valueX, y, Graphics.FONT_TINY, value, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     private function drawMetricIcon(dc as Dc, x as Number, y as Number, iconType as Number) as Void {
@@ -122,7 +132,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
             return weatherIconBitmap;
         }
 
-        return batteryIconBitmap;
+        return weeklyRunningDistanceIconBitmap;
     }
 
     private function drawEdgeProgress(dc as Dc, width as Number, height as Number, centerX as Number) as Void {
@@ -164,17 +174,123 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         dc.drawText(x + 1, y, font, text, justification);
     }
 
-    private function getBatteryText() as String {
-        try {
-            var stats = System.getSystemStats();
+    private function getWeeklyRunningDistanceText() as String {
+        var cacheMinute = (Time.now().value() / 60).toNumber();
 
-            if ((stats != null) && (stats has :battery) && (stats.battery != null)) {
-                return Lang.format("$1$%", [ (stats.battery + 0.5).toNumber().format("%d") ]);
+        if (weeklyRunningDistanceCacheMinute == cacheMinute) {
+            return weeklyRunningDistanceText;
+        }
+
+        weeklyRunningDistanceCacheMinute = cacheMinute;
+        weeklyRunningDistanceText = formatDistance(getWeeklyRunningDistanceMeters());
+
+        return weeklyRunningDistanceText;
+    }
+
+    private function getWeeklyRunningDistanceMeters() as Number {
+        var recordedRunTotal = getWeeklyRecordedRunningDistanceMeters();
+
+        if (recordedRunTotal > 0) {
+            return recordedRunTotal;
+        }
+
+        return getWeeklyActivityMonitorDistanceMeters();
+    }
+
+    private function getWeeklyRecordedRunningDistanceMeters() as Number {
+        var total = 0;
+
+        try {
+            if (!(UserProfile has :getUserActivityHistory)) {
+                return total;
+            }
+
+            var activityIterator = UserProfile.getUserActivityHistory();
+            var weekStart = getStartOfWeek();
+            var activity = activityIterator.next();
+
+            while (activity != null) {
+                if (
+                    (activity has :startTime) &&
+                    (activity.startTime != null) &&
+                    (activity.startTime.compare(weekStart) >= 0) &&
+                    (activity has :type) &&
+                    (activity.type == Activity.SPORT_RUNNING) &&
+                    (activity has :distance) &&
+                    (activity.distance != null)
+                ) {
+                    total += activity.distance as Number;
+                }
+
+                activity = activityIterator.next();
             }
         } catch (ex) {
         }
 
-        return "--%";
+        return total;
+    }
+
+    private function getWeeklyActivityMonitorDistanceMeters() as Number {
+        var total = 0;
+
+        try {
+            var history = ActivityMonitor.getHistory();
+            var weekStart = getStartOfWeek();
+            var i = 0;
+
+            while ((history != null) && (i < history.size())) {
+                var day = history[i];
+
+                if (
+                    (day != null) &&
+                    (day has :startOfDay) &&
+                    (day.startOfDay != null) &&
+                    (day.startOfDay.compare(weekStart) >= 0) &&
+                    (day has :distance) &&
+                    (day.distance != null)
+                ) {
+                    total += ((day.distance as Number) / 100).toNumber();
+                }
+
+                i++;
+            }
+        } catch (ex) {
+        }
+
+        return total;
+    }
+
+    private function getStartOfWeek() as Time.Moment {
+        var today = new Time.Moment(Time.today().value());
+        var info = Gregorian.info(today, Time.FORMAT_SHORT);
+        var firstDayOfWeek = 1;
+
+        try {
+            var settings = System.getDeviceSettings();
+
+            if ((settings != null) && (settings has :firstDayOfWeek) && (settings.firstDayOfWeek != null)) {
+                firstDayOfWeek = settings.firstDayOfWeek as Number;
+            }
+        } catch (ex) {
+        }
+
+        var daysSinceWeekStart = (info.day_of_week as Number) - firstDayOfWeek;
+
+        if (daysSinceWeekStart < 0) {
+            daysSinceWeekStart += 7;
+        }
+
+        return today.add(new Time.Duration(daysSinceWeekStart * Gregorian.SECONDS_PER_DAY * -1)) as Time.Moment;
+    }
+
+    private function formatDistance(meters as Number) as String {
+        var value = meters / 1000.0;
+
+        if (value >= 100) {
+            return Lang.format("$1$km", [ value.toNumber().format("%d") ]);
+        }
+
+        return Lang.format("$1$km", [ value.format("%.1f") ]);
     }
 
     private function formatSteps(steps as Number) as String {
@@ -200,6 +316,14 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         }
 
         return happyBackgroundBitmap;
+    }
+
+    private function getTextColor(mood as Number) as Number {
+        if (mood == MOOD_PROUD) {
+            return Graphics.COLOR_BLACK;
+        }
+
+        return Graphics.COLOR_WHITE;
     }
 
     private function choosePrototypeMood() as Number {
