@@ -1,10 +1,9 @@
 <drawables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
     <bitmap id="LauncherIcon" filename="launcher_icon.png" dithering="none" />
-    <bitmap id="BgAvatarBottomLeftHappy" filename="watchface_backgrounds_avatar_bottom_left/bg_happy_avatar_bottom_left_454.png" dithering="none" />
-    <bitmap id="BgAvatarBottomLeftProud" filename="watchface_backgrounds_avatar_bottom_left/bg_proud_avatar_bottom_left_454.png" dithering="none" />
-    <bitmap id="BgAvatarBottomLeftSleepy" filename="watchface_backgrounds_avatar_bottom_left/bg_sleepy_avatar_bottom_left_454.png" dithering="none" />
+    <bitmap id="BgAvatarBottomLeftHappy" filename="watchface_backgrounds_avatar_bottom_left/bg_happy_avatar_bottom_left_454_p256.png" dithering="none" />
+    <bitmap id="BgAvatarBottomLeftProud" filename="watchface_backgrounds_avatar_bottom_left/bg_proud_avatar_bottom_left_454_p256.png" dithering="none" />
+    <bitmap id="BgAvatarBottomLeftSleepy" filename="watchface_backgrounds_avatar_bottom_left/bg_sleepy_avatar_bottom_left_454_p256.png" dithering="none" />
     <bitmap id="IconSteps" filename="icons/icon_steps.png" dithering="none" />
     <bitmap id="IconWeather" filename="icons/icon_weather.png" dithering="none" />
-    <bitmap id="IconBattery" filename="icons/icon_battery.png" dithering="none" />
     <bitmap id="IconWeeklyRunningDistance" filename="icons/icon_weekly_running_distance.png" dithering="none" />
 </drawables>

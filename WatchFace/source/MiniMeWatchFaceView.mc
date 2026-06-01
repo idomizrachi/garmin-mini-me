@@ -16,23 +16,26 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private const MOOD_SLEEPY = 3;
 
     private const BACKGROUND_SIZE = 454;
-    private var happyBackgroundBitmap as BitmapResource?;
-    private var proudBackgroundBitmap as BitmapResource?;
-    private var sleepyBackgroundBitmap as BitmapResource?;
+    private var activeBackgroundBitmap as BitmapResource?;
+    private var activeBackgroundMood as Number = -1;
     private var stepsIconBitmap as BitmapResource?;
     private var weatherIconBitmap as BitmapResource?;
     private var weeklyRunningDistanceIconBitmap as BitmapResource?;
     private var weeklyRunningDistanceCacheMinute as Number = -1;
     private var weeklyRunningDistanceText as String = "--";
+    private var weatherCacheMinute as Number = -1;
+    private var weatherTemperatureText as String = "--\u00B0";
+    private var firstFullFaceDrawn as Boolean = false;
+    private var lastDrawnMinute as Number = -1;
+    private var lastDrawnDay as Number = -1;
+    private var lastDrawnMonth as Number = -1;
+    private var lastDrawnMood as Number = -1;
 
     function initialize() {
         WatchFace.initialize();
     }
 
     function onLayout(dc as Dc) as Void {
-        happyBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftHappy) as BitmapResource;
-        proudBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftProud) as BitmapResource;
-        sleepyBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftSleepy) as BitmapResource;
         stepsIconBitmap = WatchUi.loadResource(Rez.Drawables.IconSteps) as BitmapResource;
         weatherIconBitmap = WatchUi.loadResource(Rez.Drawables.IconWeather) as BitmapResource;
         weeklyRunningDistanceIconBitmap = WatchUi.loadResource(Rez.Drawables.IconWeeklyRunningDistance) as BitmapResource;
@@ -46,7 +49,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     function onPartialUpdate(dc as Dc) as Void {
-        drawFace(dc);
+        drawPartialFace(dc);
     }
 
     function onHide() as Void {
@@ -57,13 +60,52 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var height = dc.getHeight();
         var centerX = width / 2;
         var mood = choosePrototypeMood();
+        var clock = System.getClockTime();
+        var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var weeklyText = firstFullFaceDrawn ? getWeeklyRunningDistanceText() : weeklyRunningDistanceText;
+        var weatherText = firstFullFaceDrawn ? getWeatherTemperatureText() : weatherTemperatureText;
 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
         drawBackground(dc, width, height, mood);
-        drawDateAndTime(dc, centerX, height, mood);
-        drawActivityRows(dc, width, height, mood);
+        drawDateAndTime(dc, centerX, height, mood, clock, dateInfo);
+        drawActivityRows(
+            dc,
+            width,
+            height,
+            mood,
+            formatSteps(getSteps()),
+            weeklyText,
+            weatherText
+        );
+        rememberDrawnState(clock, dateInfo, mood);
+        firstFullFaceDrawn = true;
+    }
+
+    private function drawPartialFace(dc as Dc) as Void {
+        var width = dc.getWidth();
+        var height = dc.getHeight();
+        var centerX = width / 2;
+        var mood = choosePrototypeMood();
+        var clock = System.getClockTime();
+        var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+
+        if (mood != lastDrawnMood) {
+            drawFace(dc);
+            return;
+        }
+
+        if (
+            (clock.min == lastDrawnMinute) &&
+            ((dateInfo.day as Number) == lastDrawnDay) &&
+            ((dateInfo.month as Number) == lastDrawnMonth)
+        ) {
+            return;
+        }
+
+        drawDateAndTimeRegion(dc, width, height, centerX, mood, clock, dateInfo);
+        rememberDrawnState(clock, dateInfo, mood);
     }
 
     private function drawBackground(dc as Dc, width as Number, height as Number, mood as Number) as Void {
@@ -78,13 +120,23 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         }
     }
 
-    private function drawDateAndTime(dc as Dc, centerX as Number, height as Number, mood as Number) as Void {
-        var clock = System.getClockTime();
+    private function drawDateAndTimeRegion(dc as Dc, width as Number, height as Number, centerX as Number, mood as Number, clock, dateInfo) as Void {
+        var regionX = (width * 0.30).toNumber();
+        var regionY = (height * 0.04).toNumber();
+        var regionWidth = (width * 0.62).toNumber();
+        var regionHeight = (height * 0.34).toNumber();
+
+        dc.setClip(regionX, regionY, regionWidth, regionHeight);
+        drawBackground(dc, width, height, mood);
+        drawDateAndTime(dc, centerX, height, mood, clock, dateInfo);
+        dc.clearClip();
+    }
+
+    private function drawDateAndTime(dc as Dc, centerX as Number, height as Number, mood as Number, clock, dateInfo) as Void {
         var timeText = Lang.format(
             "$1$:$2$",
             [ clock.hour.format("%02d"), clock.min.format("%02d") ]
         );
-        var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var dateText = Lang.format(
             "$1$/$2$",
             [
@@ -103,7 +155,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         drawShadowText(dc, timeX, timeY, Graphics.FONT_NUMBER_HOT, timeText, textColor, shadowColor, 4);
     }
 
-    private function drawActivityRows(dc as Dc, width as Number, height as Number, mood as Number) as Void {
+    private function drawActivityRows(dc as Dc, width as Number, height as Number, mood as Number, stepsText as String, weeklyText as String, weatherText as String) as Void {
         var clusterOffsetX = (width * 0.035).toNumber();
         var clusterOffsetY = (height * 0.05).toNumber();
         var proudOffsetX = (mood == MOOD_PROUD) ? (width * 0.075).toNumber() : 0;
@@ -113,9 +165,9 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var rowGap = (height * 0.13).toNumber();
         var textColor = getTextColor(mood);
 
-        drawMetricRow(dc, iconX, valueX, topY, formatSteps(getSteps()), textColor, 0);
-        drawMetricRow(dc, iconX, valueX, topY + rowGap, getWeeklyRunningDistanceText(), textColor, 2);
-        drawMetricRow(dc, iconX, valueX, topY + (rowGap * 2), getWeatherTemperatureText(), textColor, 1);
+        drawMetricRow(dc, iconX, valueX, topY, stepsText, textColor, 0);
+        drawMetricRow(dc, iconX, valueX, topY + rowGap, weeklyText, textColor, 2);
+        drawMetricRow(dc, iconX, valueX, topY + (rowGap * 2), weatherText, textColor, 1);
     }
 
     private function drawMetricRow(dc as Dc, iconX as Number, valueX as Number, y as Number, value as String, color as Number, iconType as Number) as Void {
@@ -300,9 +352,18 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     private function getWeatherTemperatureText() as String {
+        var cacheMinute = (Time.now().value() / 60).toNumber();
+
+        if ((weatherCacheMinute >= 0) && ((cacheMinute - weatherCacheMinute) < 15)) {
+            return weatherTemperatureText;
+        }
+
+        weatherCacheMinute = cacheMinute;
+
         try {
             if (!(Weather has :getCurrentConditions)) {
-                return "--\u00B0";
+                weatherTemperatureText = "--\u00B0";
+                return weatherTemperatureText;
             }
 
             var conditions = Weather.getCurrentConditions();
@@ -312,24 +373,38 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
                 (conditions has :temperature) &&
                 (conditions.temperature != null)
             ) {
-                return Lang.format("$1$\u00B0", [ (conditions.temperature as Number).format("%.0f") ]);
+                weatherTemperatureText = Lang.format("$1$\u00B0", [ (conditions.temperature as Number).format("%.0f") ]);
+                return weatherTemperatureText;
             }
         } catch (ex) {
         }
 
-        return "--\u00B0";
+        weatherTemperatureText = "--\u00B0";
+        return weatherTemperatureText;
     }
 
     private function getBackgroundBitmap(mood as Number) as BitmapResource? {
-        if (mood == MOOD_PROUD) {
-            return proudBackgroundBitmap;
-        } else if (mood == MOOD_SOFT) {
-            return sleepyBackgroundBitmap;
-        } else if (mood == MOOD_SLEEPY) {
-            return sleepyBackgroundBitmap;
+        if ((activeBackgroundBitmap != null) && (activeBackgroundMood == mood)) {
+            return activeBackgroundBitmap;
         }
 
-        return happyBackgroundBitmap;
+        if (mood == MOOD_PROUD) {
+            activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftProud) as BitmapResource;
+        } else if ((mood == MOOD_SOFT) || (mood == MOOD_SLEEPY)) {
+            activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftSleepy) as BitmapResource;
+        } else {
+            activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftHappy) as BitmapResource;
+        }
+
+        activeBackgroundMood = mood;
+        return activeBackgroundBitmap;
+    }
+
+    private function rememberDrawnState(clock, dateInfo, mood as Number) as Void {
+        lastDrawnMinute = clock.min;
+        lastDrawnDay = dateInfo.day as Number;
+        lastDrawnMonth = dateInfo.month as Number;
+        lastDrawnMood = mood;
     }
 
     private function getTextColor(mood as Number) as Number {

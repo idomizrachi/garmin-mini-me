@@ -11,7 +11,6 @@ module Rez {
         (:initialized) var BgAvatarBottomLeftSleepy as ResourceId;
         (:initialized) var IconSteps as ResourceId;
         (:initialized) var IconWeather as ResourceId;
-        (:initialized) var IconBattery as ResourceId;
         (:initialized) var IconWeeklyRunningDistance as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
