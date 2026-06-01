@@ -1,3 +1,4 @@
+import Toybox.Application.Storage;
 import Toybox.ActivityMonitor;
 import Toybox.Activity;
 import Toybox.Graphics;
@@ -14,10 +15,16 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private const MOOD_PROUD = 1;
     private const MOOD_SOFT = 2;
     private const MOOD_SLEEPY = 3;
+    private const CELEBRATION_NONE = 0;
+    private const CELEBRATION_STEPS = 1;
 
     private const BACKGROUND_SIZE = 454;
+    private const CELEBRATION_WINDOW_SECONDS = 1800;
+    private const STEP_CELEBRATION_STORAGE_KEY = "miniMe.stepCelebratedDate";
     private var activeBackgroundBitmap as BitmapResource?;
     private var activeBackgroundMood as Number = -1;
+    private var activeCelebrationType as Number = CELEBRATION_NONE;
+    private var celebrationStartedAt as Time.Moment?;
     private var stepsIconBitmap as BitmapResource?;
     private var weatherIconBitmap as BitmapResource?;
     private var weeklyRunningDistanceIconBitmap as BitmapResource?;
@@ -31,6 +38,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private var lastDrawnDay as Number = -1;
     private var lastDrawnMonth as Number = -1;
     private var lastDrawnMood as Number = -1;
+    private var lastDrawnCelebrationType as Number = CELEBRATION_NONE;
 
     function initialize() {
         WatchFace.initialize();
@@ -71,7 +79,8 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var width = dc.getWidth();
         var height = dc.getHeight();
         var centerX = width / 2;
-        var mood = choosePrototypeMood();
+        var steps = getSteps();
+        var mood = choosePrototypeMood(steps);
         var clock = System.getClockTime();
         var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var weeklyText = firstFullFaceDrawn ? getWeeklyRunningDistanceText() : weeklyRunningDistanceText;
@@ -87,10 +96,11 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
             width,
             height,
             mood,
-            formatSteps(getSteps()),
+            formatSteps(steps),
             weeklyText,
             weatherText
         );
+        drawCelebrationTreatment(dc, width, height, mood);
         rememberDrawnState(clock, dateInfo, mood);
         firstFullFaceDrawn = true;
     }
@@ -112,11 +122,11 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var width = dc.getWidth();
         var height = dc.getHeight();
         var centerX = width / 2;
-        var mood = choosePrototypeMood();
+        var mood = choosePrototypeMood(getSteps());
         var clock = System.getClockTime();
         var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 
-        if (mood != lastDrawnMood) {
+        if ((mood != lastDrawnMood) || (activeCelebrationType != lastDrawnCelebrationType)) {
             drawFace(dc);
             return;
         }
@@ -193,6 +203,25 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         drawMetricRow(dc, iconX, valueX, topY, stepsText, textColor, 0);
         drawMetricRow(dc, iconX, valueX, topY + rowGap, weeklyText, textColor, 2);
         drawMetricRow(dc, iconX, valueX, topY + (rowGap * 2), weatherText, textColor, 1);
+    }
+
+    private function drawCelebrationTreatment(dc as Dc, width as Number, height as Number, mood as Number) as Void {
+        if ((activeCelebrationType != CELEBRATION_STEPS) || (mood != MOOD_PROUD)) {
+            return;
+        }
+
+        var signX = (width * 0.10).toNumber();
+        var signY = (height * 0.57).toNumber();
+        var signWidth = (width * 0.30).toNumber();
+        var signHeight = (height * 0.10).toNumber();
+        var textX = signX + (signWidth / 2);
+        var textY = signY + (signHeight / 2);
+
+        dc.setColor(0xFFFFFF, Graphics.COLOR_TRANSPARENT);
+        dc.fillRectangle(signX, signY, signWidth, signHeight);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.drawRectangle(signX, signY, signWidth, signHeight);
+        drawBoldText(dc, textX, textY, Graphics.FONT_TINY, "STEP GOAL", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     private function drawMetricRow(dc as Dc, iconX as Number, valueX as Number, y as Number, value as String, color as Number, iconType as Number) as Void {
@@ -442,6 +471,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         lastDrawnDay = dateInfo.day as Number;
         lastDrawnMonth = dateInfo.month as Number;
         lastDrawnMood = mood;
+        lastDrawnCelebrationType = activeCelebrationType;
     }
 
     private function getTextColor(mood as Number) as Number {
@@ -452,18 +482,85 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         return Graphics.COLOR_WHITE;
     }
 
-    private function choosePrototypeMood() as Number {
+    private function choosePrototypeMood(steps as Number) as Number {
+        updateStepCelebration(steps);
+
+        if (isCelebrationActive()) {
+            return MOOD_PROUD;
+        }
+
         var clock = System.getClockTime();
 
         if (clock.hour < 9) {
             return MOOD_SLEEPY;
         } else if (clock.hour >= 18 && clock.hour < 20) {
             return MOOD_PROUD;
-        } else if (clock.hour >= 22 || clock.hour < 6) {
-            return MOOD_SOFT;
+        } else if ((clock.hour > 21) || ((clock.hour == 21) && (clock.min >= 30))) {
+            return MOOD_SLEEPY;
         }
 
         return MOOD_NEUTRAL;
+    }
+
+    private function updateStepCelebration(steps as Number) as Void {
+        if (isCelebrationActive()) {
+            return;
+        }
+
+        var stepGoal = getStepGoal();
+
+        if ((stepGoal <= 0) || (steps < stepGoal) || hasStepCelebrationShownToday()) {
+            return;
+        }
+
+        activeCelebrationType = CELEBRATION_STEPS;
+        celebrationStartedAt = Time.now();
+        markStepCelebrationShownToday();
+    }
+
+    private function isCelebrationActive() as Boolean {
+        if ((activeCelebrationType == CELEBRATION_NONE) || (celebrationStartedAt == null)) {
+            return false;
+        }
+
+        var elapsed = Time.now().subtract(celebrationStartedAt as Time.Moment).value();
+
+        if (elapsed < CELEBRATION_WINDOW_SECONDS) {
+            return true;
+        }
+
+        activeCelebrationType = CELEBRATION_NONE;
+        celebrationStartedAt = null;
+        return false;
+    }
+
+    private function hasStepCelebrationShownToday() as Boolean {
+        try {
+            return Storage.getValue(STEP_CELEBRATION_STORAGE_KEY) == getTodayStorageDate();
+        } catch (ex) {
+        }
+
+        return false;
+    }
+
+    private function markStepCelebrationShownToday() as Void {
+        try {
+            Storage.setValue(STEP_CELEBRATION_STORAGE_KEY, getTodayStorageDate());
+        } catch (ex) {
+        }
+    }
+
+    private function getTodayStorageDate() as String {
+        var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+
+        return Lang.format(
+            "$1$-$2$-$3$",
+            [
+                (info.year as Number).format("%04d"),
+                (info.month as Number).format("%02d"),
+                (info.day as Number).format("%02d")
+            ]
+        );
     }
 
     private function getSteps() as Number {
@@ -472,6 +569,19 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
 
             if ((info != null) && (info has :steps) && (info.steps != null)) {
                 return info.steps as Number;
+            }
+        } catch (ex) {
+        }
+
+        return 0;
+    }
+
+    private function getStepGoal() as Number {
+        try {
+            var info = ActivityMonitor.getInfo();
+
+            if ((info != null) && (info has :stepGoal) && (info.stepGoal != null)) {
+                return info.stepGoal as Number;
             }
         } catch (ex) {
         }
