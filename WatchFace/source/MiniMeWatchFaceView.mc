@@ -25,6 +25,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private var weeklyRunningDistanceText as String = "--";
     private var weatherCacheMinute as Number = -1;
     private var weatherTemperatureText as String = "--\u00B0";
+    private var firstPaintDrawn as Boolean = false;
     private var firstFullFaceDrawn as Boolean = false;
     private var lastDrawnMinute as Number = -1;
     private var lastDrawnDay as Number = -1;
@@ -36,19 +37,30 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     function onLayout(dc as Dc) as Void {
-        stepsIconBitmap = WatchUi.loadResource(Rez.Drawables.IconSteps) as BitmapResource;
-        weatherIconBitmap = WatchUi.loadResource(Rez.Drawables.IconWeather) as BitmapResource;
-        weeklyRunningDistanceIconBitmap = WatchUi.loadResource(Rez.Drawables.IconWeeklyRunningDistance) as BitmapResource;
     }
 
     function onShow() as Void {
     }
 
     function onUpdate(dc as Dc) as Void {
+        if (!firstPaintDrawn) {
+            drawFastFirstPaint(dc);
+            firstPaintDrawn = true;
+            WatchUi.requestUpdate();
+            return;
+        }
+
         drawFace(dc);
     }
 
     function onPartialUpdate(dc as Dc) as Void {
+        if (!firstPaintDrawn) {
+            drawFastFirstPaint(dc);
+            firstPaintDrawn = true;
+            WatchUi.requestUpdate();
+            return;
+        }
+
         drawPartialFace(dc);
     }
 
@@ -81,6 +93,19 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         );
         rememberDrawnState(clock, dateInfo, mood);
         firstFullFaceDrawn = true;
+    }
+
+    private function drawFastFirstPaint(dc as Dc) as Void {
+        var width = dc.getWidth();
+        var height = dc.getHeight();
+        var centerX = width / 2;
+        var clock = System.getClockTime();
+        var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.clear();
+        drawDateAndTime(dc, centerX, height, MOOD_SLEEPY, clock, dateInfo);
+        rememberDrawnState(clock, dateInfo, MOOD_SLEEPY);
     }
 
     private function drawPartialFace(dc as Dc) as Void {
@@ -187,9 +212,21 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
 
     private function getMetricIconBitmap(iconType as Number) as BitmapResource? {
         if (iconType == 0) {
+            if (stepsIconBitmap == null) {
+                stepsIconBitmap = WatchUi.loadResource(Rez.Drawables.IconSteps) as BitmapResource;
+            }
+
             return stepsIconBitmap;
         } else if (iconType == 1) {
+            if (weatherIconBitmap == null) {
+                weatherIconBitmap = WatchUi.loadResource(Rez.Drawables.IconWeather) as BitmapResource;
+            }
+
             return weatherIconBitmap;
+        }
+
+        if (weeklyRunningDistanceIconBitmap == null) {
+            weeklyRunningDistanceIconBitmap = WatchUi.loadResource(Rez.Drawables.IconWeeklyRunningDistance) as BitmapResource;
         }
 
         return weeklyRunningDistanceIconBitmap;

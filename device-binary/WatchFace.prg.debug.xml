@@ -9,232 +9,255 @@
         <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeApp.mc" id="4" lineNum="10" parent="globals/MiniMeApp" pc="268435506" symbol="getInitialView"/>
         <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeApp.mc" id="5" lineNum="5" parent="globals/MiniMeApp" pc="268435532" symbol="initialize"/>
         <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeApp.mc" id="5" lineNum="6" parent="globals/MiniMeApp" pc="268435534" symbol="initialize"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="331" parent="globals/MiniMeWatchFaceView" pc="268435547" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="332" parent="globals/MiniMeWatchFaceView" pc="268435550" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="334" parent="globals/MiniMeWatchFaceView" pc="268435560" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="335" parent="globals/MiniMeWatchFaceView" pc="268435568" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="338" parent="globals/MiniMeWatchFaceView" pc="268435616" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="7" lineNum="217" parent="globals/MiniMeWatchFaceView" pc="268435655" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBoldText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="7" lineNum="218" parent="globals/MiniMeWatchFaceView" pc="268435657" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBoldText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="7" lineNum="219" parent="globals/MiniMeWatchFaceView" pc="268435677" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBoldText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="403" parent="globals/MiniMeWatchFaceView" pc="268435701" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="404" parent="globals/MiniMeWatchFaceView" pc="268435703" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="405" parent="globals/MiniMeWatchFaceView" pc="268435716" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="406" parent="globals/MiniMeWatchFaceView" pc="268435729" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="407" parent="globals/MiniMeWatchFaceView" pc="268435742" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="9" lineNum="410" parent="globals/MiniMeWatchFaceView" pc="268435752" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="9" lineNum="411" parent="globals/MiniMeWatchFaceView" pc="268435754" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="9" lineNum="412" parent="globals/MiniMeWatchFaceView" pc="268435769" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="9" lineNum="415" parent="globals/MiniMeWatchFaceView" pc="268435774" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="188" parent="globals/MiniMeWatchFaceView" pc="268435780" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="189" parent="globals/MiniMeWatchFaceView" pc="268435782" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="190" parent="globals/MiniMeWatchFaceView" pc="268435789" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="191" parent="globals/MiniMeWatchFaceView" pc="268435798" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="192" parent="globals/MiniMeWatchFaceView" pc="268435806" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="195" parent="globals/MiniMeWatchFaceView" pc="268435815" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="418" parent="globals/MiniMeWatchFaceView" pc="268435821" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="419" parent="globals/MiniMeWatchFaceView" pc="268435824" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="421" parent="globals/MiniMeWatchFaceView" pc="268435836" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="422" parent="globals/MiniMeWatchFaceView" pc="268435848" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="423" parent="globals/MiniMeWatchFaceView" pc="268435854" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="424" parent="globals/MiniMeWatchFaceView" pc="268435878" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="425" parent="globals/MiniMeWatchFaceView" pc="268435884" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="426" parent="globals/MiniMeWatchFaceView" pc="268435908" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="429" parent="globals/MiniMeWatchFaceView" pc="268435914" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="111" parent="globals/MiniMeWatchFaceView" pc="268435916" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="112" parent="globals/MiniMeWatchFaceView" pc="268435919" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="114" parent="globals/MiniMeWatchFaceView" pc="268435931" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="115" parent="globals/MiniMeWatchFaceView" pc="268435937" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="123" parent="globals/MiniMeWatchFaceView" pc="268435983" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="124" parent="globals/MiniMeWatchFaceView" pc="268435986" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="125" parent="globals/MiniMeWatchFaceView" pc="268436002" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="126" parent="globals/MiniMeWatchFaceView" pc="268436018" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="127" parent="globals/MiniMeWatchFaceView" pc="268436034" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="129" parent="globals/MiniMeWatchFaceView" pc="268436050" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="130" parent="globals/MiniMeWatchFaceView" pc="268436068" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="131" parent="globals/MiniMeWatchFaceView" pc="268436085" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="132" parent="globals/MiniMeWatchFaceView" pc="268436106" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="86" parent="globals/MiniMeWatchFaceView" pc="268436115" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="87" parent="globals/MiniMeWatchFaceView" pc="268436118" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="88" parent="globals/MiniMeWatchFaceView" pc="268436127" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="89" parent="globals/MiniMeWatchFaceView" pc="268436136" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="90" parent="globals/MiniMeWatchFaceView" pc="268436143" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="91" parent="globals/MiniMeWatchFaceView" pc="268436151" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="92" parent="globals/MiniMeWatchFaceView" pc="268436163" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="94" parent="globals/MiniMeWatchFaceView" pc="268436188" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="95" parent="globals/MiniMeWatchFaceView" pc="268436199" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="96" parent="globals/MiniMeWatchFaceView" pc="268436210" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="99" parent="globals/MiniMeWatchFaceView" pc="268436214" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="104" parent="globals/MiniMeWatchFaceView" pc="268436259" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="107" parent="globals/MiniMeWatchFaceView" pc="268436263" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="108" parent="globals/MiniMeWatchFaceView" pc="268436286" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="135" parent="globals/MiniMeWatchFaceView" pc="268436302" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="136" parent="globals/MiniMeWatchFaceView" pc="268436305" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="140" parent="globals/MiniMeWatchFaceView" pc="268436372" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="148" parent="globals/MiniMeWatchFaceView" pc="268436439" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="149" parent="globals/MiniMeWatchFaceView" pc="268436455" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="150" parent="globals/MiniMeWatchFaceView" pc="268436474" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="151" parent="globals/MiniMeWatchFaceView" pc="268436493" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="152" parent="globals/MiniMeWatchFaceView" pc="268436505" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="154" parent="globals/MiniMeWatchFaceView" pc="268436527" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="155" parent="globals/MiniMeWatchFaceView" pc="268436552" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="245" parent="globals/MiniMeWatchFaceView" pc="268436578" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="246" parent="globals/MiniMeWatchFaceView" pc="268436581" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="249" parent="globals/MiniMeWatchFaceView" pc="268436584" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="250" parent="globals/MiniMeWatchFaceView" pc="268436600" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="253" parent="globals/MiniMeWatchFaceView" pc="268436609" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="254" parent="globals/MiniMeWatchFaceView" pc="268436621" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="255" parent="globals/MiniMeWatchFaceView" pc="268436629" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="257" parent="globals/MiniMeWatchFaceView" pc="268436638" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="258" parent="globals/MiniMeWatchFaceView" pc="268436644" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="267" parent="globals/MiniMeWatchFaceView" pc="268436734" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="270" parent="globals/MiniMeWatchFaceView" pc="268436749" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="272" parent="globals/MiniMeWatchFaceView" pc="268436767" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="275" parent="globals/MiniMeWatchFaceView" pc="268436783" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="38" parent="globals/MiniMeWatchFaceView" pc="268436786" symbol="onLayout"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="39" parent="globals/MiniMeWatchFaceView" pc="268436788" symbol="onLayout"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="40" parent="globals/MiniMeWatchFaceView" pc="268436826" symbol="onLayout"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="41" parent="globals/MiniMeWatchFaceView" pc="268436864" symbol="onLayout"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="18" lineNum="180" parent="globals/MiniMeWatchFaceView" pc="268436903" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="18" lineNum="181" parent="globals/MiniMeWatchFaceView" pc="268436906" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="18" lineNum="183" parent="globals/MiniMeWatchFaceView" pc="268436918" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="18" lineNum="184" parent="globals/MiniMeWatchFaceView" pc="268436924" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="19" lineNum="51" parent="globals/MiniMeWatchFaceView" pc="268436950" symbol="onPartialUpdate"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="19" lineNum="52" parent="globals/MiniMeWatchFaceView" pc="268436952" symbol="onPartialUpdate"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="341" parent="globals/MiniMeWatchFaceView" pc="268436964" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="342" parent="globals/MiniMeWatchFaceView" pc="268436967" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="343" parent="globals/MiniMeWatchFaceView" pc="268436976" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="344" parent="globals/MiniMeWatchFaceView" pc="268437029" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="345" parent="globals/MiniMeWatchFaceView" pc="268437038" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="346" parent="globals/MiniMeWatchFaceView" pc="268437052" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="348" parent="globals/MiniMeWatchFaceView" pc="268437069" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="351" parent="globals/MiniMeWatchFaceView" pc="268437128" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="308" parent="globals/MiniMeWatchFaceView" pc="268437143" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="309" parent="globals/MiniMeWatchFaceView" pc="268437146" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="310" parent="globals/MiniMeWatchFaceView" pc="268437186" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="311" parent="globals/MiniMeWatchFaceView" pc="268437203" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="314" parent="globals/MiniMeWatchFaceView" pc="268437207" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="316" parent="globals/MiniMeWatchFaceView" pc="268437219" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="317" parent="globals/MiniMeWatchFaceView" pc="268437247" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="319" parent="globals/MiniMeWatchFaceView" pc="268437265" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="322" parent="globals/MiniMeWatchFaceView" pc="268437281" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="324" parent="globals/MiniMeWatchFaceView" pc="268437292" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="325" parent="globals/MiniMeWatchFaceView" pc="268437299" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="328" parent="globals/MiniMeWatchFaceView" pc="268437309" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="198" parent="globals/MiniMeWatchFaceView" pc="268437351" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="199" parent="globals/MiniMeWatchFaceView" pc="268437353" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="200" parent="globals/MiniMeWatchFaceView" pc="268437367" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="207" parent="globals/MiniMeWatchFaceView" pc="268437393" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="208" parent="globals/MiniMeWatchFaceView" pc="268437407" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="222" parent="globals/MiniMeWatchFaceView" pc="268437428" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="223" parent="globals/MiniMeWatchFaceView" pc="268437431" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="225" parent="globals/MiniMeWatchFaceView" pc="268437458" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="226" parent="globals/MiniMeWatchFaceView" pc="268437469" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="229" parent="globals/MiniMeWatchFaceView" pc="268437478" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="230" parent="globals/MiniMeWatchFaceView" pc="268437487" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="232" parent="globals/MiniMeWatchFaceView" pc="268437508" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="278" parent="globals/MiniMeWatchFaceView" pc="268437514" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="279" parent="globals/MiniMeWatchFaceView" pc="268437517" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="282" parent="globals/MiniMeWatchFaceView" pc="268437520" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="283" parent="globals/MiniMeWatchFaceView" pc="268437532" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="284" parent="globals/MiniMeWatchFaceView" pc="268437540" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="286" parent="globals/MiniMeWatchFaceView" pc="268437543" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="287" parent="globals/MiniMeWatchFaceView" pc="268437566" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="289" parent="globals/MiniMeWatchFaceView" pc="268437573" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="297" parent="globals/MiniMeWatchFaceView" pc="268437645" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="300" parent="globals/MiniMeWatchFaceView" pc="268437669" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="302" parent="globals/MiniMeWatchFaceView" pc="268437685" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="305" parent="globals/MiniMeWatchFaceView" pc="268437701" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="354" parent="globals/MiniMeWatchFaceView" pc="268437704" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="355" parent="globals/MiniMeWatchFaceView" pc="268437707" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="357" parent="globals/MiniMeWatchFaceView" pc="268437734" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="358" parent="globals/MiniMeWatchFaceView" pc="268437758" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="361" parent="globals/MiniMeWatchFaceView" pc="268437767" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="364" parent="globals/MiniMeWatchFaceView" pc="268437776" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="365" parent="globals/MiniMeWatchFaceView" pc="268437792" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="366" parent="globals/MiniMeWatchFaceView" pc="268437804" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="369" parent="globals/MiniMeWatchFaceView" pc="268437816" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="371" parent="globals/MiniMeWatchFaceView" pc="268437828" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="376" parent="globals/MiniMeWatchFaceView" pc="268437856" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="377" parent="globals/MiniMeWatchFaceView" pc="268437907" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="379" parent="globals/MiniMeWatchFaceView" pc="268437925" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="382" parent="globals/MiniMeWatchFaceView" pc="268437941" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="383" parent="globals/MiniMeWatchFaceView" pc="268437953" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="432" parent="globals/MiniMeWatchFaceView" pc="268437959" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="434" parent="globals/MiniMeWatchFaceView" pc="268437962" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="436" parent="globals/MiniMeWatchFaceView" pc="268437974" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="437" parent="globals/MiniMeWatchFaceView" pc="268438002" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="439" parent="globals/MiniMeWatchFaceView" pc="268438022" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="442" parent="globals/MiniMeWatchFaceView" pc="268438038" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="386" parent="globals/MiniMeWatchFaceView" pc="268438040" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="387" parent="globals/MiniMeWatchFaceView" pc="268438042" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="388" parent="globals/MiniMeWatchFaceView" pc="268438062" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="391" parent="globals/MiniMeWatchFaceView" pc="268438071" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="392" parent="globals/MiniMeWatchFaceView" pc="268438079" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="393" parent="globals/MiniMeWatchFaceView" pc="268438120" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="394" parent="globals/MiniMeWatchFaceView" pc="268438136" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="396" parent="globals/MiniMeWatchFaceView" pc="268438177" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="399" parent="globals/MiniMeWatchFaceView" pc="268438215" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="29" lineNum="400" parent="globals/MiniMeWatchFaceView" pc="268438224" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="158" parent="globals/MiniMeWatchFaceView" pc="268438230" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="159" parent="globals/MiniMeWatchFaceView" pc="268438233" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="160" parent="globals/MiniMeWatchFaceView" pc="268438249" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="161" parent="globals/MiniMeWatchFaceView" pc="268438265" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="162" parent="globals/MiniMeWatchFaceView" pc="268438293" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="163" parent="globals/MiniMeWatchFaceView" pc="268438315" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="164" parent="globals/MiniMeWatchFaceView" pc="268438337" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="165" parent="globals/MiniMeWatchFaceView" pc="268438356" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="166" parent="globals/MiniMeWatchFaceView" pc="268438372" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="168" parent="globals/MiniMeWatchFaceView" pc="268438384" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="169" parent="globals/MiniMeWatchFaceView" pc="268438406" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="170" parent="globals/MiniMeWatchFaceView" pc="268438432" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="58" parent="globals/MiniMeWatchFaceView" pc="268438462" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="59" parent="globals/MiniMeWatchFaceView" pc="268438465" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="60" parent="globals/MiniMeWatchFaceView" pc="268438474" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="61" parent="globals/MiniMeWatchFaceView" pc="268438483" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="62" parent="globals/MiniMeWatchFaceView" pc="268438490" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="63" parent="globals/MiniMeWatchFaceView" pc="268438498" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="64" parent="globals/MiniMeWatchFaceView" pc="268438510" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="65" parent="globals/MiniMeWatchFaceView" pc="268438535" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="66" parent="globals/MiniMeWatchFaceView" pc="268438559" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="68" parent="globals/MiniMeWatchFaceView" pc="268438583" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="69" parent="globals/MiniMeWatchFaceView" pc="268438595" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="71" parent="globals/MiniMeWatchFaceView" pc="268438603" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="72" parent="globals/MiniMeWatchFaceView" pc="268438620" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="73" parent="globals/MiniMeWatchFaceView" pc="268438641" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="82" parent="globals/MiniMeWatchFaceView" pc="268438676" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="83" parent="globals/MiniMeWatchFaceView" pc="268438691" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="173" parent="globals/MiniMeWatchFaceView" pc="268438700" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="174" parent="globals/MiniMeWatchFaceView" pc="268438702" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="176" parent="globals/MiniMeWatchFaceView" pc="268438719" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="177" parent="globals/MiniMeWatchFaceView" pc="268438733" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="33" lineNum="34" parent="globals/MiniMeWatchFaceView" pc="268438755" symbol="initialize"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="33" lineNum="35" parent="globals/MiniMeWatchFaceView" pc="268438757" symbol="initialize"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="34" lineNum="47" parent="globals/MiniMeWatchFaceView" pc="268438770" symbol="onUpdate"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="34" lineNum="48" parent="globals/MiniMeWatchFaceView" pc="268438772" symbol="onUpdate"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="235" parent="globals/MiniMeWatchFaceView" pc="268438784" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="236" parent="globals/MiniMeWatchFaceView" pc="268438787" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="238" parent="globals/MiniMeWatchFaceView" pc="268438795" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="239" parent="globals/MiniMeWatchFaceView" pc="268438802" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
-        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="242" parent="globals/MiniMeWatchFaceView" pc="268438808" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="368" parent="globals/MiniMeWatchFaceView" pc="268435547" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="369" parent="globals/MiniMeWatchFaceView" pc="268435550" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="371" parent="globals/MiniMeWatchFaceView" pc="268435560" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="372" parent="globals/MiniMeWatchFaceView" pc="268435568" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="6" lineNum="375" parent="globals/MiniMeWatchFaceView" pc="268435616" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="7" lineNum="254" parent="globals/MiniMeWatchFaceView" pc="268435655" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBoldText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="7" lineNum="255" parent="globals/MiniMeWatchFaceView" pc="268435657" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBoldText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="7" lineNum="256" parent="globals/MiniMeWatchFaceView" pc="268435677" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBoldText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="440" parent="globals/MiniMeWatchFaceView" pc="268435701" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="441" parent="globals/MiniMeWatchFaceView" pc="268435703" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="442" parent="globals/MiniMeWatchFaceView" pc="268435716" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="443" parent="globals/MiniMeWatchFaceView" pc="268435729" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="8" lineNum="444" parent="globals/MiniMeWatchFaceView" pc="268435742" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="9" lineNum="447" parent="globals/MiniMeWatchFaceView" pc="268435752" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="9" lineNum="448" parent="globals/MiniMeWatchFaceView" pc="268435754" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="9" lineNum="449" parent="globals/MiniMeWatchFaceView" pc="268435769" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="9" lineNum="452" parent="globals/MiniMeWatchFaceView" pc="268435774" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="213" parent="globals/MiniMeWatchFaceView" pc="268435780" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="214" parent="globals/MiniMeWatchFaceView" pc="268435782" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="215" parent="globals/MiniMeWatchFaceView" pc="268435789" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="216" parent="globals/MiniMeWatchFaceView" pc="268435798" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="219" parent="globals/MiniMeWatchFaceView" pc="268435839" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="220" parent="globals/MiniMeWatchFaceView" pc="268435848" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="221" parent="globals/MiniMeWatchFaceView" pc="268435856" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="222" parent="globals/MiniMeWatchFaceView" pc="268435865" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="225" parent="globals/MiniMeWatchFaceView" pc="268435906" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="228" parent="globals/MiniMeWatchFaceView" pc="268435915" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="229" parent="globals/MiniMeWatchFaceView" pc="268435924" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="10" lineNum="232" parent="globals/MiniMeWatchFaceView" pc="268435965" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="98" parent="globals/MiniMeWatchFaceView" pc="268435971" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="99" parent="globals/MiniMeWatchFaceView" pc="268435974" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="100" parent="globals/MiniMeWatchFaceView" pc="268435983" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="101" parent="globals/MiniMeWatchFaceView" pc="268435992" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="102" parent="globals/MiniMeWatchFaceView" pc="268435999" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="103" parent="globals/MiniMeWatchFaceView" pc="268436011" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="105" parent="globals/MiniMeWatchFaceView" pc="268436036" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="106" parent="globals/MiniMeWatchFaceView" pc="268436048" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="107" parent="globals/MiniMeWatchFaceView" pc="268436056" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="11" lineNum="108" parent="globals/MiniMeWatchFaceView" pc="268436077" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="455" parent="globals/MiniMeWatchFaceView" pc="268436093" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="456" parent="globals/MiniMeWatchFaceView" pc="268436096" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="458" parent="globals/MiniMeWatchFaceView" pc="268436108" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="459" parent="globals/MiniMeWatchFaceView" pc="268436120" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="460" parent="globals/MiniMeWatchFaceView" pc="268436126" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="461" parent="globals/MiniMeWatchFaceView" pc="268436150" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="462" parent="globals/MiniMeWatchFaceView" pc="268436156" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="463" parent="globals/MiniMeWatchFaceView" pc="268436180" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="12" lineNum="466" parent="globals/MiniMeWatchFaceView" pc="268436186" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="136" parent="globals/MiniMeWatchFaceView" pc="268436188" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="137" parent="globals/MiniMeWatchFaceView" pc="268436191" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="139" parent="globals/MiniMeWatchFaceView" pc="268436203" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="13" lineNum="140" parent="globals/MiniMeWatchFaceView" pc="268436209" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="148" parent="globals/MiniMeWatchFaceView" pc="268436255" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="149" parent="globals/MiniMeWatchFaceView" pc="268436258" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="150" parent="globals/MiniMeWatchFaceView" pc="268436274" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="151" parent="globals/MiniMeWatchFaceView" pc="268436290" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="152" parent="globals/MiniMeWatchFaceView" pc="268436306" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="154" parent="globals/MiniMeWatchFaceView" pc="268436322" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="155" parent="globals/MiniMeWatchFaceView" pc="268436340" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="156" parent="globals/MiniMeWatchFaceView" pc="268436357" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="14" lineNum="157" parent="globals/MiniMeWatchFaceView" pc="268436378" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="111" parent="globals/MiniMeWatchFaceView" pc="268436387" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="112" parent="globals/MiniMeWatchFaceView" pc="268436390" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="113" parent="globals/MiniMeWatchFaceView" pc="268436399" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="114" parent="globals/MiniMeWatchFaceView" pc="268436408" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="115" parent="globals/MiniMeWatchFaceView" pc="268436415" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="116" parent="globals/MiniMeWatchFaceView" pc="268436423" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="117" parent="globals/MiniMeWatchFaceView" pc="268436435" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="119" parent="globals/MiniMeWatchFaceView" pc="268436460" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="120" parent="globals/MiniMeWatchFaceView" pc="268436471" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="121" parent="globals/MiniMeWatchFaceView" pc="268436482" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="124" parent="globals/MiniMeWatchFaceView" pc="268436486" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="129" parent="globals/MiniMeWatchFaceView" pc="268436531" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="132" parent="globals/MiniMeWatchFaceView" pc="268436535" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="15" lineNum="133" parent="globals/MiniMeWatchFaceView" pc="268436558" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="160" parent="globals/MiniMeWatchFaceView" pc="268436574" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="161" parent="globals/MiniMeWatchFaceView" pc="268436577" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="165" parent="globals/MiniMeWatchFaceView" pc="268436644" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="173" parent="globals/MiniMeWatchFaceView" pc="268436711" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="174" parent="globals/MiniMeWatchFaceView" pc="268436727" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="175" parent="globals/MiniMeWatchFaceView" pc="268436746" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="176" parent="globals/MiniMeWatchFaceView" pc="268436765" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="177" parent="globals/MiniMeWatchFaceView" pc="268436777" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="179" parent="globals/MiniMeWatchFaceView" pc="268436799" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="16" lineNum="180" parent="globals/MiniMeWatchFaceView" pc="268436824" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="282" parent="globals/MiniMeWatchFaceView" pc="268436850" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="283" parent="globals/MiniMeWatchFaceView" pc="268436853" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="286" parent="globals/MiniMeWatchFaceView" pc="268436856" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="287" parent="globals/MiniMeWatchFaceView" pc="268436872" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="290" parent="globals/MiniMeWatchFaceView" pc="268436881" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="291" parent="globals/MiniMeWatchFaceView" pc="268436893" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="292" parent="globals/MiniMeWatchFaceView" pc="268436901" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="294" parent="globals/MiniMeWatchFaceView" pc="268436910" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="295" parent="globals/MiniMeWatchFaceView" pc="268436916" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="304" parent="globals/MiniMeWatchFaceView" pc="268437006" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="307" parent="globals/MiniMeWatchFaceView" pc="268437021" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="309" parent="globals/MiniMeWatchFaceView" pc="268437039" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="17" lineNum="312" parent="globals/MiniMeWatchFaceView" pc="268437055" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="18" lineNum="39" parent="globals/MiniMeWatchFaceView" pc="268437058" symbol="onLayout"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="19" lineNum="205" parent="globals/MiniMeWatchFaceView" pc="268437061" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="19" lineNum="206" parent="globals/MiniMeWatchFaceView" pc="268437064" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="19" lineNum="208" parent="globals/MiniMeWatchFaceView" pc="268437076" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="19" lineNum="209" parent="globals/MiniMeWatchFaceView" pc="268437082" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="56" parent="globals/MiniMeWatchFaceView" pc="268437108" symbol="onPartialUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="57" parent="globals/MiniMeWatchFaceView" pc="268437110" symbol="onPartialUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="58" parent="globals/MiniMeWatchFaceView" pc="268437119" symbol="onPartialUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="59" parent="globals/MiniMeWatchFaceView" pc="268437130" symbol="onPartialUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="60" parent="globals/MiniMeWatchFaceView" pc="268437138" symbol="onPartialUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="61" parent="globals/MiniMeWatchFaceView" pc="268437149" symbol="onPartialUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="20" lineNum="64" parent="globals/MiniMeWatchFaceView" pc="268437153" symbol="onPartialUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="378" parent="globals/MiniMeWatchFaceView" pc="268437165" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="379" parent="globals/MiniMeWatchFaceView" pc="268437168" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="380" parent="globals/MiniMeWatchFaceView" pc="268437177" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="381" parent="globals/MiniMeWatchFaceView" pc="268437230" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="382" parent="globals/MiniMeWatchFaceView" pc="268437239" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="383" parent="globals/MiniMeWatchFaceView" pc="268437253" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="385" parent="globals/MiniMeWatchFaceView" pc="268437270" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="21" lineNum="388" parent="globals/MiniMeWatchFaceView" pc="268437329" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="345" parent="globals/MiniMeWatchFaceView" pc="268437344" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="346" parent="globals/MiniMeWatchFaceView" pc="268437347" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="347" parent="globals/MiniMeWatchFaceView" pc="268437387" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="348" parent="globals/MiniMeWatchFaceView" pc="268437404" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="351" parent="globals/MiniMeWatchFaceView" pc="268437408" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="353" parent="globals/MiniMeWatchFaceView" pc="268437420" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="354" parent="globals/MiniMeWatchFaceView" pc="268437448" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="356" parent="globals/MiniMeWatchFaceView" pc="268437466" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="359" parent="globals/MiniMeWatchFaceView" pc="268437482" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="361" parent="globals/MiniMeWatchFaceView" pc="268437493" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="362" parent="globals/MiniMeWatchFaceView" pc="268437500" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="22" lineNum="365" parent="globals/MiniMeWatchFaceView" pc="268437510" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="235" parent="globals/MiniMeWatchFaceView" pc="268437552" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="236" parent="globals/MiniMeWatchFaceView" pc="268437554" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="237" parent="globals/MiniMeWatchFaceView" pc="268437568" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="244" parent="globals/MiniMeWatchFaceView" pc="268437594" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="23" lineNum="245" parent="globals/MiniMeWatchFaceView" pc="268437608" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="259" parent="globals/MiniMeWatchFaceView" pc="268437629" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="260" parent="globals/MiniMeWatchFaceView" pc="268437632" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="262" parent="globals/MiniMeWatchFaceView" pc="268437659" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="263" parent="globals/MiniMeWatchFaceView" pc="268437670" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="266" parent="globals/MiniMeWatchFaceView" pc="268437679" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="267" parent="globals/MiniMeWatchFaceView" pc="268437688" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="24" lineNum="269" parent="globals/MiniMeWatchFaceView" pc="268437709" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="315" parent="globals/MiniMeWatchFaceView" pc="268437715" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="316" parent="globals/MiniMeWatchFaceView" pc="268437718" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="319" parent="globals/MiniMeWatchFaceView" pc="268437721" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="320" parent="globals/MiniMeWatchFaceView" pc="268437733" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="321" parent="globals/MiniMeWatchFaceView" pc="268437741" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="323" parent="globals/MiniMeWatchFaceView" pc="268437744" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="324" parent="globals/MiniMeWatchFaceView" pc="268437767" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="326" parent="globals/MiniMeWatchFaceView" pc="268437774" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="334" parent="globals/MiniMeWatchFaceView" pc="268437846" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="337" parent="globals/MiniMeWatchFaceView" pc="268437870" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="339" parent="globals/MiniMeWatchFaceView" pc="268437886" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="25" lineNum="342" parent="globals/MiniMeWatchFaceView" pc="268437902" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="391" parent="globals/MiniMeWatchFaceView" pc="268437905" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="392" parent="globals/MiniMeWatchFaceView" pc="268437908" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="394" parent="globals/MiniMeWatchFaceView" pc="268437935" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="395" parent="globals/MiniMeWatchFaceView" pc="268437959" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="398" parent="globals/MiniMeWatchFaceView" pc="268437968" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="401" parent="globals/MiniMeWatchFaceView" pc="268437977" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="402" parent="globals/MiniMeWatchFaceView" pc="268437993" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="403" parent="globals/MiniMeWatchFaceView" pc="268438005" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="406" parent="globals/MiniMeWatchFaceView" pc="268438017" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="408" parent="globals/MiniMeWatchFaceView" pc="268438029" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="413" parent="globals/MiniMeWatchFaceView" pc="268438057" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="414" parent="globals/MiniMeWatchFaceView" pc="268438108" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="416" parent="globals/MiniMeWatchFaceView" pc="268438126" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="419" parent="globals/MiniMeWatchFaceView" pc="268438142" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="26" lineNum="420" parent="globals/MiniMeWatchFaceView" pc="268438154" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="27" lineNum="469" parent="globals/MiniMeWatchFaceView" pc="268438160" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="27" lineNum="471" parent="globals/MiniMeWatchFaceView" pc="268438163" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="27" lineNum="473" parent="globals/MiniMeWatchFaceView" pc="268438175" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="27" lineNum="474" parent="globals/MiniMeWatchFaceView" pc="268438203" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="27" lineNum="476" parent="globals/MiniMeWatchFaceView" pc="268438223" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="27" lineNum="479" parent="globals/MiniMeWatchFaceView" pc="268438239" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="423" parent="globals/MiniMeWatchFaceView" pc="268438241" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="424" parent="globals/MiniMeWatchFaceView" pc="268438243" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="425" parent="globals/MiniMeWatchFaceView" pc="268438263" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="428" parent="globals/MiniMeWatchFaceView" pc="268438272" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="429" parent="globals/MiniMeWatchFaceView" pc="268438280" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="430" parent="globals/MiniMeWatchFaceView" pc="268438321" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="431" parent="globals/MiniMeWatchFaceView" pc="268438337" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="433" parent="globals/MiniMeWatchFaceView" pc="268438378" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="436" parent="globals/MiniMeWatchFaceView" pc="268438416" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="30" lineNum="437" parent="globals/MiniMeWatchFaceView" pc="268438425" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="183" parent="globals/MiniMeWatchFaceView" pc="268438431" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="184" parent="globals/MiniMeWatchFaceView" pc="268438434" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="185" parent="globals/MiniMeWatchFaceView" pc="268438450" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="186" parent="globals/MiniMeWatchFaceView" pc="268438466" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="187" parent="globals/MiniMeWatchFaceView" pc="268438494" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="188" parent="globals/MiniMeWatchFaceView" pc="268438516" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="189" parent="globals/MiniMeWatchFaceView" pc="268438538" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="190" parent="globals/MiniMeWatchFaceView" pc="268438557" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="191" parent="globals/MiniMeWatchFaceView" pc="268438573" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="193" parent="globals/MiniMeWatchFaceView" pc="268438585" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="194" parent="globals/MiniMeWatchFaceView" pc="268438607" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="31" lineNum="195" parent="globals/MiniMeWatchFaceView" pc="268438633" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="70" parent="globals/MiniMeWatchFaceView" pc="268438663" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="71" parent="globals/MiniMeWatchFaceView" pc="268438666" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="72" parent="globals/MiniMeWatchFaceView" pc="268438675" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="73" parent="globals/MiniMeWatchFaceView" pc="268438684" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="74" parent="globals/MiniMeWatchFaceView" pc="268438691" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="75" parent="globals/MiniMeWatchFaceView" pc="268438699" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="76" parent="globals/MiniMeWatchFaceView" pc="268438711" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="77" parent="globals/MiniMeWatchFaceView" pc="268438736" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="78" parent="globals/MiniMeWatchFaceView" pc="268438760" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="80" parent="globals/MiniMeWatchFaceView" pc="268438784" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="81" parent="globals/MiniMeWatchFaceView" pc="268438796" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="83" parent="globals/MiniMeWatchFaceView" pc="268438804" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="84" parent="globals/MiniMeWatchFaceView" pc="268438821" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="85" parent="globals/MiniMeWatchFaceView" pc="268438842" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="94" parent="globals/MiniMeWatchFaceView" pc="268438877" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="32" lineNum="95" parent="globals/MiniMeWatchFaceView" pc="268438892" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="33" lineNum="198" parent="globals/MiniMeWatchFaceView" pc="268438901" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="33" lineNum="199" parent="globals/MiniMeWatchFaceView" pc="268438903" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="33" lineNum="201" parent="globals/MiniMeWatchFaceView" pc="268438920" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="33" lineNum="202" parent="globals/MiniMeWatchFaceView" pc="268438934" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="34" lineNum="35" parent="globals/MiniMeWatchFaceView" pc="268438956" symbol="initialize"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="34" lineNum="36" parent="globals/MiniMeWatchFaceView" pc="268438958" symbol="initialize"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="45" parent="globals/MiniMeWatchFaceView" pc="268438971" symbol="onUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="46" parent="globals/MiniMeWatchFaceView" pc="268438973" symbol="onUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="47" parent="globals/MiniMeWatchFaceView" pc="268438982" symbol="onUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="48" parent="globals/MiniMeWatchFaceView" pc="268438993" symbol="onUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="49" parent="globals/MiniMeWatchFaceView" pc="268439001" symbol="onUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="50" parent="globals/MiniMeWatchFaceView" pc="268439012" symbol="onUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="35" lineNum="53" parent="globals/MiniMeWatchFaceView" pc="268439016" symbol="onUpdate"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="36" lineNum="272" parent="globals/MiniMeWatchFaceView" pc="268439028" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="36" lineNum="273" parent="globals/MiniMeWatchFaceView" pc="268439031" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="36" lineNum="275" parent="globals/MiniMeWatchFaceView" pc="268439039" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="36" lineNum="276" parent="globals/MiniMeWatchFaceView" pc="268439046" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
+        <entry filename="/Users/idomizrachi/Documents/Garmin Mini Me/WatchFace/source/MiniMeWatchFaceView.mc" id="36" lineNum="279" parent="globals/MiniMeWatchFaceView" pc="268439052" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
-        <entry id="23" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
+        <entry id="25" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
-        <entry field="true" id="46" symbol="BgAvatarBottomLeftProud"/>
-        <entry field="true" id="45" symbol="BgAvatarBottomLeftHappy"/>
-        <entry id="19" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
+        <entry field="true" id="48" symbol="BgAvatarBottomLeftProud"/>
+        <entry field="true" id="47" symbol="BgAvatarBottomLeftHappy"/>
+        <entry id="20" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;"/>
         <entry field="true" id="8388731" symbol="startTime"/>
         <entry id="8388924" module="true" symbol="Gregorian"/>
         <entry id="8388647" module="true" symbol="UserProfile"/>
         <entry id="9" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry id="30" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
+        <entry id="32" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;"/>
         <entry field="true" id="8" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;activeBackgroundMood&gt;"/>
-        <entry field="true" id="42" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weeklyRunningDistanceCacheMinute&gt;"/>
+        <entry field="true" id="44" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weeklyRunningDistanceCacheMinute&gt;"/>
         <entry field="true" id="8388962" symbol="temperature"/>
-        <entry field="true" id="52" symbol="AppName"/>
+        <entry field="true" id="54" symbol="AppName"/>
         <entry id="8388633" module="true" symbol="ActivityMonitor"/>
         <entry id="5" object="true" symbol="MiniMeApp"/>
         <entry id="4" module="true" symbol="globals/Rez/Strings"/>
@@ -244,66 +267,68 @@
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="8390097" method="true" symbol="onPartialUpdate"/>
         <entry id="14" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;"/>
-        <entry id="22" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
+        <entry id="24" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="43" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weeklyRunningDistanceIconBitmap&gt;"/>
+        <entry field="true" id="45" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weeklyRunningDistanceIconBitmap&gt;"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
-        <entry field="true" id="41" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weatherTemperatureText&gt;"/>
+        <entry field="true" id="43" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weatherTemperatureText&gt;"/>
         <entry id="8391489" module="true" symbol="Weather"/>
         <entry id="15" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;"/>
         <entry field="true" id="8388916" symbol="startOfDay"/>
-        <entry field="true" id="47" symbol="BgAvatarBottomLeftSleepy"/>
-        <entry id="18" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
+        <entry field="true" id="49" symbol="BgAvatarBottomLeftSleepy"/>
+        <entry id="19" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
-        <entry id="29" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
+        <entry id="31" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
-        <entry id="21" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
+        <entry id="23" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatDistance&gt;"/>
+        <entry field="true" id="22" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;firstPaintDrawn&gt;"/>
         <entry id="8391661" method="true" symbol="getCurrentConditions"/>
-        <entry field="true" id="50" symbol="IconWeeklyRunningDistance"/>
+        <entry field="true" id="52" symbol="IconWeeklyRunningDistance"/>
         <entry field="true" id="8388911" symbol="distance"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry id="17" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
-        <entry id="27" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
+        <entry id="18" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;"/>
+        <entry id="29" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getTextColor&gt;"/>
         <entry id="13" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;"/>
-        <entry id="26" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
-        <entry id="32" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
+        <entry id="28" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;"/>
+        <entry id="34" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;"/>
         <entry id="8388644" module="true" symbol="System"/>
-        <entry id="16" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
+        <entry id="17" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;"/>
         <entry id="8388645" module="true" symbol="Time"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
-        <entry id="28" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
-        <entry id="31" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
-        <entry field="true" id="35" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;lastDrawnMonth&gt;"/>
-        <entry field="true" id="33" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;lastDrawnDay&gt;"/>
+        <entry id="30" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;"/>
+        <entry id="33" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;"/>
+        <entry field="true" id="37" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;lastDrawnMonth&gt;"/>
+        <entry field="true" id="35" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;lastDrawnDay&gt;"/>
+        <entry id="16" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry field="true" id="44" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weeklyRunningDistanceText&gt;"/>
-        <entry field="true" id="39" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weatherCacheMinute&gt;"/>
-        <entry field="true" id="51" symbol="LauncherIcon"/>
+        <entry field="true" id="46" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weeklyRunningDistanceText&gt;"/>
+        <entry field="true" id="41" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weatherCacheMinute&gt;"/>
+        <entry field="true" id="53" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8389123" method="true" symbol="onShow"/>
-        <entry field="true" id="36" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;lastDrawnMood&gt;"/>
+        <entry field="true" id="38" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;lastDrawnMood&gt;"/>
         <entry id="8389350" module="true" symbol="globals"/>
-        <entry field="true" id="20" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;firstFullFaceDrawn&gt;"/>
+        <entry field="true" id="21" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;firstFullFaceDrawn&gt;"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
-        <entry id="25" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
+        <entry id="27" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;"/>
         <entry id="8388702" method="true" symbol="initialize"/>
-        <entry id="37" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
-        <entry id="24" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
+        <entry id="39" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;rememberDrawnState&gt;"/>
+        <entry id="26" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;"/>
         <entry id="6" object="true" symbol="MiniMeWatchFaceView"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="10" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;"/>
-        <entry field="true" id="49" symbol="IconWeather"/>
-        <entry field="true" id="40" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weatherIconBitmap&gt;"/>
+        <entry field="true" id="51" symbol="IconWeather"/>
+        <entry field="true" id="42" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;weatherIconBitmap&gt;"/>
         <entry field="true" id="8389846" symbol="type"/>
         <entry id="11" method="true" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;"/>
-        <entry field="true" id="48" symbol="IconSteps"/>
+        <entry field="true" id="50" symbol="IconSteps"/>
         <entry id="8391857" method="true" symbol="getUserActivityHistory"/>
-        <entry field="true" id="38" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;stepsIconBitmap&gt;"/>
+        <entry field="true" id="40" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;stepsIconBitmap&gt;"/>
         <entry id="8389125" method="true" symbol="onHide"/>
         <entry field="true" id="7" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;activeBackgroundBitmap&gt;"/>
         <entry id="8388635" module="true" symbol="Application"/>
         <entry field="true" id="8390696" symbol="firstDayOfWeek"/>
-        <entry field="true" id="34" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;lastDrawnMinute&gt;"/>
+        <entry field="true" id="36" symbol="&lt;globals/MiniMeWatchFaceView/&lt;&gt;lastDrawnMinute&gt;"/>
     </symbolTable>
     <localVars>
         <entry arg="true" endPc="268435654" name="meters" stackId="1" startPc="268435547"/>
@@ -318,119 +343,124 @@
         <entry arg="true" endPc="268435751" name="dateInfo" stackId="2" startPc="268435701"/>
         <entry arg="true" endPc="268435751" name="mood" stackId="3" startPc="268435701"/>
         <entry arg="true" endPc="268435779" name="mood" stackId="1" startPc="268435752"/>
-        <entry arg="true" endPc="268435820" name="iconType" stackId="1" startPc="268435780"/>
-        <entry endPc="268435915" name="clock" stackId="1" startPc="268435824"/>
-        <entry arg="true" endPc="268435982" name="dc" stackId="1" startPc="268435916"/>
-        <entry arg="true" endPc="268435982" name="width" stackId="2" startPc="268435916"/>
-        <entry arg="true" endPc="268435982" name="height" stackId="3" startPc="268435916"/>
-        <entry arg="true" endPc="268435982" name="mood" stackId="4" startPc="268435916"/>
-        <entry endPc="268435981" name="bitmap" stackId="5" startPc="268435919"/>
-        <entry arg="true" endPc="268436114" name="dc" stackId="1" startPc="268435983"/>
-        <entry arg="true" endPc="268436114" name="width" stackId="2" startPc="268435983"/>
-        <entry arg="true" endPc="268436114" name="height" stackId="3" startPc="268435983"/>
-        <entry arg="true" endPc="268436114" name="centerX" stackId="4" startPc="268435983"/>
-        <entry arg="true" endPc="268436114" name="mood" stackId="5" startPc="268435983"/>
-        <entry arg="true" endPc="268436114" name="clock" stackId="6" startPc="268435983"/>
-        <entry arg="true" endPc="268436114" name="dateInfo" stackId="7" startPc="268435983"/>
-        <entry endPc="268436113" name="regionX" stackId="8" startPc="268435986"/>
-        <entry endPc="268436113" name="regionY" stackId="9" startPc="268435986"/>
-        <entry endPc="268436113" name="regionWidth" stackId="10" startPc="268435986"/>
-        <entry endPc="268436113" name="regionHeight" stackId="11" startPc="268435986"/>
-        <entry arg="true" endPc="268436301" name="dc" stackId="1" startPc="268436115"/>
-        <entry endPc="268436300" name="width" stackId="2" startPc="268436118"/>
-        <entry endPc="268436300" name="height" stackId="3" startPc="268436118"/>
-        <entry endPc="268436300" name="centerX" stackId="4" startPc="268436118"/>
-        <entry endPc="268436300" name="mood" stackId="5" startPc="268436118"/>
-        <entry endPc="268436300" name="clock" stackId="6" startPc="268436118"/>
-        <entry endPc="268436300" name="dateInfo" stackId="7" startPc="268436118"/>
-        <entry arg="true" endPc="268436577" name="dc" stackId="1" startPc="268436302"/>
-        <entry arg="true" endPc="268436577" name="centerX" stackId="2" startPc="268436302"/>
-        <entry arg="true" endPc="268436577" name="height" stackId="3" startPc="268436302"/>
-        <entry arg="true" endPc="268436577" name="mood" stackId="4" startPc="268436302"/>
-        <entry arg="true" endPc="268436577" name="clock" stackId="5" startPc="268436302"/>
-        <entry arg="true" endPc="268436577" name="dateInfo" stackId="6" startPc="268436302"/>
-        <entry endPc="268436576" name="timeText" stackId="7" startPc="268436305"/>
-        <entry endPc="268436576" name="dateText" stackId="8" startPc="268436305"/>
-        <entry endPc="268436576" name="timeY" stackId="9" startPc="268436305"/>
-        <entry endPc="268436576" name="timeX" stackId="10" startPc="268436305"/>
-        <entry endPc="268436576" name="dateY" stackId="11" startPc="268436305"/>
-        <entry endPc="268436576" name="textColor" stackId="12" startPc="268436305"/>
-        <entry endPc="268436576" name="shadowColor" stackId="13" startPc="268436305"/>
-        <entry endPc="268436785" name="total" stackId="1" startPc="268436581"/>
-        <entry endPc="268436760" name="activityIterator" stackId="2" startPc="268436584"/>
-        <entry endPc="268436760" name="weekStart" stackId="3" startPc="268436584"/>
-        <entry endPc="268436760" name="activity" stackId="4" startPc="268436584"/>
-        <entry endPc="268436777" name="ex" stackId="5" startPc="268436767"/>
-        <entry arg="true" endPc="268436902" name="dc" stackId="1" startPc="268436786"/>
-        <entry arg="true" endPc="268436949" name="dc" stackId="1" startPc="268436903"/>
-        <entry arg="true" endPc="268436949" name="x" stackId="2" startPc="268436903"/>
-        <entry arg="true" endPc="268436949" name="y" stackId="3" startPc="268436903"/>
-        <entry arg="true" endPc="268436949" name="iconType" stackId="4" startPc="268436903"/>
-        <entry endPc="268436948" name="bitmap" stackId="5" startPc="268436906"/>
-        <entry arg="true" endPc="268436963" name="dc" stackId="1" startPc="268436950"/>
-        <entry arg="true" endPc="268437142" name="steps" stackId="1" startPc="268436964"/>
-        <entry endPc="268437124" name="thousands" stackId="2" startPc="268437038"/>
-        <entry endPc="268437124" name="hundreds" stackId="3" startPc="268437038"/>
-        <entry endPc="268437350" name="today" stackId="1" startPc="268437146"/>
-        <entry endPc="268437350" name="info" stackId="2" startPc="268437146"/>
-        <entry endPc="268437350" name="firstDayOfWeek" stackId="3" startPc="268437146"/>
-        <entry endPc="268437258" name="settings" stackId="4" startPc="268437207"/>
-        <entry endPc="268437275" name="ex" stackId="5" startPc="268437265"/>
-        <entry endPc="268437350" name="daysSinceWeekStart" stackId="6" startPc="268437146"/>
-        <entry arg="true" endPc="268437427" name="dc" stackId="1" startPc="268437351"/>
-        <entry arg="true" endPc="268437427" name="x" stackId="2" startPc="268437351"/>
-        <entry arg="true" endPc="268437427" name="y" stackId="3" startPc="268437351"/>
-        <entry arg="true" endPc="268437427" name="font" stackId="4" startPc="268437351"/>
-        <entry arg="true" endPc="268437427" name="text" stackId="5" startPc="268437351"/>
-        <entry arg="true" endPc="268437427" name="color" stackId="6" startPc="268437351"/>
-        <entry arg="true" endPc="268437427" name="shadowColor" stackId="7" startPc="268437351"/>
-        <entry arg="true" endPc="268437427" name="offset" stackId="8" startPc="268437351"/>
-        <entry endPc="268437513" name="cacheMinute" stackId="1" startPc="268437431"/>
-        <entry endPc="268437703" name="total" stackId="1" startPc="268437517"/>
-        <entry endPc="268437678" name="history" stackId="2" startPc="268437520"/>
-        <entry endPc="268437678" name="weekStart" stackId="3" startPc="268437520"/>
-        <entry endPc="268437678" name="i" stackId="4" startPc="268437520"/>
-        <entry endPc="268437675" name="day" stackId="5" startPc="268437566"/>
-        <entry endPc="268437695" name="ex" stackId="6" startPc="268437685"/>
-        <entry endPc="268437958" name="cacheMinute" stackId="1" startPc="268437707"/>
-        <entry endPc="268437918" name="conditions" stackId="2" startPc="268437776"/>
-        <entry endPc="268437935" name="ex" stackId="3" startPc="268437925"/>
-        <entry endPc="268438015" name="info" stackId="1" startPc="268437962"/>
-        <entry endPc="268438032" name="ex" stackId="2" startPc="268438022"/>
-        <entry arg="true" endPc="268438229" name="mood" stackId="1" startPc="268438040"/>
-        <entry arg="true" endPc="268438461" name="dc" stackId="1" startPc="268438230"/>
-        <entry arg="true" endPc="268438461" name="width" stackId="2" startPc="268438230"/>
-        <entry arg="true" endPc="268438461" name="height" stackId="3" startPc="268438230"/>
-        <entry arg="true" endPc="268438461" name="mood" stackId="4" startPc="268438230"/>
-        <entry arg="true" endPc="268438461" name="stepsText" stackId="5" startPc="268438230"/>
-        <entry arg="true" endPc="268438461" name="weeklyText" stackId="6" startPc="268438230"/>
-        <entry arg="true" endPc="268438461" name="weatherText" stackId="7" startPc="268438230"/>
-        <entry endPc="268438460" name="clusterOffsetX" stackId="8" startPc="268438233"/>
-        <entry endPc="268438460" name="clusterOffsetY" stackId="9" startPc="268438233"/>
-        <entry endPc="268438460" name="proudOffsetX" stackId="10" startPc="268438233"/>
-        <entry endPc="268438460" name="iconX" stackId="11" startPc="268438233"/>
-        <entry endPc="268438460" name="valueX" stackId="12" startPc="268438233"/>
-        <entry endPc="268438460" name="topY" stackId="13" startPc="268438233"/>
-        <entry endPc="268438460" name="rowGap" stackId="14" startPc="268438233"/>
-        <entry endPc="268438460" name="textColor" stackId="15" startPc="268438233"/>
-        <entry arg="true" endPc="268438699" name="dc" stackId="1" startPc="268438462"/>
-        <entry endPc="268438698" name="width" stackId="2" startPc="268438465"/>
-        <entry endPc="268438698" name="height" stackId="3" startPc="268438465"/>
-        <entry endPc="268438698" name="centerX" stackId="4" startPc="268438465"/>
-        <entry endPc="268438698" name="mood" stackId="5" startPc="268438465"/>
-        <entry endPc="268438698" name="clock" stackId="6" startPc="268438465"/>
-        <entry endPc="268438698" name="dateInfo" stackId="7" startPc="268438465"/>
-        <entry endPc="268438698" name="weeklyText" stackId="8" startPc="268438465"/>
-        <entry endPc="268438698" name="weatherText" stackId="9" startPc="268438465"/>
-        <entry arg="true" endPc="268438754" name="dc" stackId="1" startPc="268438700"/>
-        <entry arg="true" endPc="268438754" name="iconX" stackId="2" startPc="268438700"/>
-        <entry arg="true" endPc="268438754" name="valueX" stackId="3" startPc="268438700"/>
-        <entry arg="true" endPc="268438754" name="y" stackId="4" startPc="268438700"/>
-        <entry arg="true" endPc="268438754" name="value" stackId="5" startPc="268438700"/>
-        <entry arg="true" endPc="268438754" name="color" stackId="6" startPc="268438700"/>
-        <entry arg="true" endPc="268438754" name="iconType" stackId="7" startPc="268438700"/>
-        <entry arg="true" endPc="268438783" name="dc" stackId="1" startPc="268438770"/>
-        <entry endPc="268438814" name="recordedRunTotal" stackId="1" startPc="268438787"/>
+        <entry arg="true" endPc="268435970" name="iconType" stackId="1" startPc="268435780"/>
+        <entry arg="true" endPc="268436092" name="dc" stackId="1" startPc="268435971"/>
+        <entry endPc="268436091" name="width" stackId="2" startPc="268435974"/>
+        <entry endPc="268436091" name="height" stackId="3" startPc="268435974"/>
+        <entry endPc="268436091" name="centerX" stackId="4" startPc="268435974"/>
+        <entry endPc="268436091" name="clock" stackId="5" startPc="268435974"/>
+        <entry endPc="268436091" name="dateInfo" stackId="6" startPc="268435974"/>
+        <entry endPc="268436187" name="clock" stackId="1" startPc="268436096"/>
+        <entry arg="true" endPc="268436254" name="dc" stackId="1" startPc="268436188"/>
+        <entry arg="true" endPc="268436254" name="width" stackId="2" startPc="268436188"/>
+        <entry arg="true" endPc="268436254" name="height" stackId="3" startPc="268436188"/>
+        <entry arg="true" endPc="268436254" name="mood" stackId="4" startPc="268436188"/>
+        <entry endPc="268436253" name="bitmap" stackId="5" startPc="268436191"/>
+        <entry arg="true" endPc="268436386" name="dc" stackId="1" startPc="268436255"/>
+        <entry arg="true" endPc="268436386" name="width" stackId="2" startPc="268436255"/>
+        <entry arg="true" endPc="268436386" name="height" stackId="3" startPc="268436255"/>
+        <entry arg="true" endPc="268436386" name="centerX" stackId="4" startPc="268436255"/>
+        <entry arg="true" endPc="268436386" name="mood" stackId="5" startPc="268436255"/>
+        <entry arg="true" endPc="268436386" name="clock" stackId="6" startPc="268436255"/>
+        <entry arg="true" endPc="268436386" name="dateInfo" stackId="7" startPc="268436255"/>
+        <entry endPc="268436385" name="regionX" stackId="8" startPc="268436258"/>
+        <entry endPc="268436385" name="regionY" stackId="9" startPc="268436258"/>
+        <entry endPc="268436385" name="regionWidth" stackId="10" startPc="268436258"/>
+        <entry endPc="268436385" name="regionHeight" stackId="11" startPc="268436258"/>
+        <entry arg="true" endPc="268436573" name="dc" stackId="1" startPc="268436387"/>
+        <entry endPc="268436572" name="width" stackId="2" startPc="268436390"/>
+        <entry endPc="268436572" name="height" stackId="3" startPc="268436390"/>
+        <entry endPc="268436572" name="centerX" stackId="4" startPc="268436390"/>
+        <entry endPc="268436572" name="mood" stackId="5" startPc="268436390"/>
+        <entry endPc="268436572" name="clock" stackId="6" startPc="268436390"/>
+        <entry endPc="268436572" name="dateInfo" stackId="7" startPc="268436390"/>
+        <entry arg="true" endPc="268436849" name="dc" stackId="1" startPc="268436574"/>
+        <entry arg="true" endPc="268436849" name="centerX" stackId="2" startPc="268436574"/>
+        <entry arg="true" endPc="268436849" name="height" stackId="3" startPc="268436574"/>
+        <entry arg="true" endPc="268436849" name="mood" stackId="4" startPc="268436574"/>
+        <entry arg="true" endPc="268436849" name="clock" stackId="5" startPc="268436574"/>
+        <entry arg="true" endPc="268436849" name="dateInfo" stackId="6" startPc="268436574"/>
+        <entry endPc="268436848" name="timeText" stackId="7" startPc="268436577"/>
+        <entry endPc="268436848" name="dateText" stackId="8" startPc="268436577"/>
+        <entry endPc="268436848" name="timeY" stackId="9" startPc="268436577"/>
+        <entry endPc="268436848" name="timeX" stackId="10" startPc="268436577"/>
+        <entry endPc="268436848" name="dateY" stackId="11" startPc="268436577"/>
+        <entry endPc="268436848" name="textColor" stackId="12" startPc="268436577"/>
+        <entry endPc="268436848" name="shadowColor" stackId="13" startPc="268436577"/>
+        <entry endPc="268437057" name="total" stackId="1" startPc="268436853"/>
+        <entry endPc="268437032" name="activityIterator" stackId="2" startPc="268436856"/>
+        <entry endPc="268437032" name="weekStart" stackId="3" startPc="268436856"/>
+        <entry endPc="268437032" name="activity" stackId="4" startPc="268436856"/>
+        <entry endPc="268437049" name="ex" stackId="5" startPc="268437039"/>
+        <entry arg="true" endPc="268437107" name="dc" stackId="1" startPc="268437061"/>
+        <entry arg="true" endPc="268437107" name="x" stackId="2" startPc="268437061"/>
+        <entry arg="true" endPc="268437107" name="y" stackId="3" startPc="268437061"/>
+        <entry arg="true" endPc="268437107" name="iconType" stackId="4" startPc="268437061"/>
+        <entry endPc="268437106" name="bitmap" stackId="5" startPc="268437064"/>
+        <entry arg="true" endPc="268437164" name="dc" stackId="1" startPc="268437108"/>
+        <entry arg="true" endPc="268437343" name="steps" stackId="1" startPc="268437165"/>
+        <entry endPc="268437325" name="thousands" stackId="2" startPc="268437239"/>
+        <entry endPc="268437325" name="hundreds" stackId="3" startPc="268437239"/>
+        <entry endPc="268437551" name="today" stackId="1" startPc="268437347"/>
+        <entry endPc="268437551" name="info" stackId="2" startPc="268437347"/>
+        <entry endPc="268437551" name="firstDayOfWeek" stackId="3" startPc="268437347"/>
+        <entry endPc="268437459" name="settings" stackId="4" startPc="268437408"/>
+        <entry endPc="268437476" name="ex" stackId="5" startPc="268437466"/>
+        <entry endPc="268437551" name="daysSinceWeekStart" stackId="6" startPc="268437347"/>
+        <entry arg="true" endPc="268437628" name="dc" stackId="1" startPc="268437552"/>
+        <entry arg="true" endPc="268437628" name="x" stackId="2" startPc="268437552"/>
+        <entry arg="true" endPc="268437628" name="y" stackId="3" startPc="268437552"/>
+        <entry arg="true" endPc="268437628" name="font" stackId="4" startPc="268437552"/>
+        <entry arg="true" endPc="268437628" name="text" stackId="5" startPc="268437552"/>
+        <entry arg="true" endPc="268437628" name="color" stackId="6" startPc="268437552"/>
+        <entry arg="true" endPc="268437628" name="shadowColor" stackId="7" startPc="268437552"/>
+        <entry arg="true" endPc="268437628" name="offset" stackId="8" startPc="268437552"/>
+        <entry endPc="268437714" name="cacheMinute" stackId="1" startPc="268437632"/>
+        <entry endPc="268437904" name="total" stackId="1" startPc="268437718"/>
+        <entry endPc="268437879" name="history" stackId="2" startPc="268437721"/>
+        <entry endPc="268437879" name="weekStart" stackId="3" startPc="268437721"/>
+        <entry endPc="268437879" name="i" stackId="4" startPc="268437721"/>
+        <entry endPc="268437876" name="day" stackId="5" startPc="268437767"/>
+        <entry endPc="268437896" name="ex" stackId="6" startPc="268437886"/>
+        <entry endPc="268438159" name="cacheMinute" stackId="1" startPc="268437908"/>
+        <entry endPc="268438119" name="conditions" stackId="2" startPc="268437977"/>
+        <entry endPc="268438136" name="ex" stackId="3" startPc="268438126"/>
+        <entry endPc="268438216" name="info" stackId="1" startPc="268438163"/>
+        <entry endPc="268438233" name="ex" stackId="2" startPc="268438223"/>
+        <entry arg="true" endPc="268438430" name="mood" stackId="1" startPc="268438241"/>
+        <entry arg="true" endPc="268438662" name="dc" stackId="1" startPc="268438431"/>
+        <entry arg="true" endPc="268438662" name="width" stackId="2" startPc="268438431"/>
+        <entry arg="true" endPc="268438662" name="height" stackId="3" startPc="268438431"/>
+        <entry arg="true" endPc="268438662" name="mood" stackId="4" startPc="268438431"/>
+        <entry arg="true" endPc="268438662" name="stepsText" stackId="5" startPc="268438431"/>
+        <entry arg="true" endPc="268438662" name="weeklyText" stackId="6" startPc="268438431"/>
+        <entry arg="true" endPc="268438662" name="weatherText" stackId="7" startPc="268438431"/>
+        <entry endPc="268438661" name="clusterOffsetX" stackId="8" startPc="268438434"/>
+        <entry endPc="268438661" name="clusterOffsetY" stackId="9" startPc="268438434"/>
+        <entry endPc="268438661" name="proudOffsetX" stackId="10" startPc="268438434"/>
+        <entry endPc="268438661" name="iconX" stackId="11" startPc="268438434"/>
+        <entry endPc="268438661" name="valueX" stackId="12" startPc="268438434"/>
+        <entry endPc="268438661" name="topY" stackId="13" startPc="268438434"/>
+        <entry endPc="268438661" name="rowGap" stackId="14" startPc="268438434"/>
+        <entry endPc="268438661" name="textColor" stackId="15" startPc="268438434"/>
+        <entry arg="true" endPc="268438900" name="dc" stackId="1" startPc="268438663"/>
+        <entry endPc="268438899" name="width" stackId="2" startPc="268438666"/>
+        <entry endPc="268438899" name="height" stackId="3" startPc="268438666"/>
+        <entry endPc="268438899" name="centerX" stackId="4" startPc="268438666"/>
+        <entry endPc="268438899" name="mood" stackId="5" startPc="268438666"/>
+        <entry endPc="268438899" name="clock" stackId="6" startPc="268438666"/>
+        <entry endPc="268438899" name="dateInfo" stackId="7" startPc="268438666"/>
+        <entry endPc="268438899" name="weeklyText" stackId="8" startPc="268438666"/>
+        <entry endPc="268438899" name="weatherText" stackId="9" startPc="268438666"/>
+        <entry arg="true" endPc="268438955" name="dc" stackId="1" startPc="268438901"/>
+        <entry arg="true" endPc="268438955" name="iconX" stackId="2" startPc="268438901"/>
+        <entry arg="true" endPc="268438955" name="valueX" stackId="3" startPc="268438901"/>
+        <entry arg="true" endPc="268438955" name="y" stackId="4" startPc="268438901"/>
+        <entry arg="true" endPc="268438955" name="value" stackId="5" startPc="268438901"/>
+        <entry arg="true" endPc="268438955" name="color" stackId="6" startPc="268438901"/>
+        <entry arg="true" endPc="268438955" name="iconType" stackId="7" startPc="268438901"/>
+        <entry arg="true" endPc="268439027" name="dc" stackId="1" startPc="268438971"/>
+        <entry endPc="268439058" name="recordedRunTotal" stackId="1" startPc="268439031"/>
     </localVars>
     <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B4570-00"/>
     <annotations>
@@ -448,8 +478,8 @@
         <dataEntry label="globals/MiniMeApp" offset="107" parentId="globals" symbolId="MiniMeApp" type="class"/>
         <dataEntry label="globals/Rez" offset="160" parentId="globals" symbolId="Rez" type="module"/>
         <dataEntry label="globals/MiniMeWatchFaceView" offset="204" parentId="globals" symbolId="MiniMeWatchFaceView" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="635" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="724" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="653" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="742" parentId="Rez" symbolId="Strings" type="module"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="MiniMeApp" startPc="268435460">
@@ -496,21 +526,25 @@
             <param id="mood"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268435820" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;" parent="MiniMeWatchFaceView" startPc="268435780">
+        <functionEntry accessMode="private" endPc="268435970" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getMetricIconBitmap&gt;" parent="MiniMeWatchFaceView" startPc="268435780">
             <param id="iconType"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268435915" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;" parent="MiniMeWatchFaceView" startPc="268435821">
+        <functionEntry accessMode="private" endPc="268436092" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFastFirstPaint&gt;" parent="MiniMeWatchFaceView" startPc="268435971">
+            <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268435982" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;" parent="MiniMeWatchFaceView" startPc="268435916">
+        <functionEntry accessMode="private" endPc="268436187" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;choosePrototypeMood&gt;" parent="MiniMeWatchFaceView" startPc="268436093">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436254" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawBackground&gt;" parent="MiniMeWatchFaceView" startPc="268436188">
             <param id="dc"/>
             <param id="width"/>
             <param id="height"/>
             <param id="mood"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268436114" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;" parent="MiniMeWatchFaceView" startPc="268435983">
+        <functionEntry accessMode="private" endPc="268436386" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTimeRegion&gt;" parent="MiniMeWatchFaceView" startPc="268436255">
             <param id="dc"/>
             <param id="width"/>
             <param id="height"/>
@@ -520,11 +554,11 @@
             <param id="dateInfo"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268436301" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;" parent="MiniMeWatchFaceView" startPc="268436115">
+        <functionEntry accessMode="private" endPc="268436573" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawPartialFace&gt;" parent="MiniMeWatchFaceView" startPc="268436387">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268436577" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;" parent="MiniMeWatchFaceView" startPc="268436302">
+        <functionEntry accessMode="private" endPc="268436849" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawDateAndTime&gt;" parent="MiniMeWatchFaceView" startPc="268436574">
             <param id="dc"/>
             <param id="centerX"/>
             <param id="height"/>
@@ -533,32 +567,32 @@
             <param id="dateInfo"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268436785" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;" parent="MiniMeWatchFaceView" startPc="268436578">
+        <functionEntry accessMode="private" endPc="268437057" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRecordedRunningDistanceMeters&gt;" parent="MiniMeWatchFaceView" startPc="268436850">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436902" name="onLayout" parent="MiniMeWatchFaceView" startPc="268436786">
+        <functionEntry accessMode="public" endPc="268437060" name="onLayout" parent="MiniMeWatchFaceView" startPc="268437058">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268436949" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;" parent="MiniMeWatchFaceView" startPc="268436903">
+        <functionEntry accessMode="private" endPc="268437107" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricIcon&gt;" parent="MiniMeWatchFaceView" startPc="268437061">
             <param id="dc"/>
             <param id="x"/>
             <param id="y"/>
             <param id="iconType"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436963" name="onPartialUpdate" parent="MiniMeWatchFaceView" startPc="268436950">
+        <functionEntry accessMode="public" endPc="268437164" name="onPartialUpdate" parent="MiniMeWatchFaceView" startPc="268437108">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437142" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;" parent="MiniMeWatchFaceView" startPc="268436964">
+        <functionEntry accessMode="private" endPc="268437343" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;formatSteps&gt;" parent="MiniMeWatchFaceView" startPc="268437165">
             <param id="steps"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437350" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;" parent="MiniMeWatchFaceView" startPc="268437143">
+        <functionEntry accessMode="private" endPc="268437551" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getStartOfWeek&gt;" parent="MiniMeWatchFaceView" startPc="268437344">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437427" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;" parent="MiniMeWatchFaceView" startPc="268437351">
+        <functionEntry accessMode="private" endPc="268437628" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawShadowText&gt;" parent="MiniMeWatchFaceView" startPc="268437552">
             <param id="dc"/>
             <param id="x"/>
             <param id="y"/>
@@ -569,16 +603,16 @@
             <param id="offset"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437513" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;" parent="MiniMeWatchFaceView" startPc="268437428">
+        <functionEntry accessMode="private" endPc="268437714" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceText&gt;" parent="MiniMeWatchFaceView" startPc="268437629">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437703" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;" parent="MiniMeWatchFaceView" startPc="268437514">
+        <functionEntry accessMode="private" endPc="268437904" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyActivityMonitorDistanceMeters&gt;" parent="MiniMeWatchFaceView" startPc="268437715">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437958" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;" parent="MiniMeWatchFaceView" startPc="268437704">
+        <functionEntry accessMode="private" endPc="268438159" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeatherTemperatureText&gt;" parent="MiniMeWatchFaceView" startPc="268437905">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268438039" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;" parent="MiniMeWatchFaceView" startPc="268437959">
+        <functionEntry accessMode="private" endPc="268438240" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getSteps&gt;" parent="MiniMeWatchFaceView" startPc="268438160">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onHide" parent="MiniMeWatchFaceView">
@@ -587,11 +621,11 @@
         <functionEntry accessMode="public" name="onShow" parent="MiniMeWatchFaceView">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268438229" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;" parent="MiniMeWatchFaceView" startPc="268438040">
+        <functionEntry accessMode="private" endPc="268438430" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getBackgroundBitmap&gt;" parent="MiniMeWatchFaceView" startPc="268438241">
             <param id="mood"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268438461" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;" parent="MiniMeWatchFaceView" startPc="268438230">
+        <functionEntry accessMode="private" endPc="268438662" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawActivityRows&gt;" parent="MiniMeWatchFaceView" startPc="268438431">
             <param id="dc"/>
             <param id="width"/>
             <param id="height"/>
@@ -601,11 +635,11 @@
             <param id="weatherText"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268438699" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;" parent="MiniMeWatchFaceView" startPc="268438462">
+        <functionEntry accessMode="private" endPc="268438900" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawFace&gt;" parent="MiniMeWatchFaceView" startPc="268438663">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268438754" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;" parent="MiniMeWatchFaceView" startPc="268438700">
+        <functionEntry accessMode="private" endPc="268438955" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;drawMetricRow&gt;" parent="MiniMeWatchFaceView" startPc="268438901">
             <param id="dc"/>
             <param id="iconX"/>
             <param id="valueX"/>
@@ -615,14 +649,14 @@
             <param id="iconType"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438769" name="initialize" parent="MiniMeWatchFaceView" startPc="268438755">
+        <functionEntry accessMode="public" endPc="268438970" name="initialize" parent="MiniMeWatchFaceView" startPc="268438956">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438783" name="onUpdate" parent="MiniMeWatchFaceView" startPc="268438770">
+        <functionEntry accessMode="public" endPc="268439027" name="onUpdate" parent="MiniMeWatchFaceView" startPc="268438971">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268438814" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;" parent="MiniMeWatchFaceView" startPc="268438784">
+        <functionEntry accessMode="private" endPc="268439058" name="&lt;globals/MiniMeWatchFaceView/&lt;&gt;getWeeklyRunningDistanceMeters&gt;" parent="MiniMeWatchFaceView" startPc="268439028">
             <documentation/>
         </functionEntry>
     </functions>
