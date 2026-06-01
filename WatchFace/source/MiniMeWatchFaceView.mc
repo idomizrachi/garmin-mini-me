@@ -15,7 +15,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private const MOOD_SOFT = 2;
     private const MOOD_SLEEPY = 3;
 
-    private const BACKGROUND_SIZE = 580;
+    private const BACKGROUND_SIZE = 454;
     private var happyBackgroundBitmap as BitmapResource?;
     private var proudBackgroundBitmap as BitmapResource?;
     private var sleepyBackgroundBitmap as BitmapResource?;
@@ -84,12 +84,22 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
             "$1$:$2$",
             [ clock.hour.format("%02d"), clock.min.format("%02d") ]
         );
+        var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var dateText = Lang.format(
+            "$1$/$2$",
+            [
+                (dateInfo.day as Number).format("%02d"),
+                (dateInfo.month as Number).format("%02d")
+            ]
+        );
 
         var timeY = (height * 0.27).toNumber();
         var timeX = (centerX + (height * 0.04)).toNumber();
+        var dateY = (timeY - (height * 0.17)).toNumber();
         var textColor = getTextColor(mood);
         var shadowColor = (mood == MOOD_PROUD) ? 0xFFFFFF : 0x197DC5;
 
+        drawShadowText(dc, timeX, dateY, Graphics.FONT_SMALL, dateText, textColor, shadowColor, 2);
         drawShadowText(dc, timeX, timeY, Graphics.FONT_NUMBER_HOT, timeText, textColor, shadowColor, 4);
     }
 
@@ -323,7 +333,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     private function getTextColor(mood as Number) as Number {
-        if (mood == MOOD_PROUD) {
+        if ((mood == MOOD_PROUD) || (mood == MOOD_NEUTRAL)) {
             return Graphics.COLOR_BLACK;
         }
 

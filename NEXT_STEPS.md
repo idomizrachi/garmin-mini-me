@@ -23,13 +23,14 @@
 - [x] Create or scaffold a Garmin Connect IQ watch-face project.
 - [x] Target the Garmin Forerunner 570.
 - [x] Confirm the exact Forerunner 570 screen dimensions and simulator profile.
-- [ ] Render a dark background.
+- [x] Render a dark background.
 - [x] Render large digital time.
-- [x] Render date as day of month plus month.
+- [x] Render date as `DD/MM`.
+- [x] Add date above time.
 - [x] Render current steps.
-- [ ] Add an optional placeholder area for weekly distance if the layout stays clean.
+- [x] Add an optional placeholder area for weekly distance if the layout stays clean.
 - [x] Add a placeholder Mini Ido below the digital time.
-- [ ] Add placeholder visual states for neutral, happy/proud, tired/soft, and sleepy morning.
+- [x] Add placeholder visual states for neutral, happy/proud, tired/soft, and sleepy morning.
 
 ## Garmin Feasibility Checks
 
