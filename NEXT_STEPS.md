@@ -15,6 +15,7 @@
 - [x] Set Workout Celebration to about 15-30 minutes, with 30 minutes as the upper limit.
 - [x] Set Morning Mood to last up to about 2 hours unless a workout overrides it.
 - [x] Use one once-per-day Step Celebration when Garmin's daily step goal is reached.
+- [x] Use one once-per-day Workout Celebration after the first Recorded Workout of the day.
 - [x] Defer long-term Growth from v1.
 - [x] Treat the attached running photo as idea reference only, not production source material.
 
@@ -35,8 +36,8 @@
 ## Garmin Feasibility Checks
 
 - [ ] Confirm `ActivityMonitor.Info.steps` works in the watch face.
-- [ ] Confirm `ActivityMonitor.Info.stepGoal` works in the watch face.
-- [ ] Confirm persistent storage can remember whether Step Celebration already appeared today.
+- [x] Confirm `ActivityMonitor.Info.stepGoal` works in the watch face.
+- [x] Confirm persistent storage can remember whether Step Celebration already appeared today.
 - [ ] Verify whether a watch face can access latest Recorded Workout information.
 - [ ] Verify whether workout type is available for Support Phrase selection.
 - [ ] Verify whether sleep quality data is available from a watch face.
@@ -49,14 +50,14 @@
 - [ ] Implement Mood Priority.
 - [ ] Implement Workout Celebration as the highest-priority temporary state.
 - [ ] Implement Celebration Window timing with a 15-30 minute duration.
-- [ ] Implement repeated same-day Workout Celebrations with rotating Support Phrases.
+- [ ] Ensure Workout Celebration appears once per day after the first Recorded Workout.
 - [ ] Implement workout-type-linked Support Phrases when workout type is available.
 - [ ] Implement Morning Mood for up to 2 hours.
 - [ ] Implement good-vs-poor Sleep Quality if sleep data is available.
 - [ ] Implement Recovery State as normal or soft.
 - [ ] Tune the Soft Mode threshold after checking available Garmin recovery data.
-- [ ] Implement Step Celebration once per day when daily step goal is reached.
-- [ ] Ensure Step Celebration does not repeat after watch-face reload on the same day.
+- [x] Implement Step Celebration once per day when daily step goal is reached.
+- [x] Ensure Step Celebration does not repeat after watch-face reload on the same day.
 - [ ] Ensure v1 messages appear only during Celebration moments.
 
 ## Visual Prototype And Assets
@@ -71,11 +72,12 @@
 - [ ] Decide whether weekly distance fits cleanly.
 - [ ] Design first-pass placeholder Mini Ido sprites.
 - [ ] Replace placeholders with v1 assets only after behavior and layout feel right.
+- [ ] Do not create a separate full celebration image for v1; reuse the happy/proud state with a small celebration treatment.
 - [ ] Create neutral Mini Ido asset.
 - [ ] Create happy/proud Mini Ido asset.
 - [ ] Create tired/soft Mini Ido asset.
 - [ ] Create sleepy morning Mini Ido asset.
-- [ ] Create a simple Support Phrase treatment, using either a sign or speech bubble.
+- [x] Create a simple Support Phrase treatment, using either a sign or speech bubble.
 
 ## Future V2/V3 Ideas
 

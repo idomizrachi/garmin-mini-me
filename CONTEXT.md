@@ -29,7 +29,7 @@ A workout that Garmin has actually recorded or recognized as an activity. Workou
 _Avoid_: Inferred workout, movement spike
 
 **Workout Celebration**:
-The Celebration caused by a Recorded Workout. In the first version, all Recorded Workout types should trigger the same Celebration Window rather than being weighted or filtered by activity type; repeated same-day workouts should be celebrated equally, with varied poses or messages when possible.
+The Celebration caused by a Recorded Workout. In the first version, all Recorded Workout types should trigger the same Celebration Window rather than being weighted or filtered by activity type. Workout Celebration should appear at most once per local day, after the first Recorded Workout of that day.
 _Avoid_: Workout ranking, type-based judgment
 
 **Workout Flavor**:
@@ -107,6 +107,10 @@ _Avoid_: Workout, chore, step grind
 **Step Celebration**:
 A once-per-day small reward when Ido reaches a meaningful step milestone, preferably Garmin's daily step goal. It should not repeat after a watch-face reload on the same day, and it does not override Morning Mood like a workout does.
 _Avoid_: Step ladder, repeated milestone spam
+
+**Celebration Treatment**:
+The small visual layer that makes a Celebration feel special without requiring a separate full-state image. In the first version, Celebration Treatment should reuse the happy or proud Mini Ido state and add a light sign, phrase, or similar accent.
+_Avoid_: Separate celebration-only full image, permanent decoration
 
 **Morning Mood**:
 A time-bounded mood influenced by the previous night's sleep. Morning Mood is visible early in the day for up to about two hours and can be overridden sooner by a workout.
