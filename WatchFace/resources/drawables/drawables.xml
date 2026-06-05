@@ -204,6 +204,7 @@
         </palette>
     </bitmap>
     <bitmap id="IconSteps" filename="icons/icon_steps.png" dithering="none" />
+    <bitmap id="IconStepGoalStar" filename="icons/icon_step_goal_star.png" dithering="none" />
     <bitmap id="IconWeather" filename="icons/icon_weather.png" dithering="none" />
     <bitmap id="IconWeeklyRunningDistance" filename="icons/icon_weekly_running_distance.png" dithering="none" />
 </drawables>

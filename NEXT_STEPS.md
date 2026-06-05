@@ -15,7 +15,7 @@
 - [x] Set Workout Celebration to about 15-30 minutes, with 30 minutes as the upper limit.
 - [x] Set Morning Mood to last up to about 2 hours unless a workout overrides it.
 - [x] Use one once-per-day Step Celebration when Garmin's daily step goal is reached.
-- [x] Use one once-per-day Workout Celebration after the first Recorded Workout of the day.
+- [ ] Use one once-per-day Workout Celebration after the first Recorded Workout of the day.
 - [x] Defer long-term Growth from v1.
 - [x] Treat the attached running photo as idea reference only, not production source material.
 
@@ -58,6 +58,7 @@
 - [ ] Tune the Soft Mode threshold after checking available Garmin recovery data.
 - [x] Implement Step Celebration once per day when daily step goal is reached.
 - [x] Ensure Step Celebration does not repeat after watch-face reload on the same day.
+- [x] Keep the proud Mini Ido reaction temporary while allowing the Step Goal Mark to remain visible for the rest of the local day.
 - [ ] Ensure v1 messages appear only during Celebration moments.
 
 ## Visual Prototype And Assets
@@ -72,7 +73,16 @@
 - [ ] Decide whether weekly distance fits cleanly.
 - [ ] Design first-pass placeholder Mini Ido sprites.
 - [ ] Replace placeholders with v1 assets only after behavior and layout feel right.
-- [ ] Do not create a separate full celebration image for v1; reuse the happy/proud state with a small celebration treatment.
+- [x] Remove the separate `STEP GOAL` sign treatment.
+- [x] Do not show text for Step Celebration in v1; use proud Mini Ido plus the Step Goal Mark.
+- [x] For Step Celebration, show a tiny star Step Goal Mark immediately after the steps count until the end of the local day.
+- [x] Use a tiny static gold PNG star asset for the Step Goal Mark, not emoji text or generated SVG.
+- [x] Size the Step Goal Mark like the existing metric icons or slightly smaller, without changing the metric row height or spacing.
+- [x] Keep the Step Goal Mark attached to the steps value in all mood layouts, including proud-mode row shifts.
+- [x] Show the Step Goal Mark whenever today's current steps are at or above the daily step goal, or 10,000 steps when the Garmin goal is unavailable, even if the watch face missed the exact crossing moment.
+- [x] Clear the Step Goal Mark on the next local day.
+- [x] Defer an animated goal-achieved gesture until the simple Step Goal Mark works.
+- [x] Do not create a separate full celebration image for v1; reuse the happy/proud state with a small celebration treatment.
 - [ ] Create neutral Mini Ido asset.
 - [ ] Create happy/proud Mini Ido asset.
 - [ ] Create tired/soft Mini Ido asset.
@@ -87,3 +97,4 @@
 - [ ] Add configurable settings after prototype use reveals which settings matter.
 - [ ] Add richer mood blending if Mood Priority feels too simple.
 - [ ] Add additional contextual outfits.
+- [ ] Consider a softer hardcoded step target if Garmin's daily goal makes Mini Ido feel insufficiently encouraging.

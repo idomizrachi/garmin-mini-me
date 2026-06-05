@@ -105,12 +105,16 @@ Ordinary daily movement reflected by steps and similar low-intensity activity. A
 _Avoid_: Workout, chore, step grind
 
 **Step Celebration**:
-A once-per-day small reward when Ido reaches a meaningful step milestone, preferably Garmin's daily step goal. It should not repeat after a watch-face reload on the same day, and it does not override Morning Mood like a workout does.
+A once-per-day small reward when Ido reaches a meaningful step milestone, preferably Garmin's daily step goal, with 10,000 steps as the fallback threshold when the goal is unavailable. It can briefly make Mini Ido proud while the Step Goal Mark remains as the quieter all-day signal.
 _Avoid_: Step ladder, repeated milestone spam
 
+**Step Goal Mark**:
+A tiny static gold star attached immediately after the steps value after the daily step goal or fallback step threshold is reached. It reflects that the step target has been reached today, stays visually secondary to the steps value, and disappears on the next local day without becoming a badge or score treatment.
+_Avoid_: Badge, achievement, separate sign, emoji glyph, text label
+
 **Celebration Treatment**:
-The small visual layer that makes a Celebration feel special without requiring a separate full-state image. In the first version, Celebration Treatment should reuse the happy or proud Mini Ido state and add a light sign, phrase, or similar accent.
-_Avoid_: Separate celebration-only full image, permanent decoration
+The small visual layer that makes a Celebration feel special without requiring a separate full-state image. In the first version, Step Celebration should use a sticky Step Goal Mark on the steps row rather than a separate sign, text message, or animation.
+_Avoid_: Separate celebration-only full image, permanent decoration, floating step-goal sign
 
 **Morning Mood**:
 A time-bounded mood influenced by the previous night's sleep. Morning Mood is visible early in the day for up to about two hours and can be overridden sooner by a workout.
@@ -280,7 +284,7 @@ Domain expert: "No. Start with one small Step Celebration; multiple step milesto
 
 Designer: "Should the first Step Celebration use a fixed number like 10,000 steps?"
 
-Domain expert: "Use Garmin's daily step goal when available; fall back to a fixed threshold only if the goal is unavailable."
+Domain expert: "Use Garmin's daily step goal when available; fall back to 10,000 steps only if the goal is unavailable."
 
 Designer: "Should last night's sleep define Mini Ido for the entire day?"
 

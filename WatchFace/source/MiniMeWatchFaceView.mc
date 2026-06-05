@@ -20,6 +20,9 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
 
     private const BACKGROUND_SIZE = 454;
     private const CELEBRATION_WINDOW_SECONDS = 1800;
+    private const STEP_GOAL_FALLBACK_STEPS = 10000;
+    private const STEP_GOAL_MARK_SIZE = 24;
+    private const STEP_GOAL_MARK_GAP = 5;
     private const WEEKLY_RUNNING_DISTANCE_CACHE_MINUTES = 60;
     private const WEATHER_CACHE_MINUTES = 15;
     private const STEP_CELEBRATION_STORAGE_KEY = "miniMe.stepCelebratedDate";
@@ -28,6 +31,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private var activeCelebrationType as Number = CELEBRATION_NONE;
     private var celebrationStartedAt as Time.Moment?;
     private var stepsIconBitmap as BitmapResource?;
+    private var stepGoalStarBitmap as BitmapResource?;
     private var weatherIconBitmap as BitmapResource?;
     private var weeklyRunningDistanceIconBitmap as BitmapResource?;
     private var activityInfoCacheMinute as Number = -1;
@@ -55,6 +59,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private var lastDrawnWeeklyText as String = "";
     private var lastDrawnWeatherText as String = "";
     private var lastDrawnResourceMetrics as Boolean = false;
+    private var lastDrawnStepGoalMark as Boolean = false;
 
     function initialize() {
         WatchFace.initialize();
@@ -92,6 +97,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var shouldDrawResourceMetrics = firstFullFaceDrawn;
         var stepCountText = getStepsText(steps);
+        var showStepGoalMark = hasReachedStepTarget(steps);
         var weeklyText = shouldDrawResourceMetrics ? getWeeklyRunningDistanceText() : weeklyRunningDistanceText;
         var weatherText = shouldDrawResourceMetrics ? getWeatherTemperatureText() : weatherTemperatureText;
 
@@ -106,13 +112,13 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
             height,
             mood,
             stepCountText,
+            showStepGoalMark,
             weeklyText,
             weatherText,
             shouldDrawResourceMetrics
         );
-        drawCelebrationTreatment(dc, width, height, mood);
         rememberDrawnState(clock, dateInfo, mood);
-        rememberDrawnMetrics(stepCountText, weeklyText, weatherText, shouldDrawResourceMetrics);
+        rememberDrawnMetrics(stepCountText, weeklyText, weatherText, shouldDrawResourceMetrics, showStepGoalMark);
 
         if (!firstFullFaceDrawn) {
             WatchUi.requestUpdate();
@@ -143,9 +149,10 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var clock = System.getClockTime();
         var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var stepCountText = getStepsText(steps);
+        var showStepGoalMark = hasReachedStepTarget(steps);
         var weeklyText = getWeeklyRunningDistanceText();
         var weatherText = getWeatherTemperatureText();
-        var metricsChanged = haveMetricRowsChanged(stepCountText, weeklyText, weatherText, true);
+        var metricsChanged = haveMetricRowsChanged(stepCountText, weeklyText, weatherText, true, showStepGoalMark);
 
         if ((mood != lastDrawnMood) || (activeCelebrationType != lastDrawnCelebrationType)) {
             drawFace(dc);
@@ -170,8 +177,8 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         }
 
         if (metricsChanged) {
-            drawActivityRowsRegion(dc, width, height, mood, stepCountText, weeklyText, weatherText, true);
-            rememberDrawnMetrics(stepCountText, weeklyText, weatherText, true);
+            drawActivityRowsRegion(dc, width, height, mood, stepCountText, showStepGoalMark, weeklyText, weatherText, true);
+            rememberDrawnMetrics(stepCountText, weeklyText, weatherText, true, showStepGoalMark);
         }
 
         rememberDrawnState(clock, dateInfo, mood);
@@ -201,7 +208,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         dc.clearClip();
     }
 
-    private function drawActivityRowsRegion(dc as Dc, width as Number, height as Number, mood as Number, stepsText as String, weeklyText as String, weatherText as String, shouldDrawIcons as Boolean) as Void {
+    private function drawActivityRowsRegion(dc as Dc, width as Number, height as Number, mood as Number, stepsText as String, showStepGoalMark as Boolean, weeklyText as String, weatherText as String, shouldDrawIcons as Boolean) as Void {
         var regionX = (width * 0.46).toNumber();
         var regionY = (height * 0.40).toNumber();
         var regionWidth = (width * 0.48).toNumber();
@@ -209,7 +216,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
 
         dc.setClip(regionX, regionY, regionWidth, regionHeight);
         drawBackground(dc, width, height, mood);
-        drawActivityRows(dc, width, height, mood, stepsText, weeklyText, weatherText, shouldDrawIcons);
+        drawActivityRows(dc, width, height, mood, stepsText, showStepGoalMark, weeklyText, weatherText, shouldDrawIcons);
         dc.clearClip();
     }
 
@@ -236,7 +243,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         drawShadowText(dc, timeX, timeY, Graphics.FONT_NUMBER_HOT, timeText, textColor, shadowColor, 4);
     }
 
-    private function drawActivityRows(dc as Dc, width as Number, height as Number, mood as Number, stepsText as String, weeklyText as String, weatherText as String, shouldDrawIcons as Boolean) as Void {
+    private function drawActivityRows(dc as Dc, width as Number, height as Number, mood as Number, stepsText as String, showStepGoalMark as Boolean, weeklyText as String, weatherText as String, shouldDrawIcons as Boolean) as Void {
         var clusterOffsetX = (width * 0.035).toNumber();
         var clusterOffsetY = (height * 0.05).toNumber();
         var proudOffsetX = (mood == MOOD_PROUD) ? (width * 0.075).toNumber() : 0;
@@ -246,37 +253,22 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var rowGap = (height * 0.13).toNumber();
         var textColor = getTextColor(mood);
 
-        drawMetricRow(dc, iconX, valueX, topY, stepsText, textColor, 0, shouldDrawIcons);
-        drawMetricRow(dc, iconX, valueX, topY + rowGap, weeklyText, textColor, 2, shouldDrawIcons);
-        drawMetricRow(dc, iconX, valueX, topY + (rowGap * 2), weatherText, textColor, 1, shouldDrawIcons);
+        drawMetricRow(dc, iconX, valueX, topY, stepsText, textColor, 0, shouldDrawIcons, showStepGoalMark);
+        drawMetricRow(dc, iconX, valueX, topY + rowGap, weeklyText, textColor, 2, shouldDrawIcons, false);
+        drawMetricRow(dc, iconX, valueX, topY + (rowGap * 2), weatherText, textColor, 1, shouldDrawIcons, false);
     }
 
-    private function drawCelebrationTreatment(dc as Dc, width as Number, height as Number, mood as Number) as Void {
-        if ((activeCelebrationType != CELEBRATION_STEPS) || (mood != MOOD_PROUD)) {
-            return;
-        }
-
-        var signX = (width * 0.10).toNumber();
-        var signY = (height * 0.57).toNumber();
-        var signWidth = (width * 0.30).toNumber();
-        var signHeight = (height * 0.10).toNumber();
-        var textX = signX + (signWidth / 2);
-        var textY = signY + (signHeight / 2);
-
-        dc.setColor(0xFFFFFF, Graphics.COLOR_TRANSPARENT);
-        dc.fillRectangle(signX, signY, signWidth, signHeight);
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawRectangle(signX, signY, signWidth, signHeight);
-        drawBoldText(dc, textX, textY, Graphics.FONT_TINY, "STEP GOAL", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-    }
-
-    private function drawMetricRow(dc as Dc, iconX as Number, valueX as Number, y as Number, value as String, color as Number, iconType as Number, shouldDrawIcon as Boolean) as Void {
+    private function drawMetricRow(dc as Dc, iconX as Number, valueX as Number, y as Number, value as String, color as Number, iconType as Number, shouldDrawIcon as Boolean, showStepGoalMark as Boolean) as Void {
         if (shouldDrawIcon) {
             drawMetricIcon(dc, iconX, y, iconType);
         }
 
         dc.setColor(color, Graphics.COLOR_TRANSPARENT);
         drawBoldText(dc, valueX, y, Graphics.FONT_TINY, value, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        if (showStepGoalMark && shouldDrawIcon) {
+            drawStepGoalMark(dc, valueX, y, value);
+        }
     }
 
     private function drawMetricIcon(dc as Dc, x as Number, y as Number, iconType as Number) as Void {
@@ -307,6 +299,28 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         }
 
         return weeklyRunningDistanceIconBitmap;
+    }
+
+    private function drawStepGoalMark(dc as Dc, valueX as Number, y as Number, value as String) as Void {
+        var bitmap = getStepGoalStarBitmap();
+
+        if (bitmap == null) {
+            return;
+        }
+
+        var textWidth = dc.getTextWidthInPixels(value, Graphics.FONT_TINY);
+        var markX = valueX + textWidth + STEP_GOAL_MARK_GAP;
+        var markY = y - (STEP_GOAL_MARK_SIZE / 2);
+
+        dc.drawBitmap(markX, markY, bitmap);
+    }
+
+    private function getStepGoalStarBitmap() as BitmapResource? {
+        if (stepGoalStarBitmap == null) {
+            stepGoalStarBitmap = WatchUi.loadResource(Rez.Drawables.IconStepGoalStar) as BitmapResource;
+        }
+
+        return stepGoalStarBitmap;
     }
 
     private function drawShadowText(dc as Dc, x as Number, y as Number, font as Graphics.FontType, text as String, color as Number, shadowColor as Number, offset as Number) as Void {
@@ -540,20 +554,22 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         lastDrawnCelebrationType = activeCelebrationType;
     }
 
-    private function haveMetricRowsChanged(stepsText as String, weeklyText as String, weatherText as String, resourceMetricsDrawn as Boolean) as Boolean {
+    private function haveMetricRowsChanged(stepsText as String, weeklyText as String, weatherText as String, resourceMetricsDrawn as Boolean, showStepGoalMark as Boolean) as Boolean {
         return (
             (stepsText != lastDrawnStepsText) ||
             (weeklyText != lastDrawnWeeklyText) ||
             (weatherText != lastDrawnWeatherText) ||
-            (resourceMetricsDrawn != lastDrawnResourceMetrics)
+            (resourceMetricsDrawn != lastDrawnResourceMetrics) ||
+            (showStepGoalMark != lastDrawnStepGoalMark)
         );
     }
 
-    private function rememberDrawnMetrics(stepsText as String, weeklyText as String, weatherText as String, resourceMetricsDrawn as Boolean) as Void {
+    private function rememberDrawnMetrics(stepsText as String, weeklyText as String, weatherText as String, resourceMetricsDrawn as Boolean, showStepGoalMark as Boolean) as Void {
         lastDrawnStepsText = stepsText;
         lastDrawnWeeklyText = weeklyText;
         lastDrawnWeatherText = weatherText;
         lastDrawnResourceMetrics = resourceMetricsDrawn;
+        lastDrawnStepGoalMark = showStepGoalMark;
     }
 
     private function getTextColor(mood as Number) as Number {
@@ -589,7 +605,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
             return;
         }
 
-        var stepGoal = getStepGoal();
+        var stepGoal = getStepTarget();
 
         if ((stepGoal <= 0) || (steps < stepGoal) || hasStepCelebrationShownToday()) {
             return;
@@ -693,6 +709,20 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         }
 
         return 0;
+    }
+
+    private function getStepTarget() as Number {
+        var currentStepGoal = getStepGoal();
+
+        if (currentStepGoal > 0) {
+            return currentStepGoal;
+        }
+
+        return STEP_GOAL_FALLBACK_STEPS;
+    }
+
+    private function hasReachedStepTarget(steps as Number) as Boolean {
+        return steps >= getStepTarget();
     }
 
     private function getActivityInfo() {

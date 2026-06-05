@@ -38,6 +38,9 @@ git for this workspace.
 
 - The repository root is one level above the active app source. Most build and
   source commands should run from `WatchFace/`.
+- Update `RELEASE_NOTES.md` after implementation changes, especially when a
+  user-visible behavior, visual treatment, build result, or checklist status
+  changes.
 - Active source files are `WatchFace/source/MiniMeApp.mc` and
   `WatchFace/source/MiniMeWatchFaceView.mc`.
 - This is a small companion watch face, not a coaching or punitive fitness app.
