@@ -15,6 +15,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private const MOOD_PROUD = 1;
     private const MOOD_SOFT = 2;
     private const MOOD_SLEEPY = 3;
+    private const MOOD_GOOD_MORNING = 4;
     private const CELEBRATION_NONE = 0;
     private const CELEBRATION_STEPS = 1;
 
@@ -23,6 +24,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private const STEP_GOAL_FALLBACK_STEPS = 10000;
     private const STEP_GOAL_MARK_SIZE = 24;
     private const STEP_GOAL_MARK_GAP = 5;
+    private const WORKOUT_CACHE_MINUTES = 30;
     private const WEEKLY_RUNNING_DISTANCE_CACHE_MINUTES = 60;
     private const WEATHER_CACHE_MINUTES = 15;
     private const STEP_CELEBRATION_STORAGE_KEY = "miniMe.stepCelebratedDate";
@@ -39,6 +41,10 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private var weeklyRunningDistanceCacheMinute as Number = -1;
     private var weeklyRunningDistanceText as String = "--";
     private var hasWeeklyRunningDistanceText as Boolean = false;
+    private var workoutTodayCacheMinute as Number = -1;
+    private var workoutTodayCacheDate as String = "";
+    private var hasWorkoutTodayCache as Boolean = false;
+    private var workoutToday as Boolean = false;
     private var weatherCacheMinute as Number = -1;
     private var weatherTemperatureText as String = "--\u00B0";
     private var hasWeatherTemperatureText as Boolean = false;
@@ -132,6 +138,8 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
 
         if (mood == MOOD_PROUD) {
             backgroundColor = 0xF1C85F;
+        } else if (mood == MOOD_GOOD_MORNING) {
+            backgroundColor = 0xF7F1B6;
         } else if (mood == MOOD_NEUTRAL) {
             backgroundColor = 0xB8D7C4;
         }
@@ -237,7 +245,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var timeX = (centerX + (height * 0.04)).toNumber();
         var dateY = (timeY - (height * 0.17)).toNumber();
         var textColor = getTextColor(mood);
-        var shadowColor = (mood == MOOD_PROUD) ? 0xFFFFFF : 0x197DC5;
+        var shadowColor = ((mood == MOOD_PROUD) || (mood == MOOD_GOOD_MORNING)) ? 0xFFFFFF : 0x197DC5;
 
         drawShadowText(dc, timeX, dateY, Graphics.FONT_SMALL, dateText, textColor, shadowColor, 2);
         drawShadowText(dc, timeX, timeY, Graphics.FONT_NUMBER_HOT, timeText, textColor, shadowColor, 4);
@@ -536,6 +544,8 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
 
         if (mood == MOOD_PROUD) {
             activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftProud) as BitmapResource;
+        } else if (mood == MOOD_GOOD_MORNING) {
+            activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftGoodMorning) as BitmapResource;
         } else if ((mood == MOOD_SOFT) || (mood == MOOD_SLEEPY)) {
             activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftSleepy) as BitmapResource;
         } else {
@@ -573,7 +583,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     private function getTextColor(mood as Number) as Number {
-        if ((mood == MOOD_PROUD) || (mood == MOOD_NEUTRAL)) {
+        if ((mood == MOOD_PROUD) || (mood == MOOD_NEUTRAL) || (mood == MOOD_GOOD_MORNING)) {
             return Graphics.COLOR_BLACK;
         }
 
@@ -583,21 +593,62 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private function choosePrototypeMood(steps as Number) as Number {
         updateStepCelebration(steps);
 
-        if (isCelebrationActive()) {
-            return MOOD_PROUD;
-        }
-
         var clock = System.getClockTime();
 
-        if (clock.hour < 9) {
+        if ((clock.hour < 6) || (clock.hour >= 21)) {
             return MOOD_SLEEPY;
-        } else if (clock.hour >= 18 && clock.hour < 20) {
+        } else if ((clock.hour < 10) || ((clock.hour == 10) && (clock.min < 30))) {
+            return MOOD_GOOD_MORNING;
+        } else if (isCelebrationActive() || hasWorkoutToday()) {
             return MOOD_PROUD;
-        } else if ((clock.hour > 21) || ((clock.hour == 21) && (clock.min >= 30))) {
-            return MOOD_SLEEPY;
         }
 
         return MOOD_NEUTRAL;
+    }
+
+    private function hasWorkoutToday() as Boolean {
+        var cacheMinute = (Time.now().value() / 60).toNumber();
+        var todayDate = getTodayStorageDate();
+
+        if (
+            hasWorkoutTodayCache &&
+            (workoutTodayCacheDate == todayDate) &&
+            (workoutTodayCacheMinute >= 0) &&
+            ((cacheMinute - workoutTodayCacheMinute) < WORKOUT_CACHE_MINUTES)
+        ) {
+            return workoutToday;
+        }
+
+        workoutTodayCacheMinute = cacheMinute;
+        workoutTodayCacheDate = todayDate;
+        hasWorkoutTodayCache = true;
+        workoutToday = false;
+
+        try {
+            if (!(UserProfile has :getUserActivityHistory)) {
+                return workoutToday;
+            }
+
+            var activityIterator = UserProfile.getUserActivityHistory();
+            var todayStart = new Time.Moment(Time.today().value());
+            var activity = activityIterator.next();
+
+            while (activity != null) {
+                if (
+                    (activity has :startTime) &&
+                    (activity.startTime != null) &&
+                    (activity.startTime.compare(todayStart) >= 0)
+                ) {
+                    workoutToday = true;
+                    return workoutToday;
+                }
+
+                activity = activityIterator.next();
+            }
+        } catch (ex) {
+        }
+
+        return workoutToday;
     }
 
     private function updateStepCelebration(steps as Number) as Void {

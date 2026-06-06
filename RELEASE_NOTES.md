@@ -6,6 +6,24 @@ change, alongside `NEXT_STEPS.md` when checklist items move.
 
 ## Unreleased
 
+### Good Morning Mood
+
+- Added a Good Morning mood background with Mini Ido holding coffee in a soft
+  sunrise trail scene.
+- Added the active palette-reduced `454x454` Good Morning background to the
+  watch-face resource bundle.
+- Updated the mood schedule:
+  - `06:00` through `10:29`: Good Morning, including days with a detected
+    workout.
+  - `10:30` through `20:59`: Happy by default, Proud after a workout is
+    detected for the current local day.
+  - `21:00` through `05:59`: Sleepy.
+- Kept the Step Celebration proud reaction for daytime after the morning window.
+- Added a cached same-day recorded-workout check using Garmin activity history,
+  so workout detection does not scan history on every partial update.
+- Uses black text with a white shadow on the pale Good Morning background for
+  readability.
+
 ### Step Goal Mark
 
 Implemented the Step Goal Mark replacement for the old step-goal sign:
@@ -30,6 +48,8 @@ Implemented the Step Goal Mark replacement for the old step-goal sign:
 
 ### Verification
 
+- 2026-06-06: Built the device artifact for `fr57047mm` with `monkeyc`;
+  result: `BUILD SUCCESSFUL`.
 - 2026-06-04: Built the device artifact for `fr57047mm` with `monkeyc`;
   result: `BUILD SUCCESSFUL`.
 
@@ -55,7 +75,8 @@ Implemented the Step Goal Mark replacement for the old step-goal sign:
 
 - Added mood-based Mini Ido background artwork for the active prototype states.
 - Uses a happy/neutral background for ordinary state, a proud background for
-  proud moments, and a sleepy background for sleepy or soft moments.
+  proud moments and same-day workout state, a good-morning coffee background
+  for the morning window, and a sleepy background for night or soft moments.
 - Uses palette-reduced `454x454` PNG backgrounds in the active watch-face
   resource bundle.
 - Avoids restoring older `580x580` backgrounds into the active app bundle.
