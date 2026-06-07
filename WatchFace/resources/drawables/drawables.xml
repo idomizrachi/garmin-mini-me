@@ -69,70 +69,38 @@
     </bitmap>
     <bitmap id="BgAvatarBottomLeftGoodMorning" filename="watchface_backgrounds_avatar_bottom_left/bg_good_morning_avatar_bottom_left_454_p64.png" dithering="none">
         <palette disableTransparency="true">
-            <color>0B0F0C</color>
-            <color>202B24</color>
-            <color>413F27</color>
-            <color>5D5E2C</color>
-            <color>07394A</color>
+            <color>161D18</color>
+            <color>4D583B</color>
             <color>1C6061</color>
-            <color>5B6950</color>
             <color>A06932</color>
             <color>D1782C</color>
             <color>95784C</color>
-            <color>72912E</color>
-            <color>37836B</color>
+            <color>648E3C</color>
             <color>558F61</color>
-            <color>94A720</color>
-            <color>90A828</color>
-            <color>A7B82A</color>
-            <color>E38D3A</color>
-            <color>B6C626</color>
-            <color>C9D731</color>
-            <color>DBE434</color>
-            <color>979368</color>
-            <color>EE9843</color>
-            <color>F19A44</color>
+            <color>98AC26</color>
+            <color>CAD831</color>
+            <color>F09943</color>
+            <color>C7A841</color>
             <color>EDB056</color>
-            <color>F2CF55</color>
-            <color>036189</color>
-            <color>02648B</color>
+            <color>02638B</color>
             <color>4C7B84</color>
-            <color>339388</color>
-            <color>55A694</color>
-            <color>53A69A</color>
-            <color>71B297</color>
-            <color>71B9A6</color>
-            <color>3DB7D2</color>
+            <color>369D9C</color>
+            <color>64AE9A</color>
             <color>8CB69E</color>
             <color>CEBC8C</color>
-            <color>A2C599</color>
-            <color>8FC8B1</color>
+            <color>90C8B0</color>
             <color>ACD6B7</color>
-            <color>FDE88E</color>
-            <color>F6EA9E</color>
-            <color>FAE898</color>
-            <color>CED9AF</color>
-            <color>C8DEBC</color>
+            <color>FAE897</color>
+            <color>C9DDBA</color>
             <color>E7D6A1</color>
-            <color>DCE3AD</color>
-            <color>CCE0BC</color>
-            <color>D9E4B6</color>
-            <color>E9E8A9</color>
-            <color>F6EBA5</color>
-            <color>FDF2A7</color>
-            <color>E6EBB7</color>
-            <color>F7F1B6</color>
+            <color>D8E3B4</color>
+            <color>ECEAAD</color>
             <color>B1DACE</color>
             <color>BBE2C9</color>
-            <color>C6DEC3</color>
-            <color>CCD9D2</color>
-            <color>D8ECC7</color>
-            <color>D0E9CC</color>
-            <color>E4EEC2</color>
-            <color>F6F4CE</color>
-            <color>D6EAE4</color>
-            <color>ECF1EB</color>
-            <color>F8FAFA</color>
+            <color>C7DEC5</color>
+            <color>D5EBC9</color>
+            <color>F1F2CB</color>
+            <color>F8F9FA</color>
         </palette>
     </bitmap>
     <bitmap id="BgAvatarBottomLeftProud" filename="watchface_backgrounds_avatar_bottom_left/bg_proud_avatar_bottom_left_454_p64.png" dithering="none">

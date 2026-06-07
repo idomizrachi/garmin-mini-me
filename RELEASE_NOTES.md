@@ -12,6 +12,8 @@ change, alongside `NEXT_STEPS.md` when checklist items move.
   sunrise trail scene.
 - Added the active palette-reduced `454x454` Good Morning background to the
   watch-face resource bundle.
+- Reduced the active Good Morning background from 64 colors to 32 colors to
+  trim the resource payload while keeping the artwork readable.
 - Updated the mood schedule:
   - `06:00` through `10:29`: Good Morning, including days with a detected
     workout.
@@ -23,6 +25,13 @@ change, alongside `NEXT_STEPS.md` when checklist items move.
   so workout detection does not scan history on every partial update.
 - Uses black text with a white shadow on the pale Good Morning background for
   readability.
+- Draws the first startup frame with the lightweight mood fallback background
+  before loading the large mood bitmap, reducing black-screen time after reloads.
+- Caches the active mood bitmap resource but repaints the bitmap on full face
+  draws, so physical watches do not show text over a missing retained
+  background.
+- Invalidates only the drawn-background marker on wake, so the cached bitmap can
+  redraw after sleep without showing the lightweight fallback frame.
 
 ### Step Goal Mark
 
@@ -48,6 +57,8 @@ Implemented the Step Goal Mark replacement for the old step-goal sign:
 
 ### Verification
 
+- 2026-06-07: Built the device artifact for `fr57047mm` with `monkeyc`;
+  result: `BUILD SUCCESSFUL`.
 - 2026-06-06: Built the device artifact for `fr57047mm` with `monkeyc`;
   result: `BUILD SUCCESSFUL`.
 - 2026-06-04: Built the device artifact for `fr57047mm` with `monkeyc`;

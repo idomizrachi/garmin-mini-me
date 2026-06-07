@@ -30,6 +30,8 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private const STEP_CELEBRATION_STORAGE_KEY = "miniMe.stepCelebratedDate";
     private var activeBackgroundBitmap as BitmapResource?;
     private var activeBackgroundMood as Number = -1;
+    private var drawnBackgroundMood as Number = -1;
+    private var hasDrawnBitmapBackground as Boolean = false;
     private var activeCelebrationType as Number = CELEBRATION_NONE;
     private var celebrationStartedAt as Time.Moment?;
     private var stepsIconBitmap as BitmapResource?;
@@ -56,6 +58,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private var stepGoal as Number = 0;
     private var hasStepGoal as Boolean = false;
     private var firstFullFaceDrawn as Boolean = false;
+    private var lastDrawnHour as Number = -1;
     private var lastDrawnMinute as Number = -1;
     private var lastDrawnDay as Number = -1;
     private var lastDrawnMonth as Number = -1;
@@ -81,6 +84,11 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         drawFace(dc);
     }
 
+    function onExitSleep() as Void {
+        invalidateDrawnBackground();
+        WatchUi.requestUpdate();
+    }
+
     function onPartialUpdate(dc as Dc) as Void {
         if (!firstFullFaceDrawn) {
             drawFace(dc);
@@ -98,19 +106,32 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var height = dc.getHeight();
         var centerX = width / 2;
         var steps = getSteps();
+        var shouldDrawFastFrame = !firstFullFaceDrawn;
+        
+        if (!shouldDrawFastFrame) {
+            updateActivityHistoryStats();
+        }
+
         var mood = choosePrototypeMood(steps);
         var clock = System.getClockTime();
         var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var shouldDrawResourceMetrics = firstFullFaceDrawn;
+        var shouldDrawResourceMetrics = !shouldDrawFastFrame;
         var stepCountText = getStepsText(steps);
         var showStepGoalMark = hasReachedStepTarget(steps);
-        var weeklyText = shouldDrawResourceMetrics ? getWeeklyRunningDistanceText() : weeklyRunningDistanceText;
-        var weatherText = shouldDrawResourceMetrics ? getWeatherTemperatureText() : weatherTemperatureText;
+        var weeklyText = getWeeklyRunningDistanceText();
+        var weatherText = getWeatherTemperatureText();
 
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.clear();
+        if (shouldDrawFastFrame) {
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+            dc.clear();
+            fillFallbackBackground(dc, width, height, mood);
+            rememberDrawnBackground(mood, false);
+        } else {
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+            dc.clear();
+            drawBackground(dc, width, height, mood);
+        }
 
-        drawBackground(dc, width, height, mood);
         drawDateAndTime(dc, centerX, height, mood, clock, dateInfo);
         drawActivityRows(
             dc,
@@ -126,7 +147,7 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         rememberDrawnState(clock, dateInfo, mood);
         rememberDrawnMetrics(stepCountText, weeklyText, weatherText, shouldDrawResourceMetrics, showStepGoalMark);
 
-        if (!firstFullFaceDrawn) {
+        if (shouldDrawFastFrame) {
             WatchUi.requestUpdate();
         }
 
@@ -151,8 +172,13 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     private function drawPartialFace(dc as Dc) as Void {
         var width = dc.getWidth();
         var height = dc.getHeight();
-        var centerX = width / 2;
         var steps = getSteps();
+        
+        // In partial update (low power), we also want to avoid heavy scans if possible.
+        // But choosePrototypeMood calls hasWorkoutToday. 
+        // We'll rely on the cache in updateActivityHistoryStats.
+        updateActivityHistoryStats();
+
         var mood = choosePrototypeMood(steps);
         var clock = System.getClockTime();
         var dateInfo = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
@@ -162,7 +188,12 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         var weatherText = getWeatherTemperatureText();
         var metricsChanged = haveMetricRowsChanged(stepCountText, weeklyText, weatherText, true, showStepGoalMark);
 
-        if ((mood != lastDrawnMood) || (activeCelebrationType != lastDrawnCelebrationType)) {
+        if (
+            shouldDrawBackground(mood) ||
+            hasTimeOrDateChanged(clock, dateInfo) ||
+            (mood != lastDrawnMood) ||
+            (activeCelebrationType != lastDrawnCelebrationType)
+        ) {
             drawFace(dc);
             return;
         }
@@ -174,14 +205,6 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
             !metricsChanged
         ) {
             return;
-        }
-
-        if (
-            (clock.min != lastDrawnMinute) ||
-            ((dateInfo.day as Number) != lastDrawnDay) ||
-            ((dateInfo.month as Number) != lastDrawnMonth)
-        ) {
-            drawDateAndTimeRegion(dc, width, height, centerX, mood, clock, dateInfo);
         }
 
         if (metricsChanged) {
@@ -201,6 +224,10 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
                 ((height - BACKGROUND_SIZE) / 2).toNumber(),
                 bitmap
             );
+            rememberDrawnBackground(mood, true);
+        } else {
+            fillFallbackBackground(dc, width, height, mood);
+            rememberDrawnBackground(mood, false);
         }
     }
 
@@ -356,69 +383,87 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     private function getWeeklyRunningDistanceText() as String {
-        var cacheMinute = (Time.now().value() / 60).toNumber();
-
-        if (
-            hasWeeklyRunningDistanceText &&
-            (weeklyRunningDistanceCacheMinute >= 0) &&
-            ((cacheMinute - weeklyRunningDistanceCacheMinute) < WEEKLY_RUNNING_DISTANCE_CACHE_MINUTES)
-        ) {
-            return weeklyRunningDistanceText;
-        }
-
-        weeklyRunningDistanceCacheMinute = cacheMinute;
-        var meters = getWeeklyRunningDistanceMeters();
-
-        if (meters != null) {
-            weeklyRunningDistanceText = formatDistance(meters as Number);
-            hasWeeklyRunningDistanceText = true;
-        }
-
         return weeklyRunningDistanceText;
     }
 
-    private function getWeeklyRunningDistanceMeters() as Number? {
-        var recordedRunTotal = getWeeklyRecordedRunningDistanceMeters();
+    private function updateActivityHistoryStats() as Void {
+        var cacheMinute = (Time.now().value() / 60).toNumber();
+        var todayDate = getTodayStorageDate();
+        
+        // Use the smaller of the two cache windows as our refresh trigger
+        var minCacheWindow = (WORKOUT_CACHE_MINUTES < WEEKLY_RUNNING_DISTANCE_CACHE_MINUTES) 
+            ? WORKOUT_CACHE_MINUTES 
+            : WEEKLY_RUNNING_DISTANCE_CACHE_MINUTES;
 
-        if ((recordedRunTotal != null) && ((recordedRunTotal as Number) > 0)) {
-            return recordedRunTotal as Number;
+        if (
+            hasWorkoutTodayCache &&
+            hasWeeklyRunningDistanceText &&
+            (workoutTodayCacheDate == todayDate) &&
+            (workoutTodayCacheMinute >= 0) &&
+            ((cacheMinute - workoutTodayCacheMinute) < minCacheWindow)
+        ) {
+            return;
         }
 
-        return getWeeklyActivityMonitorDistanceMeters();
-    }
-
-    private function getWeeklyRecordedRunningDistanceMeters() as Number? {
-        var total = 0;
+        workoutTodayCacheMinute = cacheMinute;
+        workoutTodayCacheDate = todayDate;
+        hasWorkoutTodayCache = true;
+        
+        var totalDistanceMeters = 0;
+        var foundWorkoutToday = false;
 
         try {
-            if (!(UserProfile has :getUserActivityHistory)) {
-                return null;
-            }
+            if (UserProfile has :getUserActivityHistory) {
+                var activityIterator = UserProfile.getUserActivityHistory();
+                var weekStart = getStartOfWeek();
+                var todayStart = new Time.Moment(Time.today().value());
+                var activity = activityIterator.next();
 
-            var activityIterator = UserProfile.getUserActivityHistory();
-            var weekStart = getStartOfWeek();
-            var activity = activityIterator.next();
+                while (activity != null) {
+                    var startTime = activity.startTime;
+                    if (startTime == null) {
+                        activity = activityIterator.next();
+                        continue;
+                    }
 
-            while (activity != null) {
-                if (
-                    (activity has :startTime) &&
-                    (activity.startTime != null) &&
-                    (activity.startTime.compare(weekStart) >= 0) &&
-                    (activity has :type) &&
-                    (activity.type == Activity.SPORT_RUNNING) &&
-                    (activity has :distance) &&
-                    (activity.distance != null)
-                ) {
-                    total += activity.distance as Number;
+                    // Optimization: history is newest-first. Stop when we are older than our window.
+                    if (startTime.compare(weekStart) < 0) {
+                        break;
+                    }
+
+                    // Check if there was a workout today
+                    if (!foundWorkoutToday && (startTime.compare(todayStart) >= 0)) {
+                        foundWorkoutToday = true;
+                    }
+
+                    // Aggregate weekly running distance
+                    if (
+                        (activity has :type) &&
+                        (activity.type == Activity.SPORT_RUNNING) &&
+                        (activity has :distance) &&
+                        (activity.distance != null)
+                    ) {
+                        totalDistanceMeters += activity.distance as Number;
+                    }
+
+                    activity = activityIterator.next();
                 }
-
-                activity = activityIterator.next();
             }
         } catch (ex) {
-            return null;
         }
 
-        return total;
+        workoutToday = foundWorkoutToday;
+        
+        // Fallback to activity monitor if no recorded runs were found in history
+        if (totalDistanceMeters == 0) {
+            var amDistance = getWeeklyActivityMonitorDistanceMeters();
+            if (amDistance != null) {
+                totalDistanceMeters = amDistance as Number;
+            }
+        }
+
+        weeklyRunningDistanceText = formatDistance(totalDistanceMeters);
+        hasWeeklyRunningDistanceText = true;
     }
 
     private function getWeeklyActivityMonitorDistanceMeters() as Number? {
@@ -427,27 +472,26 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
         try {
             var history = ActivityMonitor.getHistory();
             var weekStart = getStartOfWeek();
-            var i = 0;
 
             if (history == null) {
                 return null;
             }
 
-            while (i < history.size()) {
+            for (var i = 0; i < history.size(); i++) {
                 var day = history[i];
 
-                if (
-                    (day != null) &&
-                    (day has :startOfDay) &&
-                    (day.startOfDay != null) &&
-                    (day.startOfDay.compare(weekStart) >= 0) &&
-                    (day has :distance) &&
-                    (day.distance != null)
-                ) {
-                    total += ((day.distance as Number) / 100).toNumber();
+                if (day == null || day.startOfDay == null) {
+                    continue;
                 }
 
-                i++;
+                // ActivityMonitor history is also newest-first
+                if (day.startOfDay.compare(weekStart) < 0) {
+                    break;
+                }
+
+                if (day has :distance && day.distance != null) {
+                    total += ((day.distance as Number) / 100).toNumber();
+                }
             }
         } catch (ex) {
             return null;
@@ -542,21 +586,51 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
             return activeBackgroundBitmap;
         }
 
-        if (mood == MOOD_PROUD) {
-            activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftProud) as BitmapResource;
-        } else if (mood == MOOD_GOOD_MORNING) {
-            activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftGoodMorning) as BitmapResource;
-        } else if ((mood == MOOD_SOFT) || (mood == MOOD_SLEEPY)) {
-            activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftSleepy) as BitmapResource;
-        } else {
-            activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftHappy) as BitmapResource;
+        try {
+            if (mood == MOOD_PROUD) {
+                activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftProud) as BitmapResource;
+            } else if (mood == MOOD_GOOD_MORNING) {
+                activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftGoodMorning) as BitmapResource;
+            } else if ((mood == MOOD_SOFT) || (mood == MOOD_SLEEPY)) {
+                activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftSleepy) as BitmapResource;
+            } else {
+                activeBackgroundBitmap = WatchUi.loadResource(Rez.Drawables.BgAvatarBottomLeftHappy) as BitmapResource;
+            }
+        } catch (ex) {
+            activeBackgroundBitmap = null;
+            activeBackgroundMood = -1;
+            return null;
         }
 
         activeBackgroundMood = mood;
         return activeBackgroundBitmap;
     }
 
+    private function shouldDrawBackground(mood as Number) as Boolean {
+        return !hasDrawnBitmapBackground || (drawnBackgroundMood != mood);
+    }
+
+    private function hasTimeOrDateChanged(clock, dateInfo) as Boolean {
+        return (
+            (clock.hour != lastDrawnHour) ||
+            (clock.min != lastDrawnMinute) ||
+            ((dateInfo.day as Number) != lastDrawnDay) ||
+            ((dateInfo.month as Number) != lastDrawnMonth)
+        );
+    }
+
+    private function rememberDrawnBackground(mood as Number, usedBitmap as Boolean) as Void {
+        drawnBackgroundMood = mood;
+        hasDrawnBitmapBackground = usedBitmap;
+    }
+
+    private function invalidateDrawnBackground() as Void {
+        drawnBackgroundMood = -1;
+        hasDrawnBitmapBackground = false;
+    }
+
     private function rememberDrawnState(clock, dateInfo, mood as Number) as Void {
+        lastDrawnHour = clock.hour;
         lastDrawnMinute = clock.min;
         lastDrawnDay = dateInfo.day as Number;
         lastDrawnMonth = dateInfo.month as Number;
@@ -607,47 +681,6 @@ class MiniMeWatchFaceView extends WatchUi.WatchFace {
     }
 
     private function hasWorkoutToday() as Boolean {
-        var cacheMinute = (Time.now().value() / 60).toNumber();
-        var todayDate = getTodayStorageDate();
-
-        if (
-            hasWorkoutTodayCache &&
-            (workoutTodayCacheDate == todayDate) &&
-            (workoutTodayCacheMinute >= 0) &&
-            ((cacheMinute - workoutTodayCacheMinute) < WORKOUT_CACHE_MINUTES)
-        ) {
-            return workoutToday;
-        }
-
-        workoutTodayCacheMinute = cacheMinute;
-        workoutTodayCacheDate = todayDate;
-        hasWorkoutTodayCache = true;
-        workoutToday = false;
-
-        try {
-            if (!(UserProfile has :getUserActivityHistory)) {
-                return workoutToday;
-            }
-
-            var activityIterator = UserProfile.getUserActivityHistory();
-            var todayStart = new Time.Moment(Time.today().value());
-            var activity = activityIterator.next();
-
-            while (activity != null) {
-                if (
-                    (activity has :startTime) &&
-                    (activity.startTime != null) &&
-                    (activity.startTime.compare(todayStart) >= 0)
-                ) {
-                    workoutToday = true;
-                    return workoutToday;
-                }
-
-                activity = activityIterator.next();
-            }
-        } catch (ex) {
-        }
-
         return workoutToday;
     }
 
